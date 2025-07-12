@@ -90,4 +90,4 @@ content:
             fields:
               - { name: title, label: Title, type: string }
               - { name: link, label: Link, type: string }
-              - { name: authType, label: Authentication Type, type: select, options: [ all, anonymous, authenticated ] }
+              - { name: authType, label: Authentication Type, type: select, options: { values: [ "all", "anonymous", "authenticated" ] } }
