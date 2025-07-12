@@ -1,4 +1,22 @@
 {
   "anonymousProfileImage": "/assets/components/anonymous-login.png",
-  "logo": "/assets/components/logo.png"
+  "logo": "/assets/components/logo.png",
+  "navigation": {
+    "home": {
+      "title": "Home",
+      "link": "/"
+    },
+    "about": {
+      "title": "About Us",
+      "link": "/about"
+    },
+    "contact": {
+      "title": "Contact",
+      "link": "/contact"
+    },
+    "login": {
+      "title": "Login",
+      "link": "/login"
+    }
+  }
 }
