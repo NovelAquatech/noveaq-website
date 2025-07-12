@@ -7,6 +7,7 @@ content:
     label: Pages
     type: collection
     format: json
+    filename: "{year}-{month}-{day}-{primary}.json"
     path: _posts
     view:
       fields: [ coverImage, title, date ]
