@@ -3,8 +3,8 @@ media:
   output: /assets
   categories: [ "image" ]
 content:
-  - name: posts
-    label: Posts
+  - name: pages
+    label: Pages
     type: collection
     path: _posts
     view:
