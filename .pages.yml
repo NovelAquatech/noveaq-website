@@ -33,7 +33,7 @@ content:
               - { name: name, label: Name, type: string }
               - { name: title, label: Title, type: string }
               - { name: subtitle, label: Subtitle, type: string }
-              - { name: features, label: Features, type: list, fields: [ { name: title, label: Title, type: string }, { name: description, label: Description, type: string }, { name: emoji, label: Emoji, type: string } ] }
+              - { name: features, label: Features, type: block, list: true, blocks: [ { name: title, label: Title, type: string }, { name: description, label: Description, type: string }, { name: emoji, label: Emoji, type: string } ] }
               - name: demo
                 label: Demo
                 type: object
