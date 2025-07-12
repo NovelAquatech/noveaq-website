@@ -11,22 +11,45 @@ content:
     view:
       fields: [ coverImage, title, date ]
     fields:
-      - { name: title, label: Title, type: string, required: true }
-      - { name: excerpt, label: Excerpt, type: string }
-      - { name: coverImage, label: Cover image, type: image }
-      - { name: date, label: Date, type: date, options: { time: true, format: "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'" } }
-      - name: author
-        label: Author
+      - name: sections
+        label: Sections
         type: object
         fields:
-          - { name: name, label: Name, type: string }
-          - { name: picture, label: Picture, type: image }
-      - name: ogImage
-        label: Image (social sharing)
-        type: object
-        fields:
-          - { name: url, label: URL, type: image }
-      - { name: body, label: Body, type: rich-text }
+          - name: hero
+            label: Hero Section
+            type: object
+            fields:
+              - { name: title, label: Title, type: string }
+              - { name: subtitle, label: Subtitle, type: string }
+              - { name: description, label: Description, type: string }
+              - { name: image, label: Image, type: image }
+              - { name: imageAlt, label: Image Alt, type: string }
+              - { name: ctaText, label: CTA Text, type: string }
+              - { name: ctaLink, label: CTA Link, type: string }
+          - name: functions
+            label: Platform Functions
+            type: object
+            fields:
+              - { name: name, label: Name, type: string }
+              - { name: title, label: Title, type: string }
+              - { name: subtitle, label: Subtitle, type: string }
+              - { name: features, label: Features, type: list, fields: [ { name: title, label: Title, type: string }, { name: description, label: Description, type: string }, { name: emoji, label: Emoji, type: string } ] }
+              - name: demo
+                label: Demo
+                type: object
+                fields:
+                  - { name: ctaText, label: CTA Text, type: string }
+                  - { name: description, label: Description, type: string }
+                  - { name: accountName, label: Account Name, type: string }
+                  - { name: password, label: Password, type: string }
+              - { name: image, label: Image, type: image }
+              - { name: imageAlt, label: Image Alt, type: string }
+              - name: useCase
+                label: Use Case
+                type: object
+                fields:
+                  - { name: title, label: Title, type: string }
+                  - { name: description, label: Description, type: string }
   - name: components
     label: Components
     type: file
@@ -34,3 +57,4 @@ content:
     path: "content/components.json"
     fields:
       - { name: anonymousProfileImage, label: Anonymous Profile Image, type: image }
+      - { name: logo, label: Logo, type: image }
