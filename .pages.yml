@@ -3,12 +3,11 @@ media:
   output: /assets
   categories: [ "image" ]
 content:
-  - name: pages
-    label: Pages
+  - name: home-page
+    label: Home Page
     type: file
     format: json
-    filename: "home-page.json"
-    path: "content"
+    path: "content/home-page.json"
     view:
       fields: [ coverImage, title, date ]
     fields:
@@ -32,7 +31,6 @@ content:
     label: Components
     type: file
     format: json
-    filename: "components.json"
-    path: "content"
+    path: "content/components.json"
     fields:
       - { name: anonymousProfileImage, label: Anonymous Profile Image, type: image }
