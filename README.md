@@ -1,63 +1,167 @@
-# A statically generated blog example using Next.js, Markdown, and TypeScript
+# NovelAquatech Website
 
-This is the existing [blog-starter](https://github.com/vercel/next.js/tree/canary/examples/blog-starter) plus TypeScript.
+A modern, responsive website for NovelAquatech's IoT solutions built with Next.js and managed through PagesCMS for easy content updates.
 
-This example showcases Next.js's [Static Generation](https://nextjs.org/docs/app/building-your-application/routing/pages-and-layouts) feature using Markdown files as the data source.
+## 🚀 Live Deployments
 
-The blog posts are stored in `/_posts` as Markdown files with front matter support. Adding a new Markdown file in there will create a new blog post.
+- **Production**: [noveaq-website.vercel.app](https://noveaq-website.vercel.app)
+- **Development**: [noveaq-website-git-dev-deeplydiligents-projects.vercel.app](https://noveaq-website-git-dev-deeplydiligents-projects.vercel.app/)
 
-To create the blog posts we use [`remark`](https://github.com/remarkjs/remark) and [`remark-html`](https://github.com/remarkjs/remark-html) to convert the Markdown files into an HTML string, and then send it down as a prop to the page. The metadata of every post is handled by [`gray-matter`](https://github.com/jonschlinkert/gray-matter) and also sent in props to the page.
+## 🛠️ Technology Stack
 
-## Demo
+- **[Next.js 14.1.0](https://nextjs.org/)** - React framework with App Router
+- **[TypeScript](https://www.typescriptlang.org/)** - Type-safe JavaScript
+- **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework
+- **[PagesCMS](https://pagescms.org/)** - Git-based content management system
+- **[pnpm](https://pnpm.io/)** - Fast, disk space efficient package manager
 
-[https://next-blog-starter.vercel.app/](https://next-blog-starter.vercel.app/)
+## 📁 Project Structure
 
-## Deploy your own
-
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/blog-starter)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/next.js/tree/canary/examples/blog-starter&project-name=blog-starter&repository-name=blog-starter)
-
-### Related examples
-
-- [WordPress](/examples/cms-wordpress)
-- [DatoCMS](/examples/cms-datocms)
-- [Sanity](/examples/cms-sanity)
-- [TakeShape](/examples/cms-takeshape)
-- [Prismic](/examples/cms-prismic)
-- [Contentful](/examples/cms-contentful)
-- [Strapi](/examples/cms-strapi)
-- [Agility CMS](/examples/cms-agilitycms)
-- [Cosmic](/examples/cms-cosmic)
-- [ButterCMS](/examples/cms-buttercms)
-- [Storyblok](/examples/cms-storyblok)
-- [GraphCMS](/examples/cms-graphcms)
-- [Kontent](/examples/cms-kontent)
-- [Umbraco Heartcore](/examples/cms-umbraco-heartcore)
-- [Builder.io](/examples/cms-builder-io)
-- [TinaCMS](/examples/cms-tina/)
-- [Enterspeed](/examples/cms-enterspeed)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
-
-```bash
-npx create-next-app --example blog-starter blog-starter-app
+```
+noveaq-website/
+├── .pages.yml              # PagesCMS configuration
+├── content/                # Content managed by PagesCMS
+│   ├── home-page.json     # Home page content
+│   └── components.json    # Reusable components data
+├── public/                 # Static assets
+│   └── assets/            # Images and media files
+├── src/
+│   ├── app/               # Next.js App Router pages
+│   │   ├── layout.tsx     # Root layout
+│   │   ├── page.tsx       # Home page
+│   │   └── globals.css    # Global styles
+│   ├── interfaces/        # TypeScript interfaces
+│   ├── lib/              # Utility functions
+│   └── public/           # Static assets
+├── tailwind.config.ts     # Tailwind CSS configuration
+├── tsconfig.json         # TypeScript configuration
+└── package.json          # Project dependencies
 ```
 
-```bash
-yarn create next-app --example blog-starter blog-starter-app
-```
+## 🚀 Getting Started Locally
 
-```bash
-pnpm create next-app --example blog-starter blog-starter-app
-```
+### Prerequisites
 
-Your blog should be up and running on [http://localhost:3000](http://localhost:3000)! If it doesn't work, post on [GitHub discussions](https://github.com/vercel/next.js/discussions).
+- Node.js 18+ 
+- pnpm (recommended package manager)
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+### Installation
 
-# Notes
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/NovelAquatech/noveaq-website.git
+   cd noveaq-website
+   ```
 
-`blog-starter` uses [Tailwind CSS](https://tailwindcss.com) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3).
+2. **Install dependencies**
+   ```bash
+   pnpm install
+   ```
+
+3. **Start the development server**
+   ```bash
+   pnpm dev
+   ```
+
+4. **Open your browser**
+   
+   Navigate to [http://localhost:3000](http://localhost:3000) to see the website.
+
+### Available Scripts
+
+- `pnpm dev` - Start development server
+- `pnpm build` - Build production version
+- `pnpm start` - Start production server
+
+## 📝 Content Management with PagesCMS
+
+This website uses PagesCMS for content management, which allows non-technical users to edit content through a web interface while keeping everything in Git.
+
+### How PagesCMS Works
+
+1. **Configuration**: The `.pages.yml` file defines the content structure and editing interface
+2. **Content Storage**: All content is stored in JSON files in the `content/` directory
+3. **Git-Based**: Changes are committed directly to the repository
+4. **Live Updates**: Changes automatically trigger new deployments
+
+### Content Structure
+
+The website content is organized as follows:
+
+- **Home Page** (`content/home-page.json`):
+  - Hero section with title, subtitle, description, and call-to-action
+  - Platform functions section with features and demo information
+  - Use case descriptions
+
+- **Components** (`content/components.json`):
+  - Reusable assets like logos and profile images
+
+### Making Content Changes
+
+1. Navigate to the PagesCMS admin interface (URL provided by your deployment)
+2. Edit content through the user-friendly interface
+3. Save changes - they'll be automatically committed to Git
+4. New deployment will be triggered automatically
+
+## 🌐 Deployment
+
+This project is configured for automatic deployment on Vercel.
+
+### Automatic Deployment
+
+- **Production Branch**: `main` → [noveaq-website.vercel.app](https://noveaq-website.vercel.app)
+- **Development Branch**: `dev` → [noveaq-website-git-dev-deeplydiligents-projects.vercel.app](https://noveaq-website-git-dev-deeplydiligents-projects.vercel.app/)
+
+### How It Works
+
+1. Push changes to `main` branch for production deployment
+2. Push changes to `dev` branch for development/staging deployment
+3. Vercel automatically builds and deploys the changes
+4. No manual intervention required
+
+### Manual Deployment
+
+If you need to deploy manually:
+
+1. Build the project:
+   ```bash
+   pnpm build
+   ```
+
+2. Deploy to Vercel:
+   ```bash
+   vercel --prod
+   ```
+
+## 🎨 Styling
+
+The website uses Tailwind CSS for styling with a custom configuration:
+
+- **Custom Colors**: Defined in `tailwind.config.ts`
+- **Custom Spacing**: Extended spacing utilities
+- **Custom Typography**: Additional font sizes and letter spacing
+- **Custom Shadows**: Custom box-shadow utilities
+
+## 🔧 Development Notes
+
+- The project uses Next.js App Router (not Pages Router)
+- All components are built with TypeScript for type safety
+- Tailwind CSS classes are used throughout for consistent styling
+- Images are optimized using Next.js Image component
+- SEO metadata is configured in layout files
+
+## 🤝 Contributing
+
+1. Create a feature branch from `dev`
+2. Make your changes
+3. Test locally with `pnpm dev`
+4. Push to your branch
+5. Create a pull request to `dev` branch
+
+## 📞 Support
+
+For technical support or questions about the website, please contact the development team.
+
+---
+
+Built with ❤️ by the NovelAquatech team
