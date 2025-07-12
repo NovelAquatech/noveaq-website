@@ -8,7 +8,7 @@ content:
     type: collection
     format: json
     filename: "{primary}.json"
-    path: "pages/content"
+    path: "content"
     view:
       fields: [ coverImage, title, date ]
     fields:
