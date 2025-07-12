@@ -74,6 +74,12 @@ content:
     fields:
       - { name: anonymousProfileImage, label: Anonymous Profile Image, type: image }
       - { name: logo, label: Logo, type: image }
+  - name: navigation
+    label: Navigation
+    type: file
+    format: json
+    path: "content/menu.json"
+    fields:
       - name: navigation
         label: Navigation
         type: block
