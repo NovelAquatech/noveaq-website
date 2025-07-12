@@ -74,3 +74,13 @@ content:
     fields:
       - { name: anonymousProfileImage, label: Anonymous Profile Image, type: image }
       - { name: logo, label: Logo, type: image }
+      - name: navigation
+        label: Navigation
+        type: block
+        list: true
+        blocks:
+          - name: navItem
+            label: Navigation Item
+            fields:
+              - { name: title, label: Title, type: string }
+              - { name: link, label: Link, type: string }
