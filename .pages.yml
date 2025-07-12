@@ -5,9 +5,9 @@ media:
 content:
   - name: pages
     label: Pages
-    type: collection
+    type: file
     format: json
-    filename: "{primary}.json"
+    filename: "home-page.json"
     path: "content"
     view:
       fields: [ coverImage, title, date ]
@@ -28,3 +28,11 @@ content:
         fields:
           - { name: url, label: URL, type: image }
       - { name: body, label: Body, type: rich-text }
+  - name: components
+    label: Components
+    type: file
+    format: json
+    filename: "components.json"
+    path: "content"
+    fields:
+      - { name: anonymousProfileImage, label: Anonymous Profile Image, type: image }
