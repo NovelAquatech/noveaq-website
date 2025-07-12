@@ -1,6 +1,14 @@
 {
-  "sections": {
-    "hero": {
+  "title": "Home Page",
+  "excerpt": "Home Page",
+  "body": "Home Page",
+  "date": "2023-10-01T00:00:00.000Z",
+  "author": {
+    "name": "Deep Bhattacharyya",
+    "picture": ""
+  },  
+  "sections":{
+    "hero":{
       "title": "Novel IoT",
       "subtitle": "IoT Solutions for a Connected World",
       "description": "Explore our innovative IoT solutions designed to enhance connectivity and efficiency across various industries. Join us in transforming the way devices communicate and interact.",
@@ -9,16 +17,28 @@
       "ctaText": "Get Started",
       "ctaLink": "https://novelaquatech.com/novel"
     },
-    "functions": {
+    "functions":{
       "name": "Platform Functions",
       "title": "Deploy Your IoT Dashboard in 10 Minutes",
       "subtitle": "Novel IoT is super user-friendly. Using our platform you can quickly see your IoT data visualized in widgets, ideal for proof-of-concept IoT solutions. We provide a range of graphs, charts, and other data displays that can be easily customized to fit your needs.",
       "features": [
         {
           "_block": "feature",
-          "title": "hello",
-          "description": "hello",
-          "emoji": "hello"
+          "title": "Comprehensive Sensor Data Monitoring",
+          "description": "Monitor all key Indoor Air Quality (IAQ) parameters in real time using sensors connected via LoRaWAN gateways. Visualize sensor data for each monitored area by clicking the 'Sensor Data' tab.",
+          "emoji": "📊"
+        },
+        {
+          "_block": "feature",
+          "title": "Occupant Survey & Perception Analysis",
+          "description": "Engage occupants with a seamless QR code survey experience. Instantly capture real-world feedback and transform it into actionable insights, with powerful cloud-based analytics that reveal trends and drive smarter decisions for healthier, more comfortable spaces.",
+          "emoji": "📝"
+        },
+        {
+          "_block": "feature",
+          "title": "Automated Advisories",
+          "description": "Receive advisories when any IAQ parameter exceeds preset thresholds. The system ensures only one advisory per sensor per 24-hour period, helping you focus on actionable alerts.",
+          "emoji": "⚠️"
         }
       ],
       "demo": {
