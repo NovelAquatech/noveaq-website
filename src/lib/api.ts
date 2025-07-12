@@ -26,3 +26,11 @@ export function getAllPages(): Page[] {
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
   return posts;
 }
+
+export function getAuthState() {
+  // Simulate fetching auth state
+  return {
+    isLoggedIn: false,
+    user: null,
+  };
+}
