@@ -30,6 +30,20 @@ export default function Index() {
       {otherSections.map((section) => {
         if (section._block === "functions")
           return <FunctionsSection key={section.id} section={section} />;
+        if (section._block === "use-cases")
+          return <UseCasesSection key={section.id} section={section} />;
+        if (section._block === "key-features")
+          return <KeyFeaturesSection key={section.id} section={section} />;
+        if (section._block === "how-it-works")
+          return <HowItWorksSection key={section.id} section={section} />;
+        if (section._block === "live-demo")
+          return <LiveDemoSection key={section.id} section={section} />;
+        if (section._block === "testimonials")
+          return <TestimonialsSection key={section.id} section={section} />;
+        if (section._block === "pricing")
+          return <PricingSection key={section.id} section={section} />;
+        if (section._block === "contact")
+          return <ContactSection key={section.id} section={section} />;
         return null;
       })}
     </main>
@@ -116,6 +130,312 @@ const FunctionsSection = ({
               </div>
             )
           )}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const UseCasesSection = ({
+  section: useCasesSection,
+}: {
+  section: SectionsItem;
+}) => {
+  return (
+    <section
+      className="px-6 md:px-24 py-16 md:py-32 gap-10 bg-gray-50"
+      id={useCasesSection.id}
+    >
+      <div className="container mx-auto">
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 text-center">
+          {useCasesSection.title}
+        </h2>
+        <p className="text-lg md:text-xl text-gray-700 mb-20 text-center">
+          {useCasesSection.subtitle}
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {useCasesSection.cases?.map(
+            (useCase: CasesItem, index: number) => (
+              <div
+                key={index}
+                className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-shadow"
+              >
+                <div className="text-7xl text-center mb-6">{useCase.emoji}</div>
+                <h3 className="text-xl font-semibold mb-4">{useCase.title}</h3>
+                <p className="text-gray-600">{useCase.description}</p>
+              </div>
+            )
+          )}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const KeyFeaturesSection = ({
+  section: keyFeaturesSection,
+}: {
+  section: SectionsItem;
+}) => {
+  return (
+    <section
+      className="px-6 md:px-24 py-16 md:py-32 gap-10 bg-white"
+      id={keyFeaturesSection.id}
+    >
+      <div className="container mx-auto">
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-20 text-center">
+          {keyFeaturesSection.title}
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {keyFeaturesSection.features?.map(
+            (feature: FeaturesItem, index: number) => (
+              <div
+                key={index}
+                className="flex items-start space-x-4"
+              >
+                <div className="text-4xl flex-shrink-0">{feature.emoji}</div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                  <p className="text-gray-600">{feature.description}</p>
+                </div>
+              </div>
+            )
+          )}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const HowItWorksSection = ({
+  section: howItWorksSection,
+}: {
+  section: SectionsItem;
+}) => {
+  return (
+    <section
+      className="px-6 md:px-24 py-16 md:py-32 gap-10 bg-gray-50"
+      id={howItWorksSection.id}
+    >
+      <div className="container mx-auto">
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-20 text-center">
+          {howItWorksSection.title}
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {howItWorksSection.steps?.map(
+            (step: StepsItem, index: number) => (
+              <div
+                key={index}
+                className="text-center"
+              >
+                <div className="text-6xl mb-6">{step.emoji}</div>
+                <h3 className="text-xl font-semibold mb-4">{step.title}</h3>
+                <p className="text-gray-600">{step.description}</p>
+              </div>
+            )
+          )}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const LiveDemoSection = ({
+  section: liveDemoSection,
+}: {
+  section: SectionsItem;
+}) => {
+  return (
+    <section
+      className="px-6 md:px-24 py-16 md:py-32 gap-10 bg-gradient-to-br from-blue-600 to-blue-800 text-white"
+      id={liveDemoSection.id}
+    >
+      <div className="container mx-auto text-center">
+        <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          {liveDemoSection.title}
+        </h2>
+        <p className="text-lg md:text-xl mb-12 opacity-90">
+          {liveDemoSection.subtitle}
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {liveDemoSection.demos?.map(
+            (demo: DemosItem, index: number) => (
+              <div
+                key={index}
+                className="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm"
+              >
+                <h3 className="text-xl font-semibold mb-4">{demo.title}</h3>
+                <a
+                  href={demo.link}
+                  className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Launch Demo
+                </a>
+              </div>
+            )
+          )}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const TestimonialsSection = ({
+  section: testimonialsSection,
+}: {
+  section: SectionsItem;
+}) => {
+  return (
+    <section
+      className="px-6 md:px-24 py-16 md:py-32 gap-10 bg-gray-100"
+      id={testimonialsSection.id}
+    >
+      <div className="container mx-auto">
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-20 text-center">
+          {testimonialsSection.title}
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {testimonialsSection.testimonials?.map(
+            (testimonial: TestimonialsItem, index: number) => (
+              <div
+                key={index}
+                className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow"
+              >
+                <div className="text-4xl mb-4">{testimonial.emoji}</div>
+                <p className="text-gray-600 mb-4 italic">"{testimonial.quote}"</p>
+                <div className="text-sm">
+                  <div className="font-semibold">{testimonial.author}</div>
+                  <div className="text-gray-500">{testimonial.title}</div>
+                </div>
+              </div>
+            )
+          )}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const PricingSection = ({
+  section: pricingSection,
+}: {
+  section: SectionsItem;
+}) => {
+  return (
+    <section
+      className="px-6 md:px-24 py-16 md:py-32 gap-10 bg-white"
+      id={pricingSection.id}
+    >
+      <div className="container mx-auto">
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 text-center">
+          {pricingSection.title}
+        </h2>
+        <p className="text-lg md:text-xl text-gray-700 mb-20 text-center">
+          {pricingSection.subtitle}
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          {pricingSection.plans?.map(
+            (plan: PlansItem, index: number) => (
+              <div
+                key={index}
+                className="bg-gray-50 p-8 rounded-lg shadow hover:shadow-lg transition-shadow"
+              >
+                <h3 className="text-2xl font-bold text-center mb-6">{plan.name}</h3>
+                <div className="space-y-4">
+                  <div className="flex justify-between">
+                    <span className="font-medium">Devices:</span>
+                    <span>{plan.devices}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="font-medium">Dashboards:</span>
+                    <span>{plan.dashboards}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="font-medium">Alerts:</span>
+                    <span>{plan.alerts}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="font-medium">Export:</span>
+                    <span>{plan.export}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="font-medium">Support:</span>
+                    <span>{plan.support}</span>
+                  </div>
+                </div>
+              </div>
+            )
+          )}
+        </div>
+        <div className="text-center space-x-4">
+          <a
+            href={pricingSection.ctaLink}
+            className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          >
+            {pricingSection.ctaText}
+          </a>
+          <a
+            href={pricingSection.compareLink}
+            className="inline-block bg-gray-200 text-gray-800 px-8 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-colors"
+          >
+            {pricingSection.compareText}
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const ContactSection = ({
+  section: contactSection,
+}: {
+  section: SectionsItem;
+}) => {
+  return (
+    <section
+      className="px-6 md:px-24 py-16 md:py-32 gap-10 bg-gray-800 text-white"
+      id={contactSection.id}
+    >
+      <div className="container mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-8">
+              {contactSection.title}
+            </h2>
+            <p className="text-lg mb-8 opacity-90">
+              Have a question or want to schedule a free consultation?
+            </p>
+            <div className="space-y-4">
+              <div className="flex items-center space-x-3">
+                <span className="text-2xl">📩</span>
+                <span>{contactSection.email}</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <span className="text-2xl">📞</span>
+                <span>{contactSection.phone}</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <span className="text-2xl">🧭</span>
+                <span>{contactSection.address}</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold mb-6">{contactSection.helpTitle}</h3>
+            <div className="space-y-3">
+              {contactSection.helpLinks?.map(
+                (link: HelpLinksItem, index: number) => (
+                  <a
+                    key={index}
+                    href={link.url}
+                    className="block text-blue-300 hover:text-blue-100 transition-colors"
+                  >
+                    → {link.title}
+                  </a>
+                )
+              )}
+            </div>
+          </div>
         </div>
       </div>
     </section>
