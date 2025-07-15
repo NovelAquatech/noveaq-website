@@ -15,7 +15,7 @@ content:
         label: Sections
         type: block
         list: true
-        fields:
+        blocks:
           - name: hero
             label: Hero Section
             type: object
