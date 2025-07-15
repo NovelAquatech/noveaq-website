@@ -4,24 +4,18 @@ import Navbar from "./_components/navbar/navbar";
 import React, { useState } from "react";
 import SectionSelector from "./sectionSelector";
 
-type Feature = {
-  title: string;
-  description: string;
-  emoji: string;
-};
 
 export default function Index() {
-  const homePageContent = getPageBySlug("home-page.json");
+  const homePageContent: HomePage = getPageBySlug("home-page.json");
   // Parse the JSON string to an object
-  const sections = Object.keys(homePageContent.content.sections).filter(
-    (section) => section !== "hero"
-  ).map((section) => homePageContent.content.sections[section].name);
-  const heroSection = homePageContent.content.sections.hero;
-  const functionsSection = homePageContent.content.sections.functions;
+  const heroSection = homePageContent.sections.find((section) => section.id === "hero1");
+  const functionsSection = homePageContent.sections.find((section) => section.id === "functions1");
+
+  if(!heroSection || !functionsSection) return null;
 
   return (
     <main className="min-h-screen relative overflow-hidden">
-      <Navbar />
+      <Navbar currentHref="/"/>
 
       {/* Main Content */}
       <section className="px-6 md:px-24 py-16 md:py-32 gap-10 bg-gradient-to-b from-blue-100 to-blue-300 ">
@@ -68,10 +62,10 @@ export default function Index() {
       </section>
       {/* Section Selector */}
       <SectionSelector
-        sections={sections}
+        sections={homePageContent.sections}
       />
       {/* Sections */}
-      <section className="px-6 md:px-24 py-16 md:py-32 gap-10 bg-gradient-to-b ">
+      <section className="px-6 md:px-24 py-16 md:py-32 gap-10 bg-gradient-to-b " id="functions">
         <div className="container mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-14 text-center">
             {functionsSection.title}
@@ -80,7 +74,7 @@ export default function Index() {
             {functionsSection.subtitle}
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {functionsSection.features.map((feature: Feature, index: number) => (
+            {functionsSection.features?.map((feature: FeaturesItem, index: number) => (
               <div
               key={index}
               className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow"

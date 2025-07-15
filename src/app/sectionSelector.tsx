@@ -1,14 +1,10 @@
 "use client";
 import React from "react";
 
-interface SectionSelectorProps {
-  sections: string[];
-}
 
-
-const SectionSelector: React.FC<SectionSelectorProps> = ({ sections }) => {
-  const handleSectionClick = (section: string) => {
-    const sectionElement = document.getElementById(section.toLowerCase());
+const SectionSelector = ({ sections }: { sections: SectionsItem[] }) => {
+  const handleSectionClick = (section: SectionsItem) => {
+    const sectionElement = document.getElementById(section.id);
     if (sectionElement) {
       sectionElement.scrollIntoView({ behavior: "smooth" });
     }
@@ -20,12 +16,12 @@ const SectionSelector: React.FC<SectionSelectorProps> = ({ sections }) => {
       <div className="flex space-x-2 md:space-x-8 mt-4 mb-4">
         {sections.map((section) => (
           <button
-            key={section}
+            key={section.id}
             onClick={() => handleSectionClick(section)}
             className={`px-8 py-3 text-lg font-semibold rounded-lg focus:outline-none transition-colors border-b-2 bg-white text-gray-700 border-transparent hover:bg-blue-50`}
             style={{ minWidth: 120 }}
           >
-            {section}
+            {section.name}
           </button>
         ))}
       </div>
