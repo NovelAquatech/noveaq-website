@@ -43,6 +43,8 @@
       "id": "use-cases",
       "title": "Real-World Use Cases",
       "subtitle": "From smart agriculture to predictive maintenance, Novel IoT supports a wide variety of industry applications.",
+      "image": "/assets/home-page/real-world-use-cases.jpg",
+      "imageAlt": "Real-world IoT applications in agriculture, industrial, and facility monitoring",
       "cases": [
         {
           "_block": "case",

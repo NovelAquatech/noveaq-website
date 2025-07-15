@@ -62,6 +62,8 @@ content:
               - { name: id, label: id, type: string }
               - { name: title, label: Title, type: string }
               - { name: subtitle, label: Subtitle, type: string }
+              - { name: image, label: Image, type: image }
+              - { name: imageAlt, label: Image Alt, type: string }
               - name: cases
                 label: Use Cases
                 type: block
