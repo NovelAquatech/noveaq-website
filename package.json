@@ -1,9 +1,12 @@
 {
   "private": true,
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start"
+    "start-app": "next",
+    "build": "npm run generate-types && next build",
+    "start": "next start",
+    "generate-types": "node generate-types.js",
+    "generate-types:watch": "watch \"npm run generate-types\" \"./content\"",
+    "dev": "concurrently \"npm run start-app\" \"npm run generate-types:watch\""
   },
   "dependencies": {
     "classnames": "^2.5.1",
@@ -13,13 +16,26 @@
     "react": "^18",
     "react-dom": "^18",
     "remark": "^15.0.1",
-    "remark-html": "^16.0.1"
+    "remark-html": "^16.0.1",
+    "watch": "^1.0.2"
+  },
+  "watch": {
+    "generate-types": {
+      "patterns": [
+        "content"
+      ],
+      "extensions": "json",
+      "quiet": false,
+      "post": "npm run start-app"
+    }
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
+    "concurrently": "^9.2.0",
+    "json-ts": "^1.6.4",
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"

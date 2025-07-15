@@ -10,6 +10,6 @@ export type Page = {
   ogImage: {
     url: string;
   };
-  content: any;
+  content: Components | HomePage | Menu;
   preview?: boolean;
 };

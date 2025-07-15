@@ -13,13 +13,15 @@ content:
     fields:
       - name: sections
         label: Sections
-        type: object
-        fields:
+        type: block
+        list: true
+        blocks:
           - name: hero
             label: Hero Section
             type: object
             fields:
               - { name: title, label: Title, type: string }
+              - { name: id, label: id, type: string }
               - { name: subtitle, label: Subtitle, type: string }
               - { name: description, label: Description, type: string }
               - { name: image, label: Image, type: image }
@@ -31,6 +33,7 @@ content:
             type: object
             fields:
               - { name: name, label: Name, type: string }
+              - { name: id, label: id, type: string }
               - { name: title, label: Title, type: string }
               - { name: subtitle, label: Subtitle, type: string }
               - name: features
@@ -50,22 +53,8 @@ content:
                       - name: emoji
                         label: Emoji
                         type: string
-              - name: demo
-                label: Demo
-                type: object
-                fields:
-                  - { name: ctaText, label: CTA Text, type: string }
-                  - { name: description, label: Description, type: string }
-                  - { name: accountName, label: Account Name, type: string }
-                  - { name: password, label: Password, type: string }
               - { name: image, label: Image, type: image }
               - { name: imageAlt, label: Image Alt, type: string }
-              - name: useCase
-                label: Use Case
-                type: object
-                fields:
-                  - { name: title, label: Title, type: string }
-                  - { name: description, label: Description, type: string }
   - name: components
     label: Components
     type: file
@@ -74,3 +63,20 @@ content:
     fields:
       - { name: anonymousProfileImage, label: Anonymous Profile Image, type: image }
       - { name: logo, label: Logo, type: image }
+  - name: navigation
+    label: Navigation
+    type: file
+    format: json
+    path: "content/menu.json"
+    fields:
+      - name: navigation
+        label: Navigation
+        type: block
+        list: true
+        blocks:
+          - name: navItem
+            label: Navigation Item
+            fields:
+              - { name: title, label: Title, type: string }
+              - { name: link, label: Link, type: string }
+              - { name: authType, label: Authentication Type, type: select, options: { values: [ "all", "anonymous", "authenticated" ] } }
