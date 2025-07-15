@@ -246,7 +246,7 @@ const HowItWorksSection = ({
                   <h3 className="text-xl font-semibold mb-4 text-gray-800">{step.title}</h3>
                   <p className="text-gray-600 text-sm px-2">{step.description}</p>
                 </div>
-                {index < howItWorksSection.steps.length - 1 && (
+                {index < (howItWorksSection.steps?.length || 0) - 1 && (
                   <div className="hidden md:flex items-center mx-4">
                     <svg
                       className="w-8 h-8 text-blue-400"
