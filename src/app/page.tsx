@@ -67,7 +67,7 @@ const HeroSection = ({ section: heroSection }: { section: SectionsItem }) => {
           </p>
           <a
             href={heroSection.ctaLink}
-            className="inline-flex items-center px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg shadow hover:bg-blue-50 transition-colors text-lg"
+            className="inline-flex items-center px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg shadow hover:bg-blue-50 transition-colors text-lg mb-8 md:mb-0"
           >
             {heroSection.ctaText}
             <svg
@@ -233,11 +233,11 @@ const HowItWorksSection = ({
         <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-20 text-center">
           {howItWorksSection.title}
         </h2>
-        <div className="flex flex-col md:flex-row items-center justify-center">
+        <div className="flex flex-col xl:flex-row items-center justify-center">
           {howItWorksSection.steps?.map(
             (step: StepsItem, index: number) => (
               <div key={index} className="flex items-center">
-                <div className="text-center flex-shrink-0 w-64">
+                <div className="text-center flex-shrink-0 w-64 mb-8 xl:mb-0">
                   <div className="relative mb-6">
                     <div className="w-16 h-16 mx-auto bg-blue-600 rounded-full flex items-center justify-center shadow-lg">
                       <span className="text-2xl font-bold text-white">{step.number}</span>
@@ -247,7 +247,7 @@ const HowItWorksSection = ({
                   <p className="text-gray-600 text-sm px-2">{step.description}</p>
                 </div>
                 {index < (howItWorksSection.steps?.length || 0) - 1 && (
-                  <div className="hidden md:flex items-center mx-4">
+                  <div className="hidden xl:flex items-center mx-4">
                     <svg
                       className="w-8 h-8 text-blue-400"
                       fill="none"
