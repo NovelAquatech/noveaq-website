@@ -21,6 +21,7 @@ content:
             type: object
             fields:
               - { name: title, label: Title, type: string }
+              - { name: id, label: id, type: string }
               - { name: subtitle, label: Subtitle, type: string }
               - { name: description, label: Description, type: string }
               - { name: image, label: Image, type: image }
@@ -32,6 +33,7 @@ content:
             type: object
             fields:
               - { name: name, label: Name, type: string }
+              - { name: id, label: id, type: string }
               - { name: title, label: Title, type: string }
               - { name: subtitle, label: Subtitle, type: string }
               - name: features
