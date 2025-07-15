@@ -1,22 +1,31 @@
-
 import { getAuthState, getPageBySlug } from "@/lib/api";
 import NavbarClient from "./navbarClient";
+import { get } from "http";
 
 // Server component: fetches data, passes to client component
-export default function Navbar() {
-  const components = getPageBySlug("components.json");
-  const anonymousProfileImage = components.content.anonymousProfileImage;
+export default function Navbar({ currentHref }: { currentHref: string }) {
+  const components: Components = getPageBySlug("components.json");
+  const anonymousProfileImage = components.anonymousProfileImage;
+
+  const navFile: Menu = getPageBySlug("menu.json");
   const authState = getAuthState();
-  const navigation = authState.isLoggedIn ? [
-    { name: "Dashboard", href: "#", current: true },
-    { name: "Team", href: "#", current: false },
-    { name: "Projects", href: "#", current: false },
-    { name: "Calendar", href: "#", current: false },
-  ] : [
-    { name: "Home", href: "#", current: true },
-    { name: "About", href: "#", current: false },
-    { name: "Contact", href: "#", current: false },
-    { name: "Login", href: "#", current: false }
-  ];
-  return <NavbarClient logo={components.content.logo} navigation={navigation} authState={authState} anonymousProfileImage={anonymousProfileImage} />;
+
+  const navigationItems = navFile.navigation
+    .filter(
+      (x: any) =>
+        (authState.isLoggedIn && x.authType == "authenticated") ||
+        (!authState.isLoggedIn && x.authType == "anonymous") ||
+        x.authType == "all"
+    ).map((item) => ({
+      ...item,
+      current: item.link === currentHref,
+    }));
+  return (
+    <NavbarClient
+      logo={components.logo}
+      navigation={navigationItems}
+      authState={authState}
+      anonymousProfileImage={anonymousProfileImage}
+    />
+  );
 }

@@ -1,15 +1,9 @@
 {
-  "title": "Home Page",
-  "excerpt": "Home Page",
-  "body": "Home Page",
-  "date": "2023-10-01T00:00:00.000Z",
-  "author": {
-    "name": "Deep Bhattacharyya",
-    "picture": ""
-  },  
-  "sections":{
-    "hero":{
+  "sections": [
+    {
+      "_block": "hero",
       "title": "Novel IoT",
+      "id": "hero",
       "subtitle": "IoT Solutions for a Connected World",
       "description": "Explore our innovative IoT solutions designed to enhance connectivity and efficiency across various industries. Join us in transforming the way devices communicate and interact.",
       "image": "/assets/home-page/hero-image.png",
@@ -17,8 +11,10 @@
       "ctaText": "Get Started",
       "ctaLink": "https://novelaquatech.com/novel"
     },
-    "functions":{
+    {
+      "_block": "functions",
       "name": "Platform Functions",
+      "id": "functions1",
       "title": "Deploy Your IoT Dashboard in 10 Minutes",
       "subtitle": "Novel IoT is super user-friendly. Using our platform you can quickly see your IoT data visualized in widgets, ideal for proof-of-concept IoT solutions. We provide a range of graphs, charts, and other data displays that can be easily customized to fit your needs.",
       "features": [
@@ -40,19 +36,7 @@
           "description": "Receive advisories when any IAQ parameter exceeds preset thresholds. The system ensures only one advisory per sensor per 24-hour period, helping you focus on actionable alerts.",
           "emoji": "⚠️"
         }
-      ],
-      "demo": {
-        "ctaText": "See demos",
-        "description": "in our public test account",
-        "accountName": "beaverdemo@milesight.com",
-        "password": "Beaverdemo25"
-      },
-      "image": "/assets/home-page/hero-image.png",
-      "imageAlt": "IoT Dashboard Screenshot",
-      "useCase": {
-        "title": "Indoor Air Quality Monitoring",
-        "description": "Ensure occupant health, safety, and comfort while optimizing energy efficiency in indoor environments. The Beaver IoT platform enables data collection, intuitive visualization, flexible workflows, and seamless custom integrations for limitless IoT project potential."
-      }
+      ]
     }
-  }
+  ]
 }

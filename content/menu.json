@@ -1,0 +1,46 @@
+{
+  "navigation": [
+    {
+      "_block": "navItem",
+      "title": "Home",
+      "authType": "all",
+      "link": "/"
+    },
+    {
+      "_block": "navItem",
+      "title": "About Us",
+      "authType": "anonymous",
+      "link": "/about"
+    },
+    {
+      "_block": "navItem",
+      "title": "Contact Us",
+      "authType": "anonymous",
+      "link": "/contact"
+    },
+    {
+      "_block": "navItem",
+      "title": "Login",
+      "authType": "anonymous",
+      "link": "/login"
+    },
+    {
+      "_block": "navItem",
+      "title": "Dashboard",
+      "authType": "authenticated",
+      "link": "/dashboard"
+    },
+    {
+      "_block": "navItem",
+      "title": "Settings",
+      "authType": "authenticated",
+      "link": "/settings"
+    },
+    {
+      "_block": "navItem",
+      "title": "Logout",
+      "authType": "authenticated",
+      "link": "/logout"
+    }
+  ]
+}

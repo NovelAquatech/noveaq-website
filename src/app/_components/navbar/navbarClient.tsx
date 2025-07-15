@@ -1,14 +1,12 @@
 "use client";
 import React, { useState } from "react";
 
-type NavItem = {
-  name: string;
-  href: string;
-  current: boolean;
-};
+interface NavItemCurrent extends NavigationItem {
+  current?: boolean;
+}
 
 interface NavbarClientProps {
-  navigation: NavItem[];
+  navigation: NavItemCurrent[];
   anonymousProfileImage: string;
   authState: { isLoggedIn: boolean; user: any };
   logo: string;
@@ -90,8 +88,8 @@ export default function NavbarClient({ logo, navigation, anonymousProfileImage, 
               <div className="flex space-x-4">
                 {navigation.map((item) => (
                   <a
-                    key={item.name}
-                    href={item.href}
+                    key={item.title}
+                    href={item.link}
                     className={
                       (item.current
                         ? "bg-blue-300"
@@ -100,7 +98,7 @@ export default function NavbarClient({ logo, navigation, anonymousProfileImage, 
                     }
                     aria-current={item.current ? "page" : undefined}
                   >
-                    {item.name}
+                    {item.title}
                   </a>
                 ))}
               </div>
@@ -165,8 +163,8 @@ export default function NavbarClient({ logo, navigation, anonymousProfileImage, 
           <div className="space-y-1 px-2 pt-2 pb-3">
             {navigation.map((item) => (
               <a
-                key={item.name}
-                href={item.href}
+                key={item.title}
+                href={item.link}
                 className={
                   (item.current
                     ? "bg-blue-200 text-black"
@@ -175,7 +173,7 @@ export default function NavbarClient({ logo, navigation, anonymousProfileImage, 
                 }
                 aria-current={item.current ? "page" : undefined}
               >
-                {item.name}
+                {item.title}
               </a>
             ))}
           </div>

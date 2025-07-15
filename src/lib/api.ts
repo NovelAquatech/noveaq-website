@@ -15,7 +15,7 @@ export function getPageBySlug(slug: string) {
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
 
-  return { ...data, slug: realSlug, content: JSON.parse(content) } as Page;
+  return JSON.parse(content);
 }
 
 export function getAllPages(): Page[] {
