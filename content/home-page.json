@@ -58,7 +58,7 @@
         {
           "_block": "case",
           "title": "Industrial Equipment Monitoring",
-          "description": "Engineering teams integrate our platform to monitor electrical panels, vibration sensors, and temperature controls. When critical thresholds are breached, alerts ensure rapid response to prevent downtime or damage.",
+          "description": "Engineering teams integrate our platform to monitor electrical panels, vibration sensors, temperature controls, current monitoring, and in/out of phase checking. When critical thresholds are breached, alerts ensure rapid response to prevent downtime or damage.",
           "emoji": "🏭"
         },
         {
@@ -117,25 +117,25 @@
           "_block": "step",
           "title": "Connect Your Devices",
           "description": "Register your LoRaWAN gateway, link your sensors, and see data appear in minutes.",
-          "emoji": "1️⃣"
+          "number": "1"
         },
         {
           "_block": "step",
           "title": "Visualize Instantly",
           "description": "Use our dashboard builder to add widgets and watch real-time data flow in.",
-          "emoji": "2️⃣"
+          "number": "2"
         },
         {
           "_block": "step",
           "title": "Configure Alerts",
           "description": "Set thresholds and get automatic alerts when things go outside safe limits.",
-          "emoji": "3️⃣"
+          "number": "3"
         },
         {
           "_block": "step",
           "title": "Gain Insight & Take Action",
           "description": "Use historical trends, live dashboards, and survey responses to optimize operations.",
-          "emoji": "4️⃣"
+          "number": "4"
         }
       ]
     },

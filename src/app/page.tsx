@@ -233,16 +233,36 @@ const HowItWorksSection = ({
         <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-20 text-center">
           {howItWorksSection.title}
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="flex flex-col md:flex-row items-center justify-center">
           {howItWorksSection.steps?.map(
             (step: StepsItem, index: number) => (
-              <div
-                key={index}
-                className="text-center"
-              >
-                <div className="text-6xl mb-6">{step.emoji}</div>
-                <h3 className="text-xl font-semibold mb-4">{step.title}</h3>
-                <p className="text-gray-600">{step.description}</p>
+              <div key={index} className="flex items-center">
+                <div className="text-center flex-shrink-0 w-64">
+                  <div className="relative mb-6">
+                    <div className="w-16 h-16 mx-auto bg-blue-600 rounded-full flex items-center justify-center shadow-lg">
+                      <span className="text-2xl font-bold text-white">{step.number}</span>
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-4 text-gray-800">{step.title}</h3>
+                  <p className="text-gray-600 text-sm px-2">{step.description}</p>
+                </div>
+                {index < howItWorksSection.steps.length - 1 && (
+                  <div className="hidden md:flex items-center mx-4">
+                    <svg
+                      className="w-8 h-8 text-blue-400"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </div>
+                )}
               </div>
             )
           )}
