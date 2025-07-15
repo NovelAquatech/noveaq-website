@@ -150,9 +150,21 @@ const UseCasesSection = ({
         <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 text-center">
           {useCasesSection.title}
         </h2>
-        <p className="text-lg md:text-xl text-gray-700 mb-20 text-center">
+        <p className="text-lg md:text-xl text-gray-700 mb-12 text-center">
           {useCasesSection.subtitle}
         </p>
+        
+        {/* Image Section */}
+        {useCasesSection.image && (
+          <div className="mb-12 flex justify-center">
+            <img
+              src={useCasesSection.image}
+              alt={useCasesSection.imageAlt || "Real-world use cases"}
+              className="rounded-3xl shadow-lg max-w-4xl w-full object-cover"
+            />
+          </div>
+        )}
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {useCasesSection.cases?.map(
             (useCase: CasesItem, index: number) => (
