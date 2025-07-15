@@ -13,7 +13,8 @@ content:
     fields:
       - name: sections
         label: Sections
-        type: object
+        type: block
+        list: true
         fields:
           - name: hero
             label: Hero Section
