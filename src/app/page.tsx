@@ -20,7 +20,7 @@ export default function Index() {
 
   return (
     <main className="min-h-screen relative overflow-hidden">
-      <Navbar currentHref="/functions" />
+      <Navbar currentHref="/" />
       <HeroSection section={heroSection} />
       <SectionSelector
         sections={homePageContent.sections.filter(
