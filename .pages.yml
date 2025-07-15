@@ -51,22 +51,8 @@ content:
                       - name: emoji
                         label: Emoji
                         type: string
-              - name: demo
-                label: Demo
-                type: object
-                fields:
-                  - { name: ctaText, label: CTA Text, type: string }
-                  - { name: description, label: Description, type: string }
-                  - { name: accountName, label: Account Name, type: string }
-                  - { name: password, label: Password, type: string }
               - { name: image, label: Image, type: image }
               - { name: imageAlt, label: Image Alt, type: string }
-              - name: useCase
-                label: Use Case
-                type: object
-                fields:
-                  - { name: title, label: Title, type: string }
-                  - { name: description, label: Description, type: string }
   - name: components
     label: Components
     type: file
