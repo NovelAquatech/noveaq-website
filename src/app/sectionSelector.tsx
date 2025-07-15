@@ -21,7 +21,7 @@ const SectionSelector = ({ sections }: { sections: SectionsItem[] }) => {
             className={`px-8 py-3 text-lg font-semibold rounded-lg focus:outline-none transition-colors border-b-2 bg-white text-gray-700 border-transparent hover:bg-blue-50`}
             style={{ minWidth: 120 }}
           >
-            {section.title}
+            {section.label}
           </button>
         ))}
       </div>
