@@ -1,4 +1,4 @@
 {
-  "anonymousProfileImage": "/assets/components/anonymous-login.png",
-  "logo": "/assets/components/logo.png"
+  "anonymousProfileImage": "public/assets/components/anonymous-login.png",
+  "logo": "public/assets/components/logo.png"
 }
