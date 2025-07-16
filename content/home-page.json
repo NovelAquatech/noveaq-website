@@ -7,7 +7,7 @@
       "id": "hero",
       "subtitle": "IoT Solutions for a Connected World",
       "description": "Explore our innovative IoT solutions designed to enhance connectivity and efficiency across various industries. Join us in transforming the way devices communicate and interact.",
-      "image": "/public/assets/home-page/hero-image-1.png",
+      "image": "public/assets/home-page/hero-image-1.png",
       "imageAlt": "IoT Solutions Overview",
       "ctaText": "Get Started",
       "ctaLink": "https://novelaquatech.com/novel"
@@ -46,7 +46,7 @@
       "id": "use-cases",
       "title": "Real-World Use Cases",
       "subtitle": "From smart agriculture to predictive maintenance, Novel IoT supports a wide variety of industry applications.",
-      "image": "/assets/home-page/real-world-use-cases.jpg",
+      "image": "public/assets/home-page/real-world-use-cases.jpg",
       "imageAlt": "Real-world IoT applications in agriculture, industrial, and facility monitoring",
       "cases": [
         {
