@@ -1,7 +1,7 @@
 media:
   input: public/assets
   output: public/assets
-  categories: [ "image" ]
+  path: public/assets
 content:
   - name: home-page
     label: Home Page
