@@ -8,9 +8,9 @@
     },
     {
       "_block": "navItem",
-      "title": "About Us",
+      "title": "IoT",
       "authType": "anonymous",
-      "link": "/about"
+      "link": "/iot"
     },
     {
       "_block": "navItem",

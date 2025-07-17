@@ -1,13 +1,13 @@
-import { getPageBySlug } from "../lib/api";
-import Navbar from "./_components/navbar/navbar";
+import { getPageBySlug } from "../../lib/api";
+import Navbar from "../_components/navbar/navbar";
 
 import React from "react";
 import SectionSelector from "./sectionSelector";
 import FAQSection from "./faq-section";
-import { HomePage, SectionsItem, FeaturesItem, CasesItem, StepsItem, DemosItem, TestimonialsItem, PlansItem, HelpLinksItem } from "../types/home-page";
+import { IotPage , SectionsItem, FeaturesItem, CasesItem, StepsItem, DemosItem, TestimonialsItem, PlansItem, HelpLinksItem} from "@/types/iot-page";
 
 export default function Index() {
-  const homePageContent: HomePage = getPageBySlug("home-page.json");
+  const homePageContent: IotPage = getPageBySlug("iot-page.json");
   // Parse the JSON string to an object
 
 
@@ -21,7 +21,7 @@ export default function Index() {
 
   return (
     <main className="min-h-screen relative overflow-hidden">
-      <Navbar currentHref="/" />
+      <Navbar currentHref="/iot" />
       <HeroSection section={heroSection} />
       <SectionSelector
         sections={homePageContent.sections.filter(
