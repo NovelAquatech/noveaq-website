@@ -131,7 +131,7 @@ function ExpertiseSection({ section }: { section: SectionsItem }) {
 }
 function WhyChooseSection({ section }: { section: SectionsItem }) {
   return (
-    <section id={section.id} className="py-16 bg-blue-300/10">
+    <section id={section.id} className="py-16 bg-white">
       <div className="container mx-auto px-6 flex flex-col items-center">
         <h2 className="text-3xl font-bold mb-8 text-center">Why Choose Us</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-5xl mx-auto">
@@ -155,7 +155,7 @@ function WhyChooseSection({ section }: { section: SectionsItem }) {
 
 function ProjectsSection({ section }: { section: SectionsItem }) {
   return (
-    <section id={section.id} className="py-16 bg-white">
+    <section id={section.id} className="py-16 bg-gray-50">
       <div className="container mx-auto px-6 ">
         <h2 className="text-3xl font-bold mb-16 text-center">{section.label}</h2>
         <div className="justify-center flex flex-col lg:flex-row gap-6 overflow-x-auto pb-10">
