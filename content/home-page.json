@@ -7,7 +7,7 @@
       "label": "Hero",
       "background": {
         "mediaType": "videoOrImage",
-        "src": "/assets/iot-page/real-world-use-cases.jpg",
+        "src": "assets/iot-page/real-world-use-cases.jpg",
         "overlay": "data-visualization"
       },
       "headline": "Empowering Sustainable Cities Through Technology",
@@ -24,7 +24,7 @@
       "label": "About",
       "layout": "two-column",
       "mission": "Since 2004, Novel Aquatech has pioneered clean-tech innovations in Australia and beyond. Our mission is to blend software engineering, operational technology, and renewable energy into cohesive solutions that tackle air quality, energy storage, and automation in urban environments.",
-      "image": "/assets/home/team.jpg",
+      "image": "assets/home/team.jpg",
       "cta": {
         "label": "Learn More About Our Story",
         "href": "/about"
@@ -136,9 +136,9 @@
       "label": "Projects",
       "layout": "carousel",
       "projects": [
-        { "_block": "project", "title": "Air Quality Monitoring Network", "summary": "Commercial High-rise", "image": "/assets/home/aqm.png" },
-        { "_block": "project", "title": "Web-Based Energy Management Portal", "summary": "Residential Micro-grids", "image": "/assets/home/enman.png" },
-        { "_block": "project", "title": "Custom CNC Lab Equipment", "summary": "University R&D Labs", "image": "/assets/home/cnc.png" }
+        { "_block": "project", "title": "Air Quality Monitoring Network", "summary": "Commercial High-rise", "image": "assets/home/aqm.png" },
+        { "_block": "project", "title": "Web-Based Energy Management Portal", "summary": "Residential Micro-grids", "image": "assets/home/enman.png" },
+        { "_block": "project", "title": "Custom CNC Lab Equipment", "summary": "University R&D Labs", "image": "assets/home/cnc.png" }
       ],
       "cta": {
         "label": "View All Projects",
