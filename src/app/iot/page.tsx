@@ -2,7 +2,7 @@ import { getPageBySlug } from "../../lib/api";
 import Navbar from "../_components/navbar/navbar";
 
 import React from "react";
-import SectionSelector from "./sectionSelector";
+import SectionSelector from "../_components/sectionSelector";
 import FAQSection from "./faq-section";
 import { IotPage , SectionsItem, FeaturesItem, CasesItem, StepsItem, DemosItem, TestimonialsItem, PlansItem, HelpLinksItem} from "@/types/iot-page";
 
