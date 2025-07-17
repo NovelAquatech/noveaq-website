@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-
+import { SectionsItem } from "../types/home-page";
 
 const SectionSelector = ({ sections }: { sections: SectionsItem[] }) => {
   const handleSectionClick = (section: SectionsItem) => {

@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { NavigationItem } from "../../../types/menu";
 
 interface NavItemCurrent extends NavigationItem {
   current?: boolean;

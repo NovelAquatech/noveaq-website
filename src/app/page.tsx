@@ -1,9 +1,10 @@
 import { getPageBySlug } from "../lib/api";
 import Navbar from "./_components/navbar/navbar";
 
-
-import React, { useState } from "react";
+import React from "react";
 import SectionSelector from "./sectionSelector";
+import FAQSection from "./faq-section";
+import { HomePage, SectionsItem, FeaturesItem, CasesItem, StepsItem, DemosItem, TestimonialsItem, PlansItem, HelpLinksItem } from "../types/home-page";
 
 export default function Index() {
   const homePageContent: HomePage = getPageBySlug("home-page.json");
@@ -42,6 +43,8 @@ export default function Index() {
           return <TestimonialsSection key={section.id} section={section} />;
         if (section._block === "pricing")
           return <PricingSection key={section.id} section={section} />;
+        if (section._block === "faq")
+          return <FAQSection key={section.id} section={section} />;
         if (section._block === "contact")
           return <ContactSection key={section.id} section={section} />;
         return null;
