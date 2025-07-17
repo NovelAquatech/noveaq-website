@@ -1,0 +1,327 @@
+{
+  "sections": [
+    {
+      "_block": "hero",
+      "label": "Hero",
+      "title": "Novel IoT",
+      "id": "hero",
+      "subtitle": "IoT Solutions for a Connected World",
+      "description": "Explore our innovative IoT solutions designed to enhance connectivity and efficiency across various industries. Join us in transforming the way devices communicate and interact.",
+      "image": "assets/iot-page/hero-image-1.png",
+      "imageAlt": "IoT Solutions Overview",
+      "ctaText": "Get Started",
+      "ctaLink": "/setup-instructions"
+    },
+    {
+      "_block": "functions",
+      "label": "Functions",
+      "name": "Platform Functions",
+      "id": "functions1",
+      "title": "Deploy Your IoT Dashboard in 10 Minutes",
+      "subtitle": "Novel IoT is super user-friendly. Using our platform you can quickly see your IoT data visualized in widgets, ideal for proof-of-concept IoT solutions. We provide a range of graphs, charts, and other data displays that can be easily customized to fit your needs.",
+      "features": [
+        {
+          "_block": "feature",
+          "title": "Comprehensive Sensor Data Monitoring",
+          "description": "Monitor all key Indoor Air Quality (IAQ) parameters in real time using sensors connected via LoRaWAN gateways. Visualize sensor data for each monitored area by clicking the 'Sensor Data' tab.",
+          "emoji": "📊"
+        },
+        {
+          "_block": "feature",
+          "title": "Occupant Survey & Perception Analysis",
+          "description": "Engage occupants with a seamless QR code survey experience. Instantly capture real-world feedback and transform it into actionable insights, with powerful cloud-based analytics that reveal trends and drive smarter decisions for healthier, more comfortable spaces.",
+          "emoji": "📝"
+        },
+        {
+          "_block": "feature",
+          "title": "Automated Advisories",
+          "description": "Receive advisories when any IAQ parameter exceeds preset thresholds. The system ensures only one advisory per sensor per 24-hour period, helping you focus on actionable alerts.",
+          "emoji": "⚠️"
+        }
+      ]
+    },
+    {
+      "_block": "use-cases",
+      "label": "Applications",
+      "id": "use-cases",
+      "title": "Real-World Use Cases",
+      "subtitle": "From smart agriculture to predictive maintenance, Novel IoT supports a wide variety of industry applications.",
+      "image": "assets/iot-page/real-world-use-cases.jpg",
+      "imageAlt": "Real-world IoT applications in agriculture, industrial, and facility monitoring",
+      "cases": [
+        {
+          "_block": "case",
+          "title": "Agriculture & Crop Monitoring",
+          "description": "Farmers use Novel IoT to monitor soil moisture, humidity, temperature, and other vital conditions in real time. Alerts notify them when levels fall outside of safe thresholds, helping protect crops and maximize yield.",
+          "emoji": "🧑‍🌾"
+        },
+        {
+          "_block": "case",
+          "title": "Industrial Equipment Monitoring",
+          "description": "Engineering teams integrate our platform to monitor electrical panels, vibration sensors, temperature controls, current monitoring, and in/out of phase checking. When critical thresholds are breached, alerts ensure rapid response to prevent downtime or damage.",
+          "emoji": "🏭"
+        },
+        {
+          "_block": "case",
+          "title": "Facility Health & Air Quality",
+          "description": "For offices, schools, and hospitals, we enable continuous monitoring of indoor air quality parameters such as CO₂, VOCs, PM2.5, and temperature—alongside occupant satisfaction surveys to support WELL or NABERS certification.",
+          "emoji": "🏢"
+        }
+      ]
+    },
+    {
+      "_block": "key-features",
+      "label": "Features",
+      "id": "key-features",
+      "title": "Platform Features That Make a Difference",
+      "features": [
+        {
+          "_block": "feature",
+          "title": "Multi-Gateway Support",
+          "description": "Connect any LoRaWAN-compatible gateway like Milesight, Kerlink, or Dragino. We make onboarding seamless.",
+          "emoji": "🧩"
+        },
+        {
+          "_block": "feature",
+          "title": "Real-Time Dashboards",
+          "description": "Your data comes to life in customizable widgets. Bar charts, line graphs, heatmaps, gauges—build your perfect view.",
+          "emoji": "📊"
+        },
+        {
+          "_block": "feature",
+          "title": "Threshold-Based Alerts",
+          "description": "Configure notifications for any parameter—temperature, humidity, voltage, etc.—and receive email alerts instantly.",
+          "emoji": "📨"
+        },
+        {
+          "_block": "feature",
+          "title": "Data Export Tools",
+          "description": "Easily export data in CSV format for offline analysis, compliance, or integration with other systems.",
+          "emoji": "🧾"
+        },
+        {
+          "_block": "feature",
+          "title": "Secure Data Pipeline",
+          "description": "We use end-to-end encryption and secure API access to keep your data private and protected.",
+          "emoji": "🔒"
+        }
+      ]
+    },
+    {
+      "_block": "how-it-works",
+      "label": "Process",
+      "id": "how-it-works",
+      "title": "Getting Started is Simple",
+      "steps": [
+        {
+          "_block": "step",
+          "title": "Connect Your Devices",
+          "description": "Register your LoRaWAN gateway, link your sensors, and see data appear in minutes.",
+          "number": "1"
+        },
+        {
+          "_block": "step",
+          "title": "Visualize Instantly",
+          "description": "Use our dashboard builder to add widgets and watch real-time data flow in.",
+          "number": "2"
+        },
+        {
+          "_block": "step",
+          "title": "Configure Alerts",
+          "description": "Set thresholds and get automatic alerts when things go outside safe limits.",
+          "number": "3"
+        },
+        {
+          "_block": "step",
+          "title": "Gain Insight & Take Action",
+          "description": "Use historical trends, live dashboards, and survey responses to optimize operations.",
+          "number": "4"
+        }
+      ]
+    },
+    {
+      "_block": "live-demo",
+      "label": "Demo",
+      "id": "live-demo",
+      "title": "Try the Dashboard Live 🚀",
+      "subtitle": "Want to see how it works before committing? Explore our live sandbox demo—no setup required.",
+      "demos": [
+        {
+          "_block": "demo",
+          "title": "Farming IoT Dashboard",
+          "link": "https://novelaquatech.com/demo/farming"
+        },
+        {
+          "_block": "demo",
+          "title": "Engineering IoT Dashboard",
+          "link": "https://novelaquatech.com/demo/engineering"
+        },
+        {
+          "_block": "demo",
+          "title": "Weather Station IoT Dashboard",
+          "link": "https://novelaquatech.com/demo/weather"
+        }
+      ]
+    },
+    {
+      "_block": "testimonials",
+      "label": "Reviews",
+      "id": "testimonials",
+      "title": "What Our Customers Are Saying",
+      "testimonials": [
+        {
+          "_block": "testimonial",
+          "quote": "We've used Novel IoT through two harvests now. The real-time alerts helped us avoid a major frost event.",
+          "author": "James B.",
+          "title": "Farmer (NSW)",
+          "emoji": "🧑‍🌾"
+        },
+        {
+          "_block": "testimonial",
+          "quote": "It was easy to deploy across all our buildings. The occupant feedback integration is brilliant.",
+          "author": "Lina H.",
+          "title": "Facilities Manager",
+          "emoji": "🧑‍💼"
+        },
+        {
+          "_block": "testimonial",
+          "quote": "The dashboard gives our techs instant visibility into critical gear across 5 sites. Setup was less than an hour.",
+          "author": "Daniel M.",
+          "title": "Electrical Engineer",
+          "emoji": "⚙️"
+        }
+      ]
+    },
+    {
+      "_block": "pricing",
+      "label": "Pricing",
+      "id": "pricing",
+      "title": "Flexible Plans That Grow With You",
+      "subtitle": "Whether you're a small farm or an enterprise with thousands of devices, we've got a plan to match.",
+      "plans": [
+        {
+          "_block": "plan",
+          "name": "Starter",
+          "devices": "Up to 10",
+          "dashboards": "3",
+          "alerts": "✔️",
+          "export": "Manual",
+          "support": "Email"
+        },
+        {
+          "_block": "plan",
+          "name": "Professional",
+          "devices": "Up to 100",
+          "dashboards": "10",
+          "alerts": "✔️",
+          "export": "Scheduled",
+          "support": "Priority Email"
+        },
+        {
+          "_block": "plan",
+          "name": "Enterprise",
+          "devices": "Unlimited",
+          "dashboards": "Unlimited",
+          "alerts": "✔️",
+          "export": "API access",
+          "support": "Dedicated rep"
+        }
+      ],
+      "ctaText": "Get Started",
+      "ctaLink": "https://novelaquatech.com/signup",
+      "compareText": "Compare Plans",
+      "compareLink": "https://novelaquatech.com/pricing"
+    },
+    {
+      "_block": "faq",
+      "label": "FAQ",
+      "id": "faq",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Find answers to common questions about the Novel IoT platform, from onboarding to features and use cases.",
+      "questions": [
+        {
+          "_block": "question",
+          "question": "How do I start using Novel IoT?",
+          "answer": "Simply reach out via our Contact Us page or email us at support@noveliot.com. We'll set you up with an account. Once logged in, you can register your LoRaWAN gateway, link sensors, and begin visualizing data in minutes."
+        },
+        {
+          "_block": "question",
+          "question": "What types of widgets are available on the dashboard?",
+          "answer": "You can choose from bar charts, line graphs, heatmaps, gauges, and more. All widgets are customizable to suit your monitoring needs."
+        },
+        {
+          "_block": "question",
+          "question": "Can I test the dashboard before committing?",
+          "answer": "Yes! Explore our live sandbox demos for Farming, Engineering, or Weather Station use cases—no setup required."
+        },
+        {
+          "_block": "question",
+          "question": "Which gateways are supported?",
+          "answer": "Any LoRaWAN-compatible gateway, including Milesight, Kerlink, and Dragino. We make onboarding easy regardless of your hardware."
+        },
+        {
+          "_block": "question",
+          "question": "How many devices can I connect?",
+          "answer": "Our plans range from 10 devices (Starter) to unlimited (Enterprise). Choose the plan that scales with your operation."
+        },
+        {
+          "_block": "question",
+          "question": "How do alerts work?",
+          "answer": "Configure thresholds for any sensor parameter. The system sends one advisory per sensor per day when values exceed limits, keeping notifications actionable."
+        },
+        {
+          "_block": "question",
+          "question": "What parameters can I monitor?",
+          "answer": "From temperature and humidity to VOCs, PM2.5, voltage, and more. It's fully customizable to your use case."
+        },
+        {
+          "_block": "question",
+          "question": "Can I export sensor data?",
+          "answer": "Yes, all plans include data export tools. Choose manual CSV export, scheduled exports, or API access depending on your subscription."
+        },
+        {
+          "_block": "question",
+          "question": "Is my data secure?",
+          "answer": "Absolutely. We use end-to-end encryption and secure API access to protect your data throughout the pipeline."
+        },
+        {
+          "_block": "question",
+          "question": "How do survey responses work?",
+          "answer": "Occupants scan a QR code to submit feedback. Results are instantly available for analysis and trend detection using built-in analytics."
+        },
+        {
+          "_block": "question",
+          "question": "Can I use survey data for certifications?",
+          "answer": "Yes, our survey tools support efforts toward WELL or NABERS certification by integrating occupant experience into your IAQ strategy."
+        }
+      ]
+    },
+    {
+      "_block": "contact",
+      "label": "Contact",
+      "id": "contact",
+      "title": "Contact Us",
+      "email": "support@noveliot.com",
+      "phone": "+61 1234 5678",
+      "address": "123 Industry Rd, Sydney, NSW",
+      "helpTitle": "Help Centre",
+      "helpLinks": [
+        {
+          "_block": "link",
+          "title": "Read the Docs",
+          "url": "https://docs.noveliot.com"
+        },
+        {
+          "_block": "link",
+          "title": "API Reference",
+          "url": "https://api.noveliot.com"
+        },
+        {
+          "_block": "link",
+          "title": "Setup Tutorials",
+          "url": "https://tutorials.noveliot.com"
+        }
+      ]
+    }
+  ]
+}

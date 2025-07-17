@@ -1,6 +1,8 @@
 import { getAuthState, getPageBySlug } from "@/lib/api";
 import NavbarClient from "./navbarClient";
 import { get } from "http";
+import { Components } from "../../../types/components";
+import { Menu } from "../../../types/menu";
 
 // Server component: fetches data, passes to client component
 export default function Navbar({ currentHref }: { currentHref: string }) {
