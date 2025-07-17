@@ -303,7 +303,6 @@ content:
   - name: setup-instructions-md
     label: Setup Instructions Markdown
     type: file
-    format: markdown
     path: "content/setup-instructions.md"
     fields:
       - { name: title, label: Title, type: string }
