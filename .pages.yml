@@ -308,7 +308,7 @@ content:
       - { name: title, label: Title, type: string }
       - { name: description, label: Description, type: string }
       - { name: author, label: Author, type: string }
-      - { name: content , label: Content, type: rich-text }
+      - { name: body , label: Body, type: rich-text }
   - name: home-page
     label: Home Page
     type: file
