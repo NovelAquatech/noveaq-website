@@ -10,7 +10,7 @@
       "image": "assets/iot-page/hero-image-1.png",
       "imageAlt": "IoT Solutions Overview",
       "ctaText": "Get Started",
-      "ctaLink": "https://novelaquatech.com/novel"
+      "ctaLink": "/setup-instructions"
     },
     {
       "_block": "functions",
