@@ -233,6 +233,70 @@
       "compareLink": "https://novelaquatech.com/pricing"
     },
     {
+      "_block": "faq",
+      "label": "FAQ",
+      "id": "faq",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Find answers to common questions about the Novel IoT platform, from onboarding to features and use cases.",
+      "questions": [
+        {
+          "_block": "question",
+          "question": "How do I start using Novel IoT?",
+          "answer": "Simply reach out via our Contact Us page or email us at support@noveliot.com. We'll set you up with an account. Once logged in, you can register your LoRaWAN gateway, link sensors, and begin visualizing data in minutes."
+        },
+        {
+          "_block": "question",
+          "question": "What types of widgets are available on the dashboard?",
+          "answer": "You can choose from bar charts, line graphs, heatmaps, gauges, and more. All widgets are customizable to suit your monitoring needs."
+        },
+        {
+          "_block": "question",
+          "question": "Can I test the dashboard before committing?",
+          "answer": "Yes! Explore our live sandbox demos for Farming, Engineering, or Weather Station use cases—no setup required."
+        },
+        {
+          "_block": "question",
+          "question": "Which gateways are supported?",
+          "answer": "Any LoRaWAN-compatible gateway, including Milesight, Kerlink, and Dragino. We make onboarding easy regardless of your hardware."
+        },
+        {
+          "_block": "question",
+          "question": "How many devices can I connect?",
+          "answer": "Our plans range from 10 devices (Starter) to unlimited (Enterprise). Choose the plan that scales with your operation."
+        },
+        {
+          "_block": "question",
+          "question": "How do alerts work?",
+          "answer": "Configure thresholds for any sensor parameter. The system sends one advisory per sensor per day when values exceed limits, keeping notifications actionable."
+        },
+        {
+          "_block": "question",
+          "question": "What parameters can I monitor?",
+          "answer": "From temperature and humidity to VOCs, PM2.5, voltage, and more. It's fully customizable to your use case."
+        },
+        {
+          "_block": "question",
+          "question": "Can I export sensor data?",
+          "answer": "Yes, all plans include data export tools. Choose manual CSV export, scheduled exports, or API access depending on your subscription."
+        },
+        {
+          "_block": "question",
+          "question": "Is my data secure?",
+          "answer": "Absolutely. We use end-to-end encryption and secure API access to protect your data throughout the pipeline."
+        },
+        {
+          "_block": "question",
+          "question": "How do survey responses work?",
+          "answer": "Occupants scan a QR code to submit feedback. Results are instantly available for analysis and trend detection using built-in analytics."
+        },
+        {
+          "_block": "question",
+          "question": "Can I use survey data for certifications?",
+          "answer": "Yes, our survey tools support efforts toward WELL or NABERS certification by integrating occupant experience into your IAQ strategy."
+        }
+      ]
+    },
+    {
       "_block": "contact",
       "label": "Contact",
       "id": "contact",
