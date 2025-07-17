@@ -1,7 +1,7 @@
 "use client";
 
+import { QuestionsItem, SectionsItem } from "@/types/iot-page";
 import React, { useState } from "react";
-import { SectionsItem, QuestionsItem } from "../types/home-page";
 
 const FAQSection = ({
   section: faqSection,

@@ -18,6 +18,15 @@ export function getPageBySlug(slug: string) {
   return JSON.parse(content);
 }
 
+export function getMarkdownBySlug(slug: string) {
+  const realSlug = slug.replace(/\.md$/, "");
+  const fullPath = join(postsDirectory, `${realSlug}.md`);
+  const fileContents = fs.readFileSync(fullPath, "utf8");
+  const { data, content } = matter(fileContents);
+
+  return content;
+}
+
 export function getAllPages(): Page[] {
   const slugs = getPostSlugs();
   const posts = slugs
