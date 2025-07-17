@@ -347,7 +347,6 @@ content:
             type: object
             fields:
               - { name: id, label: ID, type: string }
-              - { name: _block, label: Block, type: string }
               - { name: type, label: Type, type: string }
               - { name: label, label: Label, type: string }
               - { name: layout, label: Layout, type: string }
@@ -364,7 +363,6 @@ content:
             type: object
             fields:
               - { name: id, label: ID, type: string }
-              - { name: _block, label: Block, type: string }
               - { name: type, label: Type, type: string }
               - { name: label, label: Label, type: string }
               - { name: layout, label: Layout, type: string }
@@ -376,7 +374,6 @@ content:
                   - name: card
                     label: Card
                     fields:
-                      - { name: _block, label: Block, type: string }
                       - { name: title, label: Title, type: string }
                       - { name: icon, label: Icon, type: string }
                       - { name: summary, label: Summary, type: string }
@@ -388,7 +385,6 @@ content:
                           - name: highlight
                             label: Highlight
                             fields:
-                              - { name: _block, label: Block, type: string }
                               - { name: text, label: Text, type: string }
                       - name: cta
                         label: Call to Action
@@ -401,7 +397,6 @@ content:
             type: object
             fields:
               - { name: id, label: ID, type: string }
-              - { name: _block, label: Block, type: string }
               - { name: type, label: Type, type: string }
               - { name: label, label: Label, type: string }
               - { name: background, label: Background, type: string }
@@ -413,7 +408,6 @@ content:
                   - name: proposition
                     label: Proposition
                     fields:
-                      - { name: _block, label: Block, type: string }
                       - { name: icon, label: Icon, type: string }
                       - { name: caption, label: Caption, type: string }
                       - { name: description, label: Description, type: string }
@@ -422,7 +416,6 @@ content:
             type: object
             fields:
               - { name: id, label: ID, type: string }
-              - { name: _block, label: Block, type: string }
               - { name: type, label: Type, type: string }
               - { name: label, label: Label, type: string }
               - { name: layout, label: Layout, type: string }
@@ -434,7 +427,6 @@ content:
                   - name: project
                     label: Project
                     fields:
-                      - { name: _block, label: Block, type: string }
                       - { name: title, label: Title, type: string }
                       - { name: summary, label: Summary, type: string }
                       - { name: image, label: Image, type: image }
@@ -449,7 +441,6 @@ content:
             type: object
             fields:
               - { name: id, label: ID, type: string }
-              - { name: _block, label: Block, type: string }
               - { name: type, label: Type, type: string }
               - { name: label, label: Label, type: string }
               - { name: background, label: Background, type: string }
@@ -473,7 +464,6 @@ content:
                       - name: field
                         label: Field
                         fields:
-                          - { name: _block, label: Block, type: string }
                           - { name: name, label: Name, type: string }
                           - { name: type, label: Type, type: string }
           - name: footer
@@ -481,7 +471,6 @@ content:
             type: object
             fields:
               - { name: id, label: ID, type: string }
-              - { name: _block, label: Block, type: string }
               - { name: type, label: Type, type: string }
               - { name: label, label: Label, type: string }
               - name: columns
@@ -492,7 +481,6 @@ content:
                   - name: column
                     label: Column
                     fields:
-                      - { name: _block, label: Block, type: string }
                       - { name: title, label: Title, type: string }
                       - name: links
                         label: Links
@@ -502,7 +490,6 @@ content:
                           - name: link
                             label: Link
                             fields:
-                              - { name: _block, label: Block, type: string }
                               - { name: label, label: Label, type: string }
                               - { name: href, label: Link, type: string }
               - { name: copyright, label: Copyright, type: string }
