@@ -2,7 +2,7 @@
 import { SectionsItem } from "@/types/home-page";
 import React from "react";
 
-const SectionSelector = ({ sections }: { sections: SectionsItem[] }) => {
+const SectionSelector = ({ sections }: { sections: any }) => {
   const handleSectionClick = (section: SectionsItem) => {
     const sectionElement = document.getElementById(section.id);
     if (sectionElement) {
@@ -14,7 +14,7 @@ const SectionSelector = ({ sections }: { sections: SectionsItem[] }) => {
     <div className="border-b border-gray-200">
     <div className="container mx-auto bg-white">
       <div className="flex space-x-2 md:space-x-8 mt-4 mb-4 overflow-x-auto scrollbar-hide">
-        {sections.map((section) => (
+        {sections.filter((s:any)=>s.id!=="hero" && s.id !=="footer").map((section :any) => (
           <button
             key={section.id}
             onClick={() => handleSectionClick(section)}

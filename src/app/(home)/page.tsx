@@ -1,7 +1,7 @@
-import { HomePage } from "@/types/home-page";
+import { Background, HomePage, SectionsItem } from "@/types/home-page";
 import Navbar from "../_components/navbar/navbar";
 import { getPageBySlug } from "@/lib/api";
-import SectionSelector from "./sectionSelector";
+import SectionSelector from "../_components/sectionSelector";
 
 export default function Index() {
   const homePageContent: HomePage = getPageBySlug("home-page.json");
@@ -39,11 +39,12 @@ export default function Index() {
   );
 }
 
-function HeroSection({ section }: { section: any }) {
+function HeroSection({ section }: { section: SectionsItem }) {
   return (
     <section
+      id={section.id}
       className="relative flex flex-col items-center justify-center min-h-[60vh] bg-cover bg-center"
-      style={{ backgroundImage: `url(${section.background.src})` }}
+      style={{ backgroundImage: `url(${(section.background as Background).src})` }}
     >
       <div className="absolute inset-0 bg-black/40" />
       <div className="relative z-10 text-center px-6 py-16 max-w-2xl mx-auto">
@@ -66,9 +67,9 @@ function HeroSection({ section }: { section: any }) {
   );
 }
 
-function AboutSection({ section }: { section: any }) {
+function AboutSection({ section }: { section: SectionsItem }) {
   return (
-    <section className="py-16 bg-white">
+    <section id={section.id} className="py-16 bg-white">
       <div className="container mx-auto flex flex-col md:flex-row items-center gap-20 px-6">
         <img
           src={section.image}
@@ -92,13 +93,13 @@ function AboutSection({ section }: { section: any }) {
   );
 }
 
-function ExpertiseSection({ section }: { section: any }) {
+function ExpertiseSection({ section }: { section: SectionsItem }) {
   return (
-    <section className="py-16 bg-gray-50">
+    <section id={section.id} className="py-16 bg-gray-50">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl font-bold mb-8 text-center">{section.label}</h2>
         <div className="grid md:grid-cols-3 gap-8">
-          {section.cards.map((card: any, idx: number) => (
+          {section.cards?.map((card: any, idx: number) => (
             <div
               key={idx}
               className="bg-white rounded-lg shadow p-6 flex flex-col"
@@ -128,13 +129,13 @@ function ExpertiseSection({ section }: { section: any }) {
     </section>
   );
 }
-function WhyChooseSection({ section }: { section: any }) {
+function WhyChooseSection({ section }: { section: SectionsItem }) {
   return (
-    <section className="py-16 bg-blue-300/10">
+    <section id={section.id} className="py-16 bg-blue-300/10">
       <div className="container mx-auto px-6 flex flex-col items-center">
         <h2 className="text-3xl font-bold mb-8 text-center">Why Choose Us</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-5xl mx-auto">
-          {section.propositions.map((prop: any, idx: number) => (
+          {section.propositions?.map((prop: any, idx: number) => (
             <div
               key={idx}
               className="flex flex-col items-center bg-white rounded-lg shadow p-6"
@@ -152,13 +153,13 @@ function WhyChooseSection({ section }: { section: any }) {
   );
 }
 
-function ProjectsSection({ section }: { section: any }) {
+function ProjectsSection({ section }: { section: SectionsItem }) {
   return (
-    <section className="py-16 bg-white">
+    <section id={section.id} className="py-16 bg-white">
       <div className="container mx-auto px-6 ">
         <h2 className="text-3xl font-bold mb-16 text-center">{section.label}</h2>
         <div className="justify-center flex flex-col lg:flex-row gap-6 overflow-x-auto pb-10">
-          {section.projects.map((project: any, idx: number) => (
+          {section.projects?.map((project: any, idx: number) => (
             <div
               key={idx}
               className="min-w-[300px] max-w-md bg-gray-100 rounded-2xl shadow flex flex-col items-center m-auto"
@@ -188,14 +189,14 @@ function ProjectsSection({ section }: { section: any }) {
   );
 }
 
-function ContactSection({ section }: { section: any }) {
+function ContactSection({ section }: { section: SectionsItem }) {
   return (
-    <section className="py-16 bg-blue-900 text-white">
+    <section id={section.id} className="py-16 bg-blue-900 text-white">
       <div className="container mx-auto px-6 text-center">
         <h2 className="text-3xl font-bold mb-4">{section.headline}</h2>
         <p className="mb-8 text-lg">{section.subheadline}</p>
         <form className="max-w-xl mx-auto grid gap-4 mt-8">
-          {section.form.fields.map((field: any, idx: number) => (
+          {section.form?.fields.map((field: any, idx: number) => (
             <div key={idx}>
               <label className="block mb-2 text-left font-medium">
                 {field.name}
@@ -227,11 +228,11 @@ function ContactSection({ section }: { section: any }) {
   );
 }
 
-function FooterSection({ section }: { section: any }) {
+function FooterSection({ section }: { section: SectionsItem }) {
   return (
-    <footer className="bg-gray-900 text-white py-10">
+    <footer id={section.id} className="bg-gray-900 text-white py-10">
       <div className="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8">
-        {section.columns.map((col: any, idx: number) => (
+        {section.columns?.map((col: any, idx: number) => (
           <div key={idx}>
             <h4 className="font-bold mb-4">{col.title}</h4>
             <ul>
