@@ -203,13 +203,13 @@ function ContactSection({ section }: { section: SectionsItem }) {
               </label>
               {field.type === "textarea" ? (
                 <textarea
-                  className="w-full p-3 rounded"
+                  className="w-full p-3 rounded text-black"
                   rows={4}
                   name={field.name}
                 />
               ) : (
                 <input
-                  className="w-full p-3 rounded"
+                  className="w-full p-3 rounded text-black"
                   type={field.type}
                   name={field.name}
                 />
