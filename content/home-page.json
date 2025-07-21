@@ -1,42 +1,215 @@
 {
   "sections": [
     {
-      "_block": "hero",
-      "title": "Novel IoT",
       "id": "hero",
-      "subtitle": "IoT Solutions for a Connected World",
-      "description": "Explore our innovative IoT solutions designed to enhance connectivity and efficiency across various industries. Join us in transforming the way devices communicate and interact.",
-      "image": "/assets/home-page/hero-image.png",
-      "imageAlt": "IoT Solutions Overview",
-      "ctaText": "Get Started",
-      "ctaLink": "https://novelaquatech.com/novel"
+      "type": "hero",
+      "_block": "hero",
+      "label": "Hero",
+      "background": {
+        "mediaType": "videoOrImage",
+        "src": "assets/iot-page/real-world-use-cases.jpg",
+        "overlay": "data-visualization"
+      },
+      "headline": "Empowering Sustainable Cities Through Technology",
+      "subheadline": "From bespoke software to IoT networks and renewable energy systems, we deliver end-to-end solutions for tomorrow’s urban challenges.",
+      "cta": {
+        "label": "Explore Our Solutions",
+        "href": "/expertise"
+      }
     },
     {
-      "_block": "functions",
-      "name": "Platform Functions",
-      "id": "functions1",
-      "title": "Deploy Your IoT Dashboard in 10 Minutes",
-      "subtitle": "Novel IoT is super user-friendly. Using our platform you can quickly see your IoT data visualized in widgets, ideal for proof-of-concept IoT solutions. We provide a range of graphs, charts, and other data displays that can be easily customized to fit your needs.",
-      "features": [
+      "id": "about",
+      "_block": "about",
+      "type": "about-snapshot",
+      "label": "About",
+      "layout": "two-column",
+      "mission": "Since 2004, Novel Aquatech has pioneered clean-tech innovations in Australia and beyond. Our mission is to blend software engineering, operational technology, and renewable energy into cohesive solutions that tackle air quality, energy storage, and automation in urban environments.",
+      "image": "assets/home/team.jpg",
+      "cta": {
+        "label": "Learn More About Our Story",
+        "href": "/about"
+      }
+    },
+    {
+      "id": "expertise",
+      "_block": "expertise",
+      "type": "core-expertise",
+      "label": "Expertise",
+      "layout": "grid",
+      "cards": [
         {
-          "_block": "feature",
-          "title": "Comprehensive Sensor Data Monitoring",
-          "description": "Monitor all key Indoor Air Quality (IAQ) parameters in real time using sensors connected via LoRaWAN gateways. Visualize sensor data for each monitored area by clicking the 'Sensor Data' tab.",
-          "emoji": "📊"
+          "_block": "card",
+          "title": "Software Engineering Services",
+          "icon": "code-lab",
+          "summary": "We build scalable, secure applications tailored for government, commercial, and R&D clients—transforming ideas into robust digital products.",
+          "highlights": [
+            { "_block": "highlight", "text": "Custom web & mobile applications" },
+            { "_block": "highlight", "text": "Cloud architecture & DevOps pipelines" },
+            { "_block": "highlight", "text": "Data analytics & AI integrations" }
+          ],
+          "cta": {
+            "label": "Learn More",
+            "href": "/software-engineering"
+          }
         },
         {
-          "_block": "feature",
-          "title": "Occupant Survey & Perception Analysis",
-          "description": "Engage occupants with a seamless QR code survey experience. Instantly capture real-world feedback and transform it into actionable insights, with powerful cloud-based analytics that reveal trends and drive smarter decisions for healthier, more comfortable spaces.",
-          "emoji": "📝"
+          "_block": "card",
+          "title": "IoT & Operational Technology",
+          "icon": "chip",
+          "summary": "Our R&D-driven IoT solutions turn physical assets into intelligent systems, from real-time air quality monitors to automated lab equipment.",
+          "highlights": [
+            { "_block": "highlight", "text": "Wireless sensor networks" },
+            { "_block": "highlight", "text": "3D-printed enclosures & CNC-machined prototypes" },
+            { "_block": "highlight", "text": "Centralized dashboards & remote control" }
+          ],
+          "cta": {
+            "label": "Learn More",
+            "href": "/iot"
+          }
         },
         {
-          "_block": "feature",
-          "title": "Automated Advisories",
-          "description": "Receive advisories when any IAQ parameter exceeds preset thresholds. The system ensures only one advisory per sensor per 24-hour period, helping you focus on actionable alerts.",
-          "emoji": "⚠️"
+          "_block": "card",
+          "title": "Renewable & Non-Conventional Energy",
+          "icon": "solar-battery",
+          "summary": "We design and deploy residential and commercial energy storage solutions, integrating Wi-Fi-enabled sensors and web portals for full visibility and control.",
+          "highlights": [
+            { "_block": "highlight", "text": "Modular battery storage packs" },
+            { "_block": "highlight", "text": "IoT-enabled performance monitoring" },
+            { "_block": "highlight", "text": "Compliance & safety certification support" }
+          ],
+          "cta": {
+            "label": "Learn More",
+            "href": "/energy"
+          }
         }
       ]
+    },
+    {
+      "id": "why-choose",
+      "_block": "why-choose",
+      "type": "value-propositions",
+      "label": "Why",
+      "background": "tinted",
+      "propositions": [
+        {
+          "_block": "proposition",
+          "icon": "🧑‍🔬",
+          "caption": "Deep Technical Expertise in Clean-Tech",
+          "description": "Our team combines decades of experience in software engineering, IoT, and renewable energy to deliver innovative solutions for complex urban challenges."
+        },
+        {
+          "_block": "proposition",
+          "icon": "📈",
+          "caption": "Proven Profitability & Scalable Growth",
+          "description": "We help clients achieve measurable ROI and long-term scalability, leveraging efficient processes and technologies that support sustainable business expansion."
+        },
+        {
+          "_block": "proposition",
+          "icon": "🔗",
+          "caption": "Holistic End-to-End Delivery",
+          "description": "From concept to deployment, we manage every stage of your project, ensuring seamless integration across hardware, software, and operational systems."
+        },
+        {
+          "_block": "proposition",
+          "icon": "⚡",
+          "caption": "Agile R&D & Rapid Prototyping",
+          "description": "Our agile approach accelerates development cycles, enabling rapid prototyping and iterative improvements to meet evolving requirements."
+        },
+        {
+          "_block": "proposition",
+          "icon": "🌱",
+          "caption": "Commitment to Sustainability",
+          "description": "We prioritize eco-friendly practices and technologies, helping clients reduce their environmental impact while achieving operational excellence."
+        },
+        {
+          "_block": "proposition",
+          "icon": "🤝",
+          "caption": "Collaborative Partnerships",
+          "description": "We work closely with clients, stakeholders, and communities to co-create solutions that address real-world needs and drive positive change."
+        }
+      ]
+    },
+    {
+      "id": "projects",
+      "_block": "projects",
+      "type": "featured-projects",
+      "label": "Projects",
+      "layout": "carousel",
+      "projects": [
+        { "_block": "project", "title": "Air Quality Monitoring Network", "summary": "Commercial High-rise", "image": "assets/home/aqm.png" },
+        { "_block": "project", "title": "Web-Based Energy Management Portal", "summary": "Residential Micro-grids", "image": "assets/home/enman.png" },
+        { "_block": "project", "title": "Custom CNC Lab Equipment", "summary": "University R&D Labs", "image": "assets/home/cnc.png" }
+      ],
+      "cta": {
+        "label": "View All Projects",
+        "href": "/projects"
+      }
+    },
+    {
+      "id": "contact",
+      "_block": "contact",
+      "type": "call-to-action",
+      "label": "Contact",
+      "background": "bold",
+      "headline": "Ready to Transform Your Environment?",
+      "subheadline": "Whether you’re prototyping a new IoT device or scaling renewable energy deployments, our experts are here to help.",
+      "cta": {
+        "label": "Get in Touch",
+        "href": "/contact"
+      },
+      "form": {
+        "fields": [
+          { "_block": "field", "name": "Name", "type": "text" },
+          { "_block": "field", "name": "Email", "type": "email" },
+          { "_block": "field", "name": "Inquiry", "type": "textarea" }
+        ]
+      }
+    },
+    {
+      "id": "footer",
+      "_block": "footer",
+      "type": "footer",
+      "label": "Footer",
+      "columns": [
+        {
+          "_block": "column",
+          "title": "Company",
+          "links": [
+            { "_block": "link", "label": "About", "href": "/about" },
+            { "_block": "link", "label": "Careers", "href": "/careers" },
+            { "_block": "link", "label": "News", "href": "/news" }
+          ]
+        },
+        {
+          "_block": "column",
+          "title": "Solutions",
+          "links": [
+            { "_block": "link", "label": "Software", "href": "/software-engineering" },
+            { "_block": "link", "label": "IoT", "href": "/iot" },
+            { "_block": "link", "label": "Energy", "href": "/energy" }
+          ]
+        },
+        {
+          "_block": "column",
+          "title": "Resources",
+          "links": [
+            { "_block": "link", "label": "Blog", "href": "/blog" },
+            { "_block": "link", "label": "Case Studies", "href": "/case-studies" },
+            { "_block": "link", "label": "White Papers", "href": "/white-papers" }
+          ]
+        },
+        {
+          "_block": "column",
+          "title": "Contact",
+          "links": [
+            { "_block": "link", "label": "Address", "href": "/contact" },
+            { "_block": "link", "label": "Phone", "href": "tel:+123456789" },
+            { "_block": "link", "label": "Email", "href": "mailto:info@novelaquatech.com" },
+            { "_block": "link", "label": "LinkedIn", "href": "https://linkedin.com/company/novelaquatech" }
+          ]
+        }
+      ],
+      "copyright": "© Novel Aquatech 2025. All rights reserved."
     }
   ]
 }
