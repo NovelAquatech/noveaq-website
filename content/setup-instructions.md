@@ -15,9 +15,9 @@ author: NovelAQ Team
     
 *   Then add a new connection by pressing the + button on this page. Click on HTTP. Add the required url in the uplink section:
     
-    *   Development Enviornment: `https://prod-08.australiaeast.logic.azure.com:443/workflows/139847fb6ac344b78ea9727a8cc51bf8/triggers/WebHook/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWebHook%2Frun&sv=1.0&sig=OruDuzhSPA-55mKYRW8QZU9tUfU91kRo5PUzuPa5Yko`
+    *   Development Enviornment: `https://ug65-novel-dev-2.azurewebsites.net/api/ug65-data-ingestion-http`
         
-    *   Production Environment: `https://prod-23.australiaeast.logic.azure.com:443/workflows/0abfb0873c7f4f25a6d186de3e57c7d0/triggers/WebHook/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWebHook%2Frun&sv=1.0&sig=6L7gshNNsm3Cy5qK7J6UOEC0ta5wxmDZS1-5t-JiD8E`
+    *   Production Environment: `https://ug65-novel.azurewebsites.net/api/ug65-data-ingestion-http`
         
 *   Click save
     
