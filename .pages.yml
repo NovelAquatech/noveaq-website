@@ -1,13 +1,13 @@
 media:
   input: public/assets
-  output: /assets
-  categories: [ "image" ]
+  output: assets
+  path: public/assets
 content:
-  - name: home-page
-    label: Home Page
+  - name: iot-page
+    label: IoT Page
     type: file
     format: json
-    path: "content/home-page.json"
+    path: "content/iot-page.json"
     view:
       fields: [ coverImage, title, date ]
     fields:
@@ -20,6 +20,7 @@ content:
             label: Hero Section
             type: object
             fields:
+              - { name: label, label: Label, type: string }
               - { name: title, label: Title, type: string }
               - { name: id, label: id, type: string }
               - { name: subtitle, label: Subtitle, type: string }
@@ -32,6 +33,7 @@ content:
             label: Platform Functions
             type: object
             fields:
+              - { name: label, label: Label, type: string }
               - { name: name, label: Name, type: string }
               - { name: id, label: id, type: string }
               - { name: title, label: Title, type: string }
@@ -55,6 +57,215 @@ content:
                         type: string
               - { name: image, label: Image, type: image }
               - { name: imageAlt, label: Image Alt, type: string }
+          - name: use-cases
+            label: Use Cases by Industry
+            type: object
+            fields:
+              - { name: label, label: Label, type: string }
+              - { name: id, label: id, type: string }
+              - { name: title, label: Title, type: string }
+              - { name: subtitle, label: Subtitle, type: string }
+              - { name: image, label: Image, type: image }
+              - { name: imageAlt, label: Image Alt, type: string }
+              - name: cases
+                label: Use Cases
+                type: block
+                list: true
+                blocks:
+                  - name: case
+                    label: Use Case
+                    fields:
+                      - name: title
+                        label: Title
+                        type: string
+                      - name: description
+                        label: Description
+                        type: string
+                      - name: emoji
+                        label: Emoji
+                        type: string
+          - name: key-features
+            label: Key Features
+            type: object
+            fields:
+              - { name: label, label: Label, type: string }
+              - { name: id, label: id, type: string }
+              - { name: title, label: Title, type: string }
+              - name: features
+                label: Features
+                type: block
+                list: true
+                blocks:
+                  - name: feature
+                    label: Feature
+                    fields:
+                      - name: title
+                        label: Title
+                        type: string
+                      - name: description
+                        label: Description
+                        type: string
+                      - name: emoji
+                        label: Emoji
+                        type: string
+          - name: how-it-works
+            label: How It Works
+            type: object
+            fields:
+              - { name: label, label: Label, type: string }
+              - { name: id, label: id, type: string }
+              - { name: title, label: Title, type: string }
+              - name: steps
+                label: Steps
+                type: block
+                list: true
+                blocks:
+                  - name: step
+                    label: Step
+                    fields:
+                      - name: title
+                        label: Title
+                        type: string
+                      - name: description
+                        label: Description
+                        type: string
+                      - name: number
+                        label: Number
+                        type: string
+          - name: live-demo
+            label: Live Demo Invitation
+            type: object
+            fields:
+              - { name: label, label: Label, type: string }
+              - { name: id, label: id, type: string }
+              - { name: title, label: Title, type: string }
+              - { name: subtitle, label: Subtitle, type: string }
+              - name: demos
+                label: Demo Buttons
+                type: block
+                list: true
+                blocks:
+                  - name: demo
+                    label: Demo Button
+                    fields:
+                      - name: title
+                        label: Title
+                        type: string
+                      - name: link
+                        label: Link
+                        type: string
+          - name: testimonials
+            label: Testimonials
+            type: object
+            fields:
+              - { name: label, label: Label, type: string }
+              - { name: id, label: id, type: string }
+              - { name: title, label: Title, type: string }
+              - name: testimonials
+                label: Testimonials
+                type: block
+                list: true
+                blocks:
+                  - name: testimonial
+                    label: Testimonial
+                    fields:
+                      - name: quote
+                        label: Quote
+                        type: string
+                      - name: author
+                        label: Author
+                        type: string
+                      - name: title
+                        label: Author Title
+                        type: string
+                      - name: emoji
+                        label: Emoji
+                        type: string
+          - name: pricing
+            label: Pricing Plans
+            type: object
+            fields:
+              - { name: label, label: Label, type: string }
+              - { name: id, label: id, type: string }
+              - { name: title, label: Title, type: string }
+              - { name: subtitle, label: Subtitle, type: string }
+              - name: plans
+                label: Pricing Plans
+                type: block
+                list: true
+                blocks:
+                  - name: plan
+                    label: Plan
+                    fields:
+                      - name: name
+                        label: Plan Name
+                        type: string
+                      - name: devices
+                        label: Devices
+                        type: string
+                      - name: dashboards
+                        label: Dashboards
+                        type: string
+                      - name: alerts
+                        label: Alerts
+                        type: string
+                      - name: export
+                        label: Export
+                        type: string
+                      - name: support
+                        label: Support
+                        type: string
+              - { name: ctaText, label: CTA Text, type: string }
+              - { name: ctaLink, label: CTA Link, type: string }
+              - { name: compareText, label: Compare Text, type: string }
+              - { name: compareLink, label: Compare Link, type: string }
+          - name: faq
+            label: FAQ Section
+            type: object
+            fields:
+              - { name: label, label: Label, type: string }
+              - { name: id, label: id, type: string }
+              - { name: title, label: Title, type: string }
+              - { name: subtitle, label: Subtitle, type: string }
+              - name: questions
+                label: Questions
+                type: block
+                list: true
+                blocks:
+                  - name: question
+                    label: Question
+                    fields:
+                      - name: question
+                        label: Question
+                        type: string
+                      - name: answer
+                        label: Answer
+                        type: string
+          - name: contact
+            label: Contact & Support
+            type: object
+            fields:
+              - { name: label, label: Label, type: string }
+              - { name: id, label: id, type: string }
+              - { name: title, label: Title, type: string }
+              - { name: email, label: Email, type: string }
+              - { name: phone, label: Phone, type: string }
+              - { name: address, label: Address, type: string }
+              - { name: helpTitle, label: Help Centre Title, type: string }
+              - name: helpLinks
+                label: Help Links
+                type: block
+                list: true
+                blocks:
+                  - name: link
+                    label: Link
+                    fields:
+                      - name: title
+                        label: Title
+                        type: string
+                      - name: url
+                        label: URL
+                        type: string
   - name: components
     label: Components
     type: file
@@ -80,3 +291,205 @@ content:
               - { name: title, label: Title, type: string }
               - { name: link, label: Link, type: string }
               - { name: authType, label: Authentication Type, type: select, options: { values: [ "all", "anonymous", "authenticated" ] } }
+  - name: setup-instructions-json
+    label: Setup Instructions
+    type: file
+    format: json
+    path: "content/setup-instructions.json"
+    fields:
+      - { name: title, label: Title, type: string }
+      - { name: description, label: Description, type: string }
+      - { name: file, label: File, type: string }
+  - name: setup-instructions-md
+    label: Setup Instructions Markdown
+    type: file
+    path: "content/setup-instructions.md"
+    fields:
+      - { name: title, label: Title, type: string }
+      - { name: description, label: Description, type: string }
+      - { name: author, label: Author, type: string }
+      - { name: body , label: Body, type: rich-text }
+  - name: home-page
+    label: Home Page
+    type: file
+    format: json
+    path: "content/home-page.json"
+    fields:
+      - name: sections
+        label: Sections
+        type: block
+        list: true
+        blocks:
+          - name: hero
+            label: Hero
+            type: object
+            fields:
+              - { name: id, label: ID, type: string }
+              - { name: type, label: Type, type: string }
+              - { name: label, label: Label, type: string }
+              - name: background
+                label: Background
+                type: object
+                fields:
+                  - { name: mediaType, label: Media Type, type: string }
+                  - { name: src, label: Source, type: string }
+                  - { name: overlay, label: Overlay, type: string }
+              - { name: headline, label: Headline, type: string }
+              - { name: subheadline, label: Subheadline, type: string }
+              - name: cta
+                label: Call to Action
+                type: object
+                fields:
+                  - { name: label, label: Label, type: string }
+                  - { name: href, label: Link, type: string }
+          - name: about
+            label: About
+            type: object
+            fields:
+              - { name: id, label: ID, type: string }
+              - { name: type, label: Type, type: string }
+              - { name: label, label: Label, type: string }
+              - { name: layout, label: Layout, type: string }
+              - { name: mission, label: Mission, type: string }
+              - { name: image, label: Image, type: image }
+              - name: cta
+                label: Call to Action
+                type: object
+                fields:
+                  - { name: label, label: Label, type: string }
+                  - { name: href, label: Link, type: string }
+          - name: expertise
+            label: Expertise
+            type: object
+            fields:
+              - { name: id, label: ID, type: string }
+              - { name: type, label: Type, type: string }
+              - { name: label, label: Label, type: string }
+              - { name: layout, label: Layout, type: string }
+              - name: cards
+                label: Cards
+                type: block
+                list: true
+                blocks:
+                  - name: card
+                    label: Card
+                    fields:
+                      - { name: title, label: Title, type: string }
+                      - { name: icon, label: Icon, type: string }
+                      - { name: summary, label: Summary, type: string }
+                      - name: highlights
+                        label: Highlights
+                        type: block
+                        list: true
+                        blocks:
+                          - name: highlight
+                            label: Highlight
+                            fields:
+                              - { name: text, label: Text, type: string }
+                      - name: cta
+                        label: Call to Action
+                        type: object
+                        fields:
+                          - { name: label, label: Label, type: string }
+                          - { name: href, label: Link, type: string }
+          - name: why-choose
+            label: Why Choose
+            type: object
+            fields:
+              - { name: id, label: ID, type: string }
+              - { name: type, label: Type, type: string }
+              - { name: label, label: Label, type: string }
+              - { name: background, label: Background, type: string }
+              - name: propositions
+                label: Propositions
+                type: block
+                list: true
+                blocks:
+                  - name: proposition
+                    label: Proposition
+                    fields:
+                      - { name: icon, label: Icon, type: string }
+                      - { name: caption, label: Caption, type: string }
+                      - { name: description, label: Description, type: string }
+          - name: projects
+            label: Projects
+            type: object
+            fields:
+              - { name: id, label: ID, type: string }
+              - { name: type, label: Type, type: string }
+              - { name: label, label: Label, type: string }
+              - { name: layout, label: Layout, type: string }
+              - name: projects
+                label: Projects
+                type: block
+                list: true
+                blocks:
+                  - name: project
+                    label: Project
+                    fields:
+                      - { name: title, label: Title, type: string }
+                      - { name: summary, label: Summary, type: string }
+                      - { name: image, label: Image, type: image }
+              - name: cta
+                label: Call to Action
+                type: object
+                fields:
+                  - { name: label, label: Label, type: string }
+                  - { name: href, label: Link, type: string }
+          - name: contact
+            label: Contact
+            type: object
+            fields:
+              - { name: id, label: ID, type: string }
+              - { name: type, label: Type, type: string }
+              - { name: label, label: Label, type: string }
+              - { name: background, label: Background, type: string }
+              - { name: headline, label: Headline, type: string }
+              - { name: subheadline, label: Subheadline, type: string }
+              - name: cta
+                label: Call to Action
+                type: object
+                fields:
+                  - { name: label, label: Label, type: string }
+                  - { name: href, label: Link, type: string }
+              - name: form
+                label: Form
+                type: object
+                fields:
+                  - name: fields
+                    label: Fields
+                    type: block
+                    list: true
+                    blocks:
+                      - name: field
+                        label: Field
+                        fields:
+                          - { name: name, label: Name, type: string }
+                          - { name: type, label: Type, type: string }
+          - name: footer
+            label: Footer
+            type: object
+            fields:
+              - { name: id, label: ID, type: string }
+              - { name: type, label: Type, type: string }
+              - { name: label, label: Label, type: string }
+              - name: columns
+                label: Columns
+                type: block
+                list: true
+                blocks:
+                  - name: column
+                    label: Column
+                    fields:
+                      - { name: title, label: Title, type: string }
+                      - name: links
+                        label: Links
+                        type: block
+                        list: true
+                        blocks:
+                          - name: link
+                            label: Link
+                            fields:
+                              - { name: label, label: Label, type: string }
+                              - { name: href, label: Link, type: string }
+              - { name: copyright, label: Copyright, type: string }

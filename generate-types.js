@@ -29,4 +29,9 @@ files.forEach(file => {
   const command = `json-ts "./content/${file}" > "${outputPath}" --rootName "${baseNameProcessed}" --prefix ""`;
   console.log(`🔄 Generating: ${outputPath}`);
   execSync(command, { stdio: 'inherit' });
+  
+  // Add export statements to make the interfaces exportable
+  const content = fs.readFileSync(outputPath, 'utf8');
+  const exportedContent = content.replace(/^interface /gm, 'export interface ');
+  fs.writeFileSync(outputPath, exportedContent);
 });
