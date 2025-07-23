@@ -133,23 +133,25 @@ const FunctionsSection = ({
             (feature: FeaturesItem, index: number) => (
               <div key={index} className="flex flex-col items-center">
                 {feature.image && (
-                    <div
-                      className={`flex justify-center rounded-xl py-2 w-[320px] ${
+                  <div
+                    className={`flex justify-center rounded-xl py-2 w-[320px] ${
                       feature.bgColor ? feature.bgColor : "bg-blue-100"
-                      }`}
-                    >
-                      <img
+                    }`}
+                  >
+                    <img
                       src={feature.image}
                       alt={feature.imageAlt || feature.title}
                       className="h-40 w-50 rounded-xl"
-                      />
-                    </div>
+                    />
+                  </div>
                 )}
                 <div className="bg-white p-6 rounded-b-xl shadow hover:shadow-lg transition-shadow w-[275px]">
                   <h3 className="text-md font-semibold mb-4 text-center">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600 text-center">{feature.description}</p>
+                  <p className="text-gray-600 text-center">
+                    {feature.description}
+                  </p>
                 </div>
               </div>
             )
@@ -213,17 +215,34 @@ const KeyFeaturesSection = ({
 }) => {
   return (
     <section
-      className="px-6 md:px-24 py-16 md:py-32 gap-10 bg-white"
+      className="px-16 md:px-24 py-16 md:py-32 gap-10 relative mx-auto"
       id={keyFeaturesSection.id}
+      style={
+        keyFeaturesSection.image
+          ? {
+              backgroundImage: `url(${keyFeaturesSection.image})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+              minHeight: "700px",
+              height: "1000px",
+            }
+          : undefined
+      }
     >
-      <div className="container mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-20 text-center">
-          {keyFeaturesSection.title}
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {keyFeaturesSection.features?.map(
-            (feature: FeaturesItem, index: number) => (
-              <div key={index} className="flex items-start space-x-4">
+      <h2 className="text-4xl md:text-5xl font-bold text-white mb-20 text-center">
+        {keyFeaturesSection.title}
+      </h2>
+
+      <div className="container mx-auto rounded-xl p-8 justify-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 w-[1000px] ">
+          {keyFeaturesSection.features
+            ?.slice(0, 2)
+            .map((feature: FeaturesItem, index: number) => (
+              <div
+                key={index}
+                className="flex items-start space-x-4 bg-blue-50 rounded-lg p-6 shadow "
+              >
                 <div className="text-4xl flex-shrink-0">{feature.emoji}</div>
                 <div>
                   <h3 className="text-xl font-semibold mb-2">
@@ -232,8 +251,25 @@ const KeyFeaturesSection = ({
                   <p className="text-gray-600">{feature.description}</p>
                 </div>
               </div>
-            )
-          )}
+            ))}
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-[1000px] ">
+          {keyFeaturesSection.features
+            ?.slice(2, 5)
+            .map((feature: FeaturesItem, index: number) => (
+              <div
+                key={index}
+                className="flex items-start space-x-4 bg-blue-50 rounded-lg p-6 shadow "
+              >
+                <div className="text-4xl flex-shrink-0">{feature.emoji}</div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600">{feature.description}</p>
+                </div>
+              </div>
+            ))}
         </div>
       </div>
     </section>

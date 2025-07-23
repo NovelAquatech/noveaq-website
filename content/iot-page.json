@@ -89,6 +89,8 @@
       "label": "Features",
       "id": "key-features",
       "title": "Platform Features That Make a Difference",
+      "image": "assets/iot-page/laptop.png",
+      "imageAlt": "Key features of Novel IoT platform",
       "features": [
         {
           "_block": "feature",
