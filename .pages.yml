@@ -585,35 +585,42 @@ content:
                   - name: point
                     label: Point
                     fields:
-                      - { name: icon, label: Icon, type: string }
+                      - { name: emoji, label: Emoji, type: string }
+                      - { name: title, label: Title, type: string }
                       - { name: text, label: Text, type: string }
           - name: partners
             label: Partners Section
             type: object
             fields:
               - { name: title, label: Title, type: string }
-              - name: partners
-                label: Partners
-                type: block
-                list: true
-                blocks:
-                  - name: partner
-                    label: Partner
-                    fields:
-                      - { name: logo, label: Logo, type: image }
+              - { name: description, label: Description, type: string }
+              # - name: partners
+              #   label: Partners
+              #   type: block
+              #   list: true
+              #   blocks:
+              #     - name: partner
+              #       label: Partner
+              #       fields:
+              #         - { name: logo, label: Logo, type: image }
                       
           - name: call-to-action
-            label: Call To Action Section
+            label: Call to Action Section         
             type: object
-            fields:
+            fields:                     
               - { name: title, label: Title, type: string }
-              - name: buttons
-                label: Buttons
+              - { name: subtitle, label: Subtitle, type: string }
+              - name: ctas
+                label: cta Buttons
                 type: block
                 list: true
                 blocks:
-                  - name: button
-                    label: Button
+                  - name: cta
+                    label: cta Button
                     fields:
-                      - { name: text, label: Text, type: string }
-                      - { name: link, label: Link, type: string }
+                      - name: title
+                        label: Title
+                        type: string
+                      - name: link
+                        label: Link
+                        type: string
