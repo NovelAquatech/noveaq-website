@@ -23,20 +23,35 @@
         {
           "_block": "feature",
           "title": "Comprehensive Sensor Data Monitoring",
-          "description": "Monitor all key Indoor Air Quality (IAQ) parameters in real time using sensors connected via LoRaWAN gateways. Visualize sensor data for each monitored area by clicking the 'Sensor Data' tab.",
-          "emoji": "📊"
+          "description": "Track IAQ in real time via LoRaWAN sensors—view data per area under ‘Sensor Data’",
+          "image": "assets/iot-page/sensor-data-monitoring.png",
+          "imageAlt": "Sensor data monitoring dashboard",
+          "bgColor": "bg-blue-100"
         },
         {
           "_block": "feature",
           "title": "Occupant Survey & Perception Analysis",
-          "description": "Engage occupants with a seamless QR code survey experience. Instantly capture real-world feedback and transform it into actionable insights, with powerful cloud-based analytics that reveal trends and drive smarter decisions for healthier, more comfortable spaces.",
-          "emoji": "📝"
+          "description": "QR surveys. Instant feedback. Smarter spaces.",
+          "image": "assets/iot-page/occupant-survey.png",
+          "imageAlt": "Occupant survey dashboard",
+          "bgColor": "bg-blue-100"
         },
         {
           "_block": "feature",
           "title": "Automated Advisories",
-          "description": "Receive advisories when any IAQ parameter exceeds preset thresholds. The system ensures only one advisory per sensor per 24-hour period, helping you focus on actionable alerts.",
-          "emoji": "⚠️"
+          "description": "Get one actionable IAQ alert per sensor daily when thresholds are exceeded.",
+          "image": "assets/iot-page/automated-advisories.png",
+          "imageAlt": "Automated advisories dashboard",
+          "bgColor": "bg-blue-100"
+        },
+        {
+          "_block": "feature",
+          "title": "Advanced Device Sequence & Logic Control",
+          "description": "Define custom on/off sequences and logic for precise, reliable equipment operation.",
+          "emoji": "⚙️",
+          "image": "assets/iot-page/device-sequence-logic.png",
+          "imageAlt": "Device sequence and logic control dashboard",
+          "bgColor": "bg-blue-100"
         }
       ]
     },
@@ -74,6 +89,8 @@
       "label": "Features",
       "id": "key-features",
       "title": "Platform Features That Make a Difference",
+      "image": "assets/iot-page/laptop.png",
+      "imageAlt": "Key features of Novel IoT platform",
       "features": [
         {
           "_block": "feature",
