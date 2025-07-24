@@ -493,3 +493,24 @@ content:
                               - { name: label, label: Label, type: string }
                               - { name: href, label: Link, type: string }
               - { name: copyright, label: Copyright, type: string }
+  - name: research-page
+    label: Research Lab Equipment Page
+    type: file
+    format: json
+    path: "content/research-page.json"
+    fields:
+      - { name: title, label: Title, type: string }
+      - { name: description, label: Description, type: string }
+      - name: equipments
+        label: Equipment
+        type: block
+        list: true
+        blocks:
+          - name: equipmentItem
+            label: Equipment Item
+            fields:
+              - { name: name, label: Name, type: string }
+              - { name: description, label: Description, type: string }
+              - { name: image, label: Image, type: image }
+              - { name: imageAlt, label: Image Alt, type: string }
+              - { name: link, label: Link, type: string }
