@@ -536,6 +536,7 @@ content:
             type: object
             fields:
               - { name: label, label: Label, type: string }
+              - { name: id, label: id, type: string }
               - { name: title, label: Title, type: string }
               - { name: subtitle, label: Subtitle, type: string }
               - { name: image, label: Image, type: image }
@@ -555,12 +556,14 @@ content:
             type: object
             fields:
               - { name: title, label: Title, type: string }
+              - {name: id, label: id, type: string }
               - { name: description, label: Description, type: string }
           - name: industries
             label: Industries Section
             type: object
             fields:
               - { name: title, label: Title, type: string }
+              - { name: id, label: id, type: string }
               - name: industries
                 label: Industries
                 type: block
@@ -577,6 +580,7 @@ content:
             type: object
             fields:
               - { name: title, label: Title, type: string }
+              - { name: id, label: id, type: string }
               - name: points
                 label: Points
                 type: block
@@ -593,6 +597,7 @@ content:
             type: object
             fields:
               - { name: title, label: Title, type: string }
+              - { name: id, label: id, type: string }
               - { name: description, label: Description, type: string }
               # - name: partners
               #   label: Partners
@@ -610,6 +615,7 @@ content:
             fields:                     
               - { name: title, label: Title, type: string }
               - { name: subtitle, label: Subtitle, type: string }
+              - { name: id, label: id, type: string }
               - name: ctas
                 label: cta Buttons
                 type: block
