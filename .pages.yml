@@ -572,7 +572,7 @@ content:
                     fields:
                       - { name: title, label: Title, type: string }
                       - { name: description, label: Description, type: string }
-                      - { name: icon, label: Icon, type: string }
+                      - { name: emoji, label: Emoji, type: string }
           - name: why-choose
             label: Why Choose Section
             type: object
