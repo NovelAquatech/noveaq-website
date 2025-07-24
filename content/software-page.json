@@ -3,6 +3,7 @@
     {
       "_block": "hero",
       "label": "Hero Section",
+      "id": "hero",
       "title": "Engineering Smart Solutions for Complex Business Problems",
       "subtitle": "From HR transformation to full-stack digital solutions—trusted for over a decade",
       "image": "assets/software-hero-2.png",
@@ -23,11 +24,13 @@
     {
       "_block": "intro",
       "title": "From Humble Beginnings to Nationwide Impact",
+      "id": "intro",
       "description": "At Novel Aquatech, we’ve been solving business challenges through software engineering for over 10 years. Starting as a small firm with big ideas, we’re now recognized as a Standard Business Sponsor by the Australian Government, enabling us to combine local talent, international expertise, and continuous upskilling to deliver high-quality digital solutions."
     },
     {
       "_block": "industries",
       "title": "Driving Transformation Across Industries",
+      "id": "industries",
       "industries": [
         {
           "_block": "industry",
@@ -70,6 +73,7 @@
     {
       "_block": "why-choose",
       "title": "Why Choose Novel Aquatech?",
+      "id": "why-choose",
       "points": [
         {
           "_block": "point",
@@ -100,12 +104,14 @@
     {
       "_block": "partners",
       "title": "Partnerships & Collaborations",
+      "id": "partners",
       "description": "In 2021, we entered a strategic joint venture with Transformationplus Pty Ltd, expanding our reach in complex software engineering and digital delivery projects. Together, we’re tackling bigger problems with greater precision."
     },
     {
       "_block": "call-to-action",
       "title": "Let’s Build the Right Solution for Your Business",
       "subtitle": "Whether you’re optimizing HR, modernizing your tech stack, or launching a new product—we’re ready to help.",
+      "id": "call-to-action",
       "ctas": [
         {
           "_block": "cta",
