@@ -48,7 +48,6 @@
           "_block": "feature",
           "title": "Advanced Device Sequence & Logic Control",
           "description": "Define custom on/off sequences and logic for precise, reliable equipment operation.",
-          "emoji": "⚙️",
           "image": "assets/iot-page/device-sequence-logic.png",
           "imageAlt": "Device sequence and logic control dashboard",
           "bgColor": "bg-blue-100"
