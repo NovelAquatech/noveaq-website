@@ -52,11 +52,15 @@ content:
                       - name: description
                         label: Description
                         type: string
-                      - name: emoji
-                        label: Emoji
+                      - name: image
+                        label: Image
+                        type: image
+                      - name: imageAlt
+                        label: Image Alt
                         type: string
-              - { name: image, label: Image, type: image }
-              - { name: imageAlt, label: Image Alt, type: string }
+                      - name: backgroundColor
+                        label: Background Color
+                        type: string
           - name: use-cases
             label: Use Cases by Industry
             type: object
@@ -91,6 +95,8 @@ content:
               - { name: label, label: Label, type: string }
               - { name: id, label: id, type: string }
               - { name: title, label: Title, type: string }
+              - { name: image, label: Image, type: image }
+              - { name: imageAlt, label: Image Alt, type: string }
               - name: features
                 label: Features
                 type: block
@@ -502,7 +508,7 @@ content:
       - { name: title, label: Title, type: string }
       - { name: description, label: Description, type: string }
       - name: equipments
-        label: Equipment
+        label: Equipments
         type: block
         list: true
         blocks:
@@ -514,3 +520,113 @@ content:
               - { name: image, label: Image, type: image }
               - { name: imageAlt, label: Image Alt, type: string }
               - { name: link, label: Link, type: string }
+  - name: software-engineering
+    label: Software Engineering Page
+    type: file
+    format: json
+    path: "content/software-page.json"
+    fields:
+      - name: sections
+        label: Sections
+        type: block
+        list: true
+        blocks:
+          - name: hero
+            label: Hero Section
+            type: object
+            fields:
+              - { name: label, label: Label, type: string }
+              - { name: id, label: id, type: string }
+              - { name: title, label: Title, type: string }
+              - { name: subtitle, label: Subtitle, type: string }
+              - { name: image, label: Image, type: image }
+              - { name: imageAlt, label: Image Alt, type: string }
+              - name: ctas
+                label: Call to Actions
+                type: block
+                list: true
+                blocks:
+                  - name: cta
+                    label: CTA
+                    fields:
+                      - { name: text, label: Text, type: string }
+                      - { name: link, label: Link, type: string }
+          - name: intro
+            label: Intro Section
+            type: object
+            fields:
+              - { name: title, label: Title, type: string }
+              - {name: id, label: id, type: string }
+              - { name: description, label: Description, type: string }
+          - name: industries
+            label: Industries Section
+            type: object
+            fields:
+              - { name: title, label: Title, type: string }
+              - { name: id, label: id, type: string }
+              - name: industries
+                label: Industries
+                type: block
+                list: true
+                blocks:
+                  - name: industry
+                    label: Industry
+                    fields:
+                      - { name: title, label: Title, type: string }
+                      - { name: description, label: Description, type: string }
+                      - { name: emoji, label: Emoji, type: string }
+          - name: why-choose
+            label: Why Choose Section
+            type: object
+            fields:
+              - { name: title, label: Title, type: string }
+              - { name: id, label: id, type: string }
+              - name: points
+                label: Points
+                type: block
+                list: true
+                blocks:
+                  - name: point
+                    label: Point
+                    fields:
+                      - { name: emoji, label: Emoji, type: string }
+                      - { name: title, label: Title, type: string }
+                      - { name: text, label: Text, type: string }
+          - name: partners
+            label: Partners Section
+            type: object
+            fields:
+              - { name: title, label: Title, type: string }
+              - { name: id, label: id, type: string }
+              - { name: description, label: Description, type: string }
+              # - name: partners
+              #   label: Partners
+              #   type: block
+              #   list: true
+              #   blocks:
+              #     - name: partner
+              #       label: Partner
+              #       fields:
+              #         - { name: logo, label: Logo, type: image }
+                      
+          - name: call-to-action
+            label: Call to Action Section         
+            type: object
+            fields:                     
+              - { name: title, label: Title, type: string }
+              - { name: subtitle, label: Subtitle, type: string }
+              - { name: id, label: id, type: string }
+              - name: ctas
+                label: cta Buttons
+                type: block
+                list: true
+                blocks:
+                  - name: cta
+                    label: cta Button
+                    fields:
+                      - name: title
+                        label: Title
+                        type: string
+                      - name: link
+                        label: Link
+                        type: string
