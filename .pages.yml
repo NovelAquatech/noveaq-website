@@ -538,7 +538,6 @@ content:
               - { name: label, label: Label, type: string }
               - { name: title, label: Title, type: string }
               - { name: subtitle, label: Subtitle, type: string }
-              - { name: description, label: Description, type: string }
               - { name: image, label: Image, type: image }
               - { name: imageAlt, label: Image Alt, type: string }
               - name: ctas
