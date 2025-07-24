@@ -6,7 +6,7 @@
       "id": "hero",
       "title": "Engineering Smart Solutions for Complex Business Problems",
       "subtitle": "From HR transformation to full-stack digital solutions—trusted for over a decade",
-      "image": "assets/software-hero-2.png",
+      "image": "assets/software/software-hero.png",
       "imageAlt": "Software engineering illustration",
       "ctas": [
         {
@@ -25,7 +25,7 @@
       "_block": "intro",
       "title": "From Humble Beginnings to Nationwide Impact",
       "id": "intro",
-      "description": "At Novel Aquatech, we’ve been solving business challenges through software engineering for over 10 years. Starting as a small firm with big ideas, we’re now recognized as a Standard Business Sponsor by the Australian Government, enabling us to combine local talent, international expertise, and continuous upskilling to deliver high-quality digital solutions."
+      "description": "At Novel Aquatech, we’ve been solving business challenges through software engineering for over 10 years. Starting as a small firm with big ideas, we’re now recognized as a <strong>Standard Business Sponsor by the Australian Government</strong>, enabling us to combine <strong>local talent, international expertise, and continuous upskilling</strong> to deliver high-quality digital solutions."
     },
     {
       "_block": "industries",
