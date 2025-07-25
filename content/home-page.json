@@ -1,9 +1,9 @@
 {
   "sections": [
     {
+      "_block": "hero",
       "id": "hero",
       "type": "hero",
-      "_block": "hero",
       "label": "Hero",
       "background": {
         "mediaType": "videoOrImage",
@@ -18,8 +18,8 @@
       }
     },
     {
-      "id": "about",
       "_block": "about",
+      "id": "about",
       "type": "about-snapshot",
       "label": "About",
       "layout": "two-column",
@@ -31,8 +31,8 @@
       }
     },
     {
-      "id": "expertise",
       "_block": "expertise",
+      "id": "expertise",
       "type": "core-expertise",
       "label": "Expertise",
       "layout": "grid",
@@ -43,9 +43,18 @@
           "icon": "code-lab",
           "summary": "We build scalable, secure applications tailored for government, commercial, and R&D clients—transforming ideas into robust digital products.",
           "highlights": [
-            { "_block": "highlight", "text": "Custom web & mobile applications" },
-            { "_block": "highlight", "text": "Cloud architecture & DevOps pipelines" },
-            { "_block": "highlight", "text": "Data analytics & AI integrations" }
+            {
+              "_block": "highlight",
+              "text": "Custom web & mobile applications"
+            },
+            {
+              "_block": "highlight",
+              "text": "Cloud architecture & DevOps pipelines"
+            },
+            {
+              "_block": "highlight",
+              "text": "Data analytics & AI integrations"
+            }
           ],
           "cta": {
             "label": "Learn More",
@@ -58,9 +67,18 @@
           "icon": "chip",
           "summary": "Our R&D-driven IoT solutions turn physical assets into intelligent systems, from real-time air quality monitors to automated lab equipment.",
           "highlights": [
-            { "_block": "highlight", "text": "Wireless sensor networks" },
-            { "_block": "highlight", "text": "3D-printed enclosures & CNC-machined prototypes" },
-            { "_block": "highlight", "text": "Centralized dashboards & remote control" }
+            {
+              "_block": "highlight",
+              "text": "Wireless sensor networks"
+            },
+            {
+              "_block": "highlight",
+              "text": "3D-printed enclosures & CNC-machined prototypes"
+            },
+            {
+              "_block": "highlight",
+              "text": "Centralized dashboards & remote control"
+            }
           ],
           "cta": {
             "label": "Learn More",
@@ -73,9 +91,18 @@
           "icon": "solar-battery",
           "summary": "We design and deploy residential and commercial energy storage solutions, integrating Wi-Fi-enabled sensors and web portals for full visibility and control.",
           "highlights": [
-            { "_block": "highlight", "text": "Modular battery storage packs" },
-            { "_block": "highlight", "text": "IoT-enabled performance monitoring" },
-            { "_block": "highlight", "text": "Compliance & safety certification support" }
+            {
+              "_block": "highlight",
+              "text": "Modular battery storage packs"
+            },
+            {
+              "_block": "highlight",
+              "text": "IoT-enabled performance monitoring"
+            },
+            {
+              "_block": "highlight",
+              "text": "Compliance & safety certification support"
+            }
           ],
           "cta": {
             "label": "Learn More",
@@ -85,8 +112,8 @@
       ]
     },
     {
-      "id": "why-choose",
       "_block": "why-choose",
+      "id": "why-choose",
       "type": "value-propositions",
       "label": "Why",
       "background": "tinted",
@@ -130,15 +157,30 @@
       ]
     },
     {
-      "id": "projects",
       "_block": "projects",
+      "id": "projects",
       "type": "featured-projects",
       "label": "Projects",
       "layout": "carousel",
       "projects": [
-        { "_block": "project", "title": "Air Quality Monitoring Network", "summary": "Commercial High-rise", "image": "assets/home/aqm.png" },
-        { "_block": "project", "title": "Web-Based Energy Management Portal", "summary": "Residential Micro-grids", "image": "assets/home/enman.png" },
-        { "_block": "project", "title": "Custom CNC Lab Equipment", "summary": "University R&D Labs", "image": "assets/home/cnc.png" }
+        {
+          "_block": "project",
+          "title": "Air Quality Monitoring Network",
+          "summary": "Commercial High-rise",
+          "image": "assets/home/aqm.png"
+        },
+        {
+          "_block": "project",
+          "title": "Web-Based Energy Management Portal",
+          "summary": "Residential Micro-grids",
+          "image": "assets/home/enman.png"
+        },
+        {
+          "_block": "project",
+          "title": "Custom CNC Lab Equipment",
+          "summary": "University R&D Labs",
+          "image": "assets/home/cnc.png"
+        }
       ],
       "cta": {
         "label": "View All Projects",
@@ -146,8 +188,8 @@
       }
     },
     {
-      "id": "contact",
       "_block": "contact",
+      "id": "contact",
       "type": "call-to-action",
       "label": "Contact",
       "background": "bold",
@@ -159,57 +201,23 @@
       },
       "form": {
         "fields": [
-          { "_block": "field", "name": "Name", "type": "text" },
-          { "_block": "field", "name": "Email", "type": "email" },
-          { "_block": "field", "name": "Inquiry", "type": "textarea" }
+          {
+            "_block": "field",
+            "name": "Name",
+            "type": "text"
+          },
+          {
+            "_block": "field",
+            "name": "Email",
+            "type": "email"
+          },
+          {
+            "_block": "field",
+            "name": "Inquiry",
+            "type": "textarea"
+          }
         ]
       }
-    },
-    {
-      "id": "footer",
-      "_block": "footer",
-      "type": "footer",
-      "label": "Footer",
-      "columns": [
-        {
-          "_block": "column",
-          "title": "Company",
-          "links": [
-            { "_block": "link", "label": "About", "href": "/about" },
-            { "_block": "link", "label": "Careers", "href": "/careers" },
-            { "_block": "link", "label": "News", "href": "/news" }
-          ]
-        },
-        {
-          "_block": "column",
-          "title": "Solutions",
-          "links": [
-            { "_block": "link", "label": "Software", "href": "/software-engineering" },
-            { "_block": "link", "label": "IoT", "href": "/iot" },
-            { "_block": "link", "label": "Energy", "href": "/energy" }
-          ]
-        },
-        {
-          "_block": "column",
-          "title": "Resources",
-          "links": [
-            { "_block": "link", "label": "Blog", "href": "/blog" },
-            { "_block": "link", "label": "Case Studies", "href": "/case-studies" },
-            { "_block": "link", "label": "White Papers", "href": "/white-papers" }
-          ]
-        },
-        {
-          "_block": "column",
-          "title": "Contact",
-          "links": [
-            { "_block": "link", "label": "Address", "href": "/contact" },
-            { "_block": "link", "label": "Phone", "href": "tel:+123456789" },
-            { "_block": "link", "label": "Email", "href": "mailto:info@novelaquatech.com" },
-            { "_block": "link", "label": "LinkedIn", "href": "https://linkedin.com/company/novelaquatech" }
-          ]
-        }
-      ],
-      "copyright": "© Novel Aquatech 2025. All rights reserved."
     }
   ]
 }
