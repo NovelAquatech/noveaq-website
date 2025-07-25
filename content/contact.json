@@ -1,0 +1,77 @@
+{
+  "sections": [
+    {
+      "_block": "officeSection",
+      "title": "Get In Touch With Us (Head Office)",
+      "descriptionBlock": {
+        "description": "This location is officially listed as the business address on ASIC records. It features a compact office space suitable for two individuals, and the residential garage has been transformed into a well-maintained manufacturing facility. This site is equipped with all the necessary hardware and prototype fabrication tools for the development of IoT (Internet of Things) and Non-conventional Energy products. Additionally, a significant portion of the software development work for these products is carried out at this location.",
+        "contactList": [
+          {
+            "_block": "list",
+            "emoji": "📍",
+            "text": "7 Clarke Street Newington New South Wales 2127"
+          },
+          {
+            "_block": "list",
+            "emoji": "📞",
+            "text": "1300 768 439 or 9666 7183"
+          },
+          {
+            "_block": "list",
+            "emoji": "✈",
+            "text": "ABN 69110336617 AND ACN 110 336 617"
+          },
+          {
+            "_block": "list",
+            "emoji": "📧",
+            "text": "http://www.novelaquatech.com"
+          }
+        ]
+      },
+      "mapBlock": {
+        "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3314.064472745963!2d151.05302037548472!3d-33.8364479173835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12a4a45974d47b%3A0x59a67e124354651!2s7%20Clarke%20St%2C%20Newington%20NSW%202127%2C%20Australia!5e0!3m2!1sen!2sde!4v1753475963018!5m2!1sen!2sde"
+      },
+      "imagesBlock": [
+        {
+          "_block": "Office image",
+          "office Image": "assets/contact/Registered-office-picture.jpg"
+        }
+      ]
+    },
+    {
+      "_block": "officeSection",
+      "title": "Branch Office",
+      "descriptionBlock": {
+        "description": "This office is used by the directors of Novel Aquatech Aquatech to meet with customers, vendors, and with internal teams as required. All software engineers also use this office when they are not working at the customer premises. The office has full video conference facility which we use for meeting people overseas and when personal meetings are restricted or difficult in Australia.",
+        "contactList": [
+          {
+            "_block": "list",
+            "emoji": "📍",
+            "text": "11/8 Avenue of the Americas, Newington, NSW, 2127"
+          }
+        ]
+      },
+      "mapBlock": {
+        "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3314.2027136781066!2d151.0516870754847!3d-33.83288251719903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12a4a3c0fb3a7f%3A0x154bf419e7ab3653!2s11%2F8%20Ave%20of%20the%20Americas%2C%20Newington%20NSW%202127%2C%20Australia!5e0!3m2!1sen!2sde!4v1753475818285!5m2!1sen!2sde"
+      },
+      "imagesBlock": [
+        {
+          "_block": "Office image",
+          "office Image": "assets/contact/OfficePicture1.jpg"
+        },
+        {
+          "_block": "Office image",
+          "office Image": "assets/contact/OfficePicture2.jpg"
+        },
+        {
+          "_block": "Office image",
+          "office Image": "assets/contact/OfficePicture3.jpg"
+        },
+        {
+          "_block": "Office image",
+          "office Image": "assets/contact/OfficePicture4.jpg"
+        }
+      ]
+    }
+  ]
+}

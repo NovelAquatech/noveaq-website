@@ -161,7 +161,7 @@ const WhyChooseSection = ({
         <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-14 text-center">
           {whyChooseSection.title}
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-1 gap-0 w-1/2 mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-1 gap-0 md:w-1/2 sm:w-4/5 mx-auto">
           {whyChooseSection.points?.map((point: PointsItem, index: number) => (
             <div
               key={index}

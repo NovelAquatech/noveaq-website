@@ -218,28 +218,27 @@ const KeyFeaturesSection = ({
   section: SectionsItem;
 }) => {
   return (
-    <section
-      className="px-16 md:px-24 py-16 md:py-32 gap-10 relative mx-auto"
-      id={keyFeaturesSection.id}
-      style={
-        keyFeaturesSection.image
-          ? {
-              backgroundImage: `url(${keyFeaturesSection.image})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-              minHeight: "700px",
-              height: "1000px",
-            }
-          : undefined
-      }
-    >
-      <h2 className="text-4xl md:text-5xl font-bold text-white mb-20 text-center">
+    <section className="relative px-6 md:px-24 py-16 md:py-32">
+      {/* Background Image (only visible on md+) */}
+      <div className="hidden md:block absolute inset-0">
+        <div
+          className="w-full h-full"
+          style={{
+            backgroundImage: `url(${keyFeaturesSection.image})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            minHeight: "700px",
+            height: "1000px",
+          }}
+        />
+      </div>
+      <h2 className=" relative text-4xl md:text-5xl font-bold md:text-white sm:text-gray-800 mb-10 text-center">
         {keyFeaturesSection.title}
       </h2>
 
-      <div className="container mx-auto rounded-xl p-8 justify-items-center">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 w-[1000px] ">
+      <div className="container relative mx-auto rounded-xl p-8 justify-items-center w-4/5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           {keyFeaturesSection.features
             ?.slice(0, 2)
             .map((feature: FeaturesItem, index: number) => (
@@ -257,13 +256,13 @@ const KeyFeaturesSection = ({
               </div>
             ))}
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-[1000px] ">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {keyFeaturesSection.features
             ?.slice(2, 5)
             .map((feature: FeaturesItem, index: number) => (
               <div
                 key={index}
-                className="flex items-start space-x-4 bg-blue-50 rounded-lg p-6 shadow "
+                className="flex items-start space-x-4 bg-blue-50 rounded-lg p-6 shadow"
               >
                 <div className="text-4xl flex-shrink-0">{feature.emoji}</div>
                 <div>
