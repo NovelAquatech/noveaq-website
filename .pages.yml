@@ -478,13 +478,83 @@ content:
     format: json
     path: content/footer.json
     fields: 
-        - { name: id, label: ID, type: string }
-        - { name: type, label: Type, type: string }
-        - { name: label, label: Label, type: string }
-        - { name: description, label: Company Description, type: text }
-        - { name: logo, label: Company Logo, type: image }
-        
-        - { name: copyright, label: Copyright Text, type: string }         
+        - name: columns
+          label: columns
+          type: block
+          list: true
+          blocks:
+           - name: logo
+             label: logo
+             type: object
+             fields:
+                - { name: id, label: ID, type: string }
+                - { name: type, label: Type, type: string }
+                - { "name": "description", "label": "Company Description", "type": "text" },
+                - { "name": "logo", "label": "Company Logo", "type": "image" }
+           - name: what we do
+             label: what we do
+             type: object
+             fields:
+               - { name: id, label: ID, type: string }
+                - { name: type, label: Type, type: string }
+                - { "name": "title", "label": "title", "type": "text" }
+                -  name: services
+                   label: services
+                   type: block
+                   list: true
+                   blocks:
+                     - name: service
+                       label: our service
+                       fields:
+                       - name: text
+                         label: text
+                         type: string
+                       - name: image
+                         label: image
+                         type: string
+           - name: Contact
+             label: contact
+             type: object
+             fields:
+               - { name: id, label: ID, type: string }
+                - { name: type, label: Type, type: string }
+                - { "name": "title", "label": "title", "type": "text" }
+                -  name: contacts
+                   label: contacts
+                   type: block
+                   list: true
+                   blocks:
+                     - name: contact
+                       label: contact us
+                       fields:
+                        - name: emoji
+                          label: Emoji
+                          type: string
+                        - name: text
+                          label: text
+                          type: string
+           - name: Social
+             label: Social Media Links
+             type: object
+             fields:
+               - { name: id, label: ID, type: string }
+                - { name: type, label: Type, type: string }
+              
+                -  name: socials
+                   label: socials
+                   type: block
+                   list: true
+                   blocks:
+                     - name: social
+                       label: Connect with us
+                       fields:
+                        - name: icon
+                          label: icon
+                          type: string
+                        - name: link
+                          label: link
+                          type: string
+        - { name: copyright, label: Copyright, type: string }  
   - name: research-page
     label: Research Lab Equipment Page
     type: file
