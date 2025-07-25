@@ -1,0 +1,65 @@
+{
+  "sectionOne": [
+    {
+      "_block": "columnOne",
+      "logo": "assets/components/logo.png",
+      "description": "Our team offers the most up-to-date, sustainable manufacturing solutions. We only source materials from tried and trusted suppliers."
+    },
+    {
+      "_block": "columnTwo",
+      "title": "What We Do",
+      "services": [
+        {
+          "_block": "service",
+          "title": "Software Engineering",
+          "emoji": "💻"
+        },
+        {
+          "_block": "service",
+          "title": "IoT",
+          "emoji": "🌏"
+        },
+        {
+          "_block": "service",
+          "title": "Renewable & Non conventional Energy",
+          "emoji": "💻"
+        }
+      ]
+    },
+    {
+      "_block": "columnThree",
+      "infoBlock": [
+        {
+          "_block": "address",
+          "title": "7 Clarke Street Newington New South Wales 2127",
+          "emoji": "📍"
+        },
+        {
+          "_block": "address",
+          "title": "1300 768 439 or 9666 7183",
+          "emoji": "📞"
+        },
+        {
+          "_block": "address",
+          "title": "ABN 69110336617 AND ACN 110 336 617",
+          "emoji": "✈"
+        },
+        {
+          "_block": "address",
+          "title": "http://www.novelaquatech.com",
+          "emoji": "📧"
+        }
+      ],
+      "socialLinks": [
+        {
+          "_block": "social",
+          "icon": "assets/components/icons8-facebook-50.png",
+          "href": "https://novelaquatech.com/"
+        }
+      ]
+    }
+  ],
+  "sectionTwo": {
+    "copyright": "Copyrights © 2025 Novel Aquatech"
+  }
+}

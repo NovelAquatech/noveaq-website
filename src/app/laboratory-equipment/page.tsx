@@ -4,6 +4,8 @@ import Navbar from "../_components/navbar/navbar";
 import { ResearchPage } from "@/types/research-page";
 import { getPageBySlug } from "@/lib/api";
 import Link from "next/link";
+import FooterSection from "../_components/footer/footer";
+import PartnersCarousel from "../_components/partners/partner";
 
 export default function LaboratoryEquipmentPage() {
   const labEquipment: ResearchPage = getPageBySlug("research-page.json");
@@ -73,6 +75,8 @@ export default function LaboratoryEquipmentPage() {
           ))}
         </div>
       </div>
+      <PartnersCarousel/>
+      <FooterSection/>
     </main>
   );
 }

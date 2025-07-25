@@ -1,0 +1,21 @@
+{
+  "title": "Our partners",
+  "logos": [
+    {
+      "_block": "logoImage",
+      "logo": "assets/partners/Macquarie_University.png"
+    },
+    {
+      "_block": "logoImage",
+      "logo": "assets/partners/qalogo.png"
+    },
+    {
+      "_block": "logoImage",
+      "logo": "assets/partners/seely.png"
+    },
+    {
+      "_block": "logoImage",
+      "logo": "assets/partners/UNSW.webp"
+    }
+  ]
+}
