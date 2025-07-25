@@ -1,5 +1,6 @@
 import { getPageBySlug } from "../../lib/api";
 import Navbar from "../_components/navbar/navbar";
+import FooterSection from "../_components/footer/footer";
 
 import React from "react";
 import SectionSelector from "../_components/sectionSelector";
@@ -54,10 +55,11 @@ export default function Index() {
           return <PricingSection key={section.id} section={section} />;
         if (section._block === "faq")
           return <FAQSection key={section.id} section={section} />;
-        if (section._block === "contact")
-          return <ContactSection key={section.id} section={section} />;
+        // if (section._block === "contact")
+        //   return <ContactSection key={section.id} section={section} />;
         return null;
       })}
+      <FooterSection />
     </main>
   );
 }
