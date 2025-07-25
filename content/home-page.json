@@ -164,7 +164,6 @@
           { "_block": "field", "name": "Inquiry", "type": "textarea" }
         ]
       }
-    }
-  
+    }  
   ]
 }
