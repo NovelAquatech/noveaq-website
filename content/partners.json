@@ -3,19 +3,19 @@
   "logos": [
     {
       "_block": "logoImage",
-      "logo": "assets/Macquarie_University.png"
+      "logo": "assets/partners/Macquarie_University.png"
     },
     {
       "_block": "logoImage",
-      "logo": "assets/qalogo.png"
+      "logo": "assets/partners/qalogo.png"
     },
     {
       "_block": "logoImage",
-      "logo": "assets/seely.png"
+      "logo": "assets/partners/seely.png"
     },
     {
       "_block": "logoImage",
-      "logo": "assets/UNSW.webp"
+      "logo": "assets/partners/UNSW.webp"
     }
   ]
 }

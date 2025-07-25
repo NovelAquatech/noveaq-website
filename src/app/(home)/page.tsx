@@ -3,6 +3,7 @@ import Navbar from "../_components/navbar/navbar";
 import { getPageBySlug } from "@/lib/api";
 import SectionSelector from "../_components/sectionSelector";
 import FooterSection from "../_components/footer/footer";
+import PartnersCarousel from "../_components/partners/partner";
 
 export default function Index() {
   const homePageContent: HomePage = getPageBySlug("home-page.json");
@@ -35,6 +36,7 @@ export default function Index() {
             return null;
         }
       })}
+      <PartnersCarousel/>
       <FooterSection />
     </div>
   );
