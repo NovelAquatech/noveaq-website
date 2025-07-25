@@ -1,0 +1,20 @@
+{
+  "logos": [
+    {
+      "_block": "logoImage",
+      "logo": "assets/Macquarie_University.png"
+    },
+    {
+      "_block": "logoImage",
+      "logo": "assets/qalogo.png"
+    },
+    {
+      "_block": "logoImage",
+      "logo": "assets/seely.png"
+    },
+    {
+      "_block": "logoImage",
+      "logo": "assets/UNSW.webp"
+    }
+  ]
+}
