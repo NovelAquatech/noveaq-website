@@ -1,0 +1,46 @@
+  {
+      "id": "footer",
+      "_block": "footer",
+      "type": "footer",
+      "label": "Footer",
+      "columns": [
+        {
+          "_block": "column",
+          "title": "Company",
+          "links": [
+            { "_block": "link", "label": "About", "href": "/about" },
+            { "_block": "link", "label": "Careers", "href": "/careers" },
+            { "_block": "link", "label": "News", "href": "/news" }
+          ]
+        },
+        {
+          "_block": "column",
+          "title": "Solutions",
+          "links": [
+            { "_block": "link", "label": "Software", "href": "/software-engineering" },
+            { "_block": "link", "label": "IoT", "href": "/iot" },
+            { "_block": "link", "label": "Energy", "href": "/energy" }
+          ]
+        },
+        {
+          "_block": "column",
+          "title": "Resources",
+          "links": [
+            { "_block": "link", "label": "Blog", "href": "/blog" },
+            { "_block": "link", "label": "Case Studies", "href": "/case-studies" },
+            { "_block": "link", "label": "White Papers", "href": "/white-papers" }
+          ]
+        },
+        {
+          "_block": "column",
+          "title": "Contact",
+          "links": [
+            { "_block": "link", "label": "Address", "href": "/contact" },
+            { "_block": "link", "label": "Phone", "href": "tel:+123456789" },
+            { "_block": "link", "label": "Email", "href": "mailto:info@novelaquatech.com" },
+            { "_block": "link", "label": "LinkedIn", "href": "https://linkedin.com/company/novelaquatech" }
+          ]
+        }
+      ],
+      "copyright": "© Novel Aquatech 2025. All rights reserved."
+    }
