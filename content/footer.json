@@ -1,8 +1,80 @@
 {
-  "id": "footer",
-  "type": "footer",
-  "label": "Footer",
-  "description": "Our team provides the most up-to-date and sustainable manufacturing solutions. We only source materials from tried and trusted suppliers.",
-  "logo": "assets/logo.png",
+  "columns": [
+    {
+      "_block": "logo",
+      "id": "logo",
+      "type": "object",
+      "description": "Our team offers the most up-to-date, sustainable manufacturing solutions. We only source materials from tried and trusted suppliers.",
+      "logo": "assets/logo.png"
+    },
+    {
+      "_block": "what we do",
+      "id": "Service",
+      "type": "object",
+      "title": "What We Do",
+      "services": [
+        {
+          "_block": "service",
+          "text": "Software Engineering",
+          "image": "Software Engineering"
+        },
+        {
+          "_block": "service",
+          "text": "Internet Of Things(IoT)",
+          "image": "Internet Of Things(IoT)"
+        },
+        {
+          "_block": "service",
+          "text": "Renewable & non-conventional Energy",
+          "image": "Renewable & non-conventional Energy"
+        }
+      ]
+    },
+    {
+      "_block": "Contact",
+      "id": "contact",
+      "type": "object",
+      "title": "Contact Us",
+      "contacts": [
+        {
+          "_block": "contact",
+          "emoji": "🌏",
+          "text": "7 Clarke Street Newington New South Wales 2127"
+        },
+        {
+          "_block": "contact",
+          "emoji": "📞",
+          "text": "1300 768 439 or 9666 7183"
+        },
+        {
+          "_block": "contact",
+          "emoji": "✈",
+          "text": "ABN 69110336617 AND ACN 110 336 617"
+        },
+        {
+          "_block": "contact",
+          "emoji": "📧",
+          "text": "http://www.novelaquatech.com"
+        }
+      ]
+    },
+    {
+      "_block": "Social",
+      "id": "social",
+      "type": "object",
+      "socials": [
+        {
+          "_block": "social",
+          "icon": "📍",
+          "link": "https://novelaquatech.com/"
+        },
+        {
+          "_block": "social",
+          "icon": "📍",
+          "link": "https://novelaquatech.com/"
+        }
+      ]
+    }
+  ],
   "copyright": "© Novel Aquatech 2025. All rights reserved."
 }
