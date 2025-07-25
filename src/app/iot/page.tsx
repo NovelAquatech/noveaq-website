@@ -233,7 +233,7 @@ const KeyFeaturesSection = ({
           }}
         />
       </div>
-      <h2 className=" relative text-4xl md:text-5xl font-bold text-white sm:text-gray-800 mb-10 text-center">
+      <h2 className=" relative text-4xl md:text-5xl font-bold md:text-white sm:text-gray-800 mb-10 text-center">
         {keyFeaturesSection.title}
       </h2>
 
