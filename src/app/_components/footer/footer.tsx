@@ -12,14 +12,14 @@ export default function FooterSection() {
     <footer className="bg-blue-100 text-gray-600 py-10">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
         {/* Column One */}
-        <div>
+        <div className="pl-8 md:pl-0">
           {columnOne?.logo && (
             <img src={`/${columnOne.logo}`} alt="Logo" className="w-40 mb-4" />
           )}
           <p className="text-sm w-3/4">{columnOne?.description}</p>
         </div>
         {/* Column Two */}
-        <div>
+        <div className="pl-8 md:pl-0">
           <h3 className="text-lg font-bold mb-4">{columnTwo?.title}</h3>
           <ul className="space-y-2 text-sm">
             {columnTwo?.services?.map((service, idx) => (
@@ -31,7 +31,7 @@ export default function FooterSection() {
           </ul>
         </div>
         {/* Column Three */}
-        <div>
+        <div className="pl-8 md:pl-0">
           <h3 className="text-lg font-bold mb-4">Contact</h3>
           <ul className="space-y-2 text-sm mb-6">
             {columnThree?.infoBlock?.map((info, idx) => (
