@@ -34,7 +34,7 @@
       "imagesBlock": [
         {
           "_block": "Office image",
-          "office Image": "assets/Registered-office-picture-1.jpg"
+          "office Image": "assets/contact/Registered-office-picture.jpg"
         }
       ]
     },
@@ -57,19 +57,19 @@
       "imagesBlock": [
         {
           "_block": "Office image",
-          "office Image": "assets/OfficePicture2-1.jpg"
+          "office Image": "assets/contact/OfficePicture1.jpg"
         },
         {
           "_block": "Office image",
-          "office Image": "assets/OfficePicture3.jpg"
+          "office Image": "assets/contact/OfficePicture2.jpg"
         },
         {
           "_block": "Office image",
-          "office Image": "assets/OfficePicture4.jpg"
+          "office Image": "assets/contact/OfficePicture3.jpg"
         },
         {
           "_block": "Office image",
-          "office Image": "assets/OfficePicture5.jpg"
+          "office Image": "assets/contact/OfficePicture4.jpg"
         }
       ]
     }
