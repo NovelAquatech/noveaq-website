@@ -706,10 +706,14 @@ content:
                   - {name: description,label: Description,type: text}
                   - name: contactList
                     label: Contact List Items
-                    type: object
-                    fields:
-                      - {name: emoji, label: emoji,type: string}
-                      - {name: text, label: contact,  type: string}
+                    type: block
+                    list: true
+                    blocks:
+                      - name: list
+                        label: list
+                        fields:
+                          - {name: emoji, label: emoji,type: string}
+                          - {name: text, label: contact,  type: string}
               - name: mapBlock
                 label: Google Map Block
                 type: object
@@ -717,6 +721,10 @@ content:
                   - {name: mapEmbed, label: Google Map, type: string}
               - name: imagesBlock
                 label: Images Block
-                type: object
-                fields:
-                  - {name: office Image, label: Image, type: image}
+                type: block
+                list: true
+                blocks:
+                  - name: Office image
+                    label: Office
+                    fields:
+                      - {name: office Image, label: Image, type: image}
