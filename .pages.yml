@@ -472,76 +472,6 @@ content:
                         fields:
                           - { name: name, label: Name, type: string }
                           - { name: type, label: Type, type: string }
-  - name: footer
-    label: Footer
-    type: file
-    format: json
-    path: content/footer.json
-    fields: 
-        - name: columns
-          label: columns
-          type: block
-          list: true
-          blocks:
-           - name: logo
-             label: logo
-             type: object
-             fields:
-                - { name: id, label: ID, type: string }
-                - { name: type, label: Type, type: string }
-                - { "name": "description", "label": "Company Description", "type": "text" },
-                - { "name": "logo", "label": "Company Logo", "type": "image" }
-           - name: what we do
-             label: what we do
-             type: object
-             fields:
-                - { name: id, label: ID, type: string }
-                - { name: type, label: Type, type: string }
-                - { "name": "title", "label": "title", "type": "text" }
-                -  name: services
-                   label: services
-                   type: block
-                   list: true
-                   blocks:
-                     - name: service
-                       label: our service
-                       fields:
-                       - {name: text,label: text,type: string}
-                       - {name: image,label: image,type: string}
-           - name: Contact
-             label: contact
-             type: object
-             fields:
-               - { name: id, label: ID, type: string }
-               - { name: type, label: Type, type: string }
-               - { "name": "title", "label": "title", "type": "text" }
-               -  name: contacts
-                  label: contacts
-                  type: block
-                  list: true
-                  blocks:
-                     - name: contact
-                       label: contact us
-                       fields:
-                        - {name: emoji,label: Emoji,type: string}
-                        - {name: text,label: text,type: string}
-           - name: Social
-             label: Social Media Links
-             type: object
-             fields:
-               - { name: id, label: ID, type: string }
-               - { name: type, label: Type, type: string }              
-               -  name: socials
-                  label: socials
-                  type: block
-                  list: true
-                  blocks:
-                     - name: social
-                       label: Connect with us
-                       fields:
-                        - {name: icon,label: icon,type: string}
-                        - {name: link,label: link,type: string}
-        - { name: copyright, label: Copyright, type: string }  
   - name: research-page
     label: Research Lab Equipment Page
     type: file
@@ -673,3 +603,72 @@ content:
                       - name: link
                         label: Link
                         type: string
+  - name: "footer"
+    label: "Footer"
+    type: "file"
+    format: "json"
+    path: "content/footer.json"
+    fields:
+     - name: "sectionOne"
+       label: "Section One"
+       type: "group"
+       fields:
+        - name: "columnOne"
+          label: "Logo & Description"
+          type: "group"
+          fields:
+            - name: "logo"
+              label: "Logo"
+              type: "image"
+            - name: "description"
+              label: "Description"
+              type: "text"
+
+        - name: "columnTwo"
+          label: "What We Do"
+          type: "group"
+          fields:
+           - name: "title"
+             label: "Title"
+             type: "string"
+           - name: "services"
+             label: "Service List"
+             type: "list"
+             items:
+              type: "string"
+
+        - name: "columnThree"
+          label: "Contact Us"
+          type: "group"
+          fields:
+            - name: "infoBlock"
+              label: "Info with Icons"
+              type: "list"
+              items:
+              type: "group"
+              fields:
+                - name: "icon"
+                  label: "Icon"
+                  type: "image"
+                - name: "text"
+                  label: "Text"
+                  type: "string"
+            - name: "socialLinks"
+              label: "Social Media"
+              type: "list"
+              items:
+              type: "group"
+              fields:
+                - name: "url"
+                  label: "URL"
+                  type: "string"
+                - name: "icon"
+                  label: "Icon"
+                  type: "image"
+     - name: "sectionTwo"
+       label: "Section Two"
+       type: "group"
+       fields:
+        - name: "copyright"
+          label: "Copyright Text"
+          type: "string"
