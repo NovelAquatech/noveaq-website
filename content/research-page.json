@@ -6,7 +6,7 @@
       "_block": "equipmentItem",
       "name": "Hydrogen Generator",
       "description": "A hydrogen gas generator for gas chromatography (GC) utilizes electrolysis to produce high-purity hydrogen gas from distilled water, offering a safer and more convenient alternative to traditional gas cylinders",
-      "image": "assets/equipment/hydrogen.png",
+      "image": "/assets/equipment/hydrogen.png",
       "imageAlt": "A hydrogen generator",
       "link": "https://novelaquatech.com/hydrogen-generator/"
     },
@@ -14,7 +14,7 @@
       "_block": "equipmentItem",
       "name": "Nitrogen Generator",
       "description": "A nitrogen gas generator for a laboratory is a device that produces high-purity nitrogen gas on-site by separating it from compressed air, eliminating the need for traditional nitrogen cylinders.",
-      "image": "assets/equipment/nitrogen.png",
+      "image": "/assets/equipment/nitrogen.png",
       "imageAlt": "A nitrogen generator",
       "link": "https://novelaquatech.com/nitrogen-gas-generator/"
     }

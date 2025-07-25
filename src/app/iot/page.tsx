@@ -1,5 +1,7 @@
 import { getPageBySlug } from "../../lib/api";
 import Navbar from "../_components/navbar/navbar";
+import FooterSection from "../_components/footer/footer";
+import PartnersCarousel from "../_components/partners/partner";
 
 import React from "react";
 import SectionSelector from "../_components/sectionSelector";
@@ -58,6 +60,8 @@ export default function Index() {
           return <ContactSection key={section.id} section={section} />;
         return null;
       })}
+      <PartnersCarousel />
+      <FooterSection />
     </main>
   );
 }

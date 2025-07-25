@@ -3,44 +3,56 @@
     {
       "_block": "navItem",
       "title": "Home",
-      "authType": "all",
-      "link": "/"
+      "link": "/",
+      "authType": "all"
     },
     {
       "_block": "navItem",
       "title": "IoT",
-      "authType": "anonymous",
-      "link": "/iot"
+      "link": "/iot",
+      "authType": "anonymous"
+    },
+    {
+      "_block": "navItem",
+      "title": "Software Engineering",
+      "link": "/software-engineering",
+      "authType": "anonymous"
+    },
+    {
+      "_block": "navItem",
+      "title": "Research Lab Equipment",
+      "link": "/laboratory-equipment",
+      "authType": "anonymous"
     },
     {
       "_block": "navItem",
       "title": "Contact Us",
-      "authType": "anonymous",
-      "link": "/contact"
+      "link": "/contact",
+      "authType": "anonymous"
     },
     {
       "_block": "navItem",
       "title": "Login",
-      "authType": "anonymous",
-      "link": "/login"
+      "link": "/login",
+      "authType": "anonymous"
     },
     {
       "_block": "navItem",
       "title": "Dashboard",
-      "authType": "authenticated",
-      "link": "/dashboard"
+      "link": "/dashboard",
+      "authType": "authenticated"
     },
     {
       "_block": "navItem",
       "title": "Settings",
-      "authType": "authenticated",
-      "link": "/settings"
+      "link": "/settings",
+      "authType": "authenticated"
     },
     {
       "_block": "navItem",
       "title": "Logout",
-      "authType": "authenticated",
-      "link": "/logout"
+      "link": "/logout",
+      "authType": "authenticated"
     }
   ]
 }

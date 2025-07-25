@@ -1,6 +1,7 @@
 import { getPageBySlug } from "../../lib/api";
 import Navbar from "../_components/navbar/navbar";
-
+import FooterSection from "../_components/footer/footer";
+import PartnersCarousel from "../_components/partners/partner";
 import React from "react";
 import SectionSelector from "../_components/sectionSelector";
 
@@ -11,6 +12,7 @@ import {
   IndustriesItem,
   PointsItem,
 } from "@/types/software-page";
+
 
 export default function Index() {
   const homePageContent: SoftwarePage = getPageBySlug("software-page.json");
@@ -38,9 +40,10 @@ export default function Index() {
           return <PartnersSection key={section.id} section={section} />;
         if (section._block === "call-to-action")
           return <CallToActionSection key={section.id} section={section} />;
-
         return null;
       })}
+      <PartnersCarousel/>
+      <FooterSection/>
     </main>
   );
 }

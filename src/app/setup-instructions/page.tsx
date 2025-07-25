@@ -4,6 +4,7 @@ import { readFile } from "fs/promises";
 import path from "path";
 import { SetupInstructions } from "@/types/setup-instructions";
 import Navbar from "../_components/navbar/navbar";
+import FooterSection from "../_components/footer/footer";
 
 
 
@@ -19,6 +20,7 @@ export default async function SetupInstructionsPage() {
           <MarkdownRender content={markdown} />
         </div>
       </section>
+      <FooterSection/>
     </main>
   );
 }
