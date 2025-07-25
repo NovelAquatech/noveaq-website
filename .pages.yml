@@ -627,10 +627,14 @@ content:
              - {name: title,label: Title,type: string}
              - name: services
                label: Service List
-               type: object
-               fields:
-                 - {name: title,label: Title,type: string}
-                 - {name: emoji, label: Emoji, type: string}
+               type: block
+               list: true
+               blocks:
+                  - name: service
+                    label: service
+                    fields:
+                      - { name: title, label: Title, type: string }                      
+                      - { name: emoji, label: Emoji, type: string }
           - name: columnThree
             label: Contact Us
             type: object
@@ -638,27 +642,23 @@ content:
               - name: infoBlock
                 label: Info with Icons
                 type: block
-                items:
-                  type: object
-                  fields:
-                    - {name: icon,
-                       label: Icon,
-                       type: image}
-                    - {name: text,
-                       label: Text,
-                       type: string}
+                list: true
+                blocks:
+                  - name: address
+                    label: address
+                    fields:
+                      - { name: title, label: Title, type: string }                      
+                      - { name: emoji, label: Emoji, type: string }
               - name: socialLinks
                 label: Social Media
-                type: list
-                items:
-                  type: object
-                  fields:
-                    - {name: url,
-                      label: URL,
-                      type: string}
-                    - {name: icon,
-                       label: Icon,
-                       type: image}
+                type: block
+                list: true
+                blocks:
+                  - name: social
+                    label: social
+                    fields:
+                      - { name: icon, label: icon, type: image }
+                      - { name: href, label: link, type: string }                     
       - name: sectionTwo
         label: Section Two
         type: object
