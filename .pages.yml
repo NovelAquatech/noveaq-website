@@ -603,66 +603,66 @@ content:
                       - name: link
                         label: Link
                         type: string
-  - name: "footer"
-    label: "Footer"
-    type: "file"
-    format: "json"
-    path: "content/footer.json"
+  - name: footer
+    label: Footer
+    type: file
+    format: json
+    path: content/footer.json
     fields:
-      - name: "sectionOne"
-        label: "Section One"
+      - name: sectionOne
+        label: Section One
         type: block
         list: true
         blocks:
-          - name: "columnOne"
-            label: "Logo & Description"            
+          - name: columnOne
+            label: Logo & Description            
             fields:
-              - {name: "logo",label: "Logo",type: "image"}
-              - {name: "description",label: "Description",type: "text"}
+              - {name: logo,label: Logo,type: image}
+              - {name: description,label: Description,type: text}
 
-          - name: "columnTwo"
-            label: "What We Do"
-            type: "object"
+          - name: columnTwo
+            label: What We Do
+            type: object
             fields:
-             - {name: "title",label: "Title",type: "string"}
-             - name: "services"
-               label: "Service List"
-               type: "list"
-               items:
-                 type: "string"
-
-          - name: "columnThree"
-            label: "Contact Us"
-            type: "object"
+             - {name: title,label: Title,type: string}
+             - name: services
+               label: Service List
+               type: object
+               fields:
+                 - {name: title,label: Title,type: string}
+                 - {name: emoji, label: Emoji, type: string}
+          - name: columnThree
+            label: Contact Us
+            type: object
             fields:
-              - name: "infoBlock"
-                label: "Info with Icons"
-                type: "list"
+              - name: infoBlock
+                label: Info with Icons
+                type: block
                 items:
-                  type: "object"
+                  type: object
                   fields:
-                    - {name: "icon",
-                       label: "Icon",
-                       type: "image"}
-                    - {name: "text",
-                       label: "Text",
-                       type: "string"}
-              - name: "socialLinks"
-                label: "Social Media"
-                type: "list"
+                    - {name: icon,
+                       label: Icon,
+                       type: image}
+                    - {name: text,
+                       label: Text,
+                       type: string}
+              - name: socialLinks
+                label: Social Media
+                type: list
                 items:
-                  type: "object"
+                  type: object
                   fields:
-                    - {name: "url",
-                      label: "URL",
-                      type: "string"}
-                    - {name: "icon",
-                       label: "Icon",
-                       type: "image"}
-      - name: "sectionTwo"
-        label: "Section Two"
-        type: "object"
+                    - {name: url,
+                      label: URL,
+                      type: string}
+                    - {name: icon,
+                       label: Icon,
+                       type: image}
+      - name: sectionTwo
+        label: Section Two
+        type: object
         fields:
-          - name: "copyright"
-            label: "Copyright Text"
-            type: "string"
+          - name: copyright
+            label: Copyright Text
+            type: string
