@@ -14,6 +14,18 @@
     },
     {
       "_block": "navItem",
+      "title": "Software Engineering",
+      "link": "/software-engineering",
+      "authType": "anonymous"
+    },
+    {
+      "_block": "navItem",
+      "title": "Research Lab Equipment",
+      "link": "/laboratory-equipment",
+      "authType": "anonymous"
+    },
+    {
+      "_block": "navItem",
       "title": "Contact Us",
       "link": "/contact",
       "authType": "anonymous"
@@ -41,18 +53,6 @@
       "title": "Logout",
       "link": "/logout",
       "authType": "authenticated"
-    },
-    {
-      "_block": "navItem",
-      "title": "Software Engineering",
-      "link": "/software-engineering",
-      "authType": "anonymous"
-    },
-    {
-      "_block": "navItem",
-      "title": "Research Lab Equipment",
-      "link": "/laboratory-equipment",
-      "authType": "anonymous"
     }
   ]
 }
