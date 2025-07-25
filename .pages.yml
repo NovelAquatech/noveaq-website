@@ -482,7 +482,7 @@ content:
         - { name: "type", label: "Type", type: "string" }
         - { name: "label", label: "Label", type: "string" }
         - { name: "description", label: "Company Description", type: "text" }
-        - { name: "logo", label: "Company Logo", type: "image" }        - 
+        - { name: "logo", label: "Company Logo", type: "image" }
         -   name: "columns"
             label: "Columns"
             type: "block"
