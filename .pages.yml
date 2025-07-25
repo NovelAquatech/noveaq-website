@@ -516,10 +516,10 @@ content:
                - { name: type, label: Type, type: string }
                - { "name": "title", "label": "title", "type": "text" }
                -  name: contacts
-                   label: contacts
-                   type: block
-                   list: true
-                   blocks:
+                  label: contacts
+                  type: block
+                  list: true
+                  blocks:
                      - name: contact
                        label: contact us
                        fields:
