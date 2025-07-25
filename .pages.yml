@@ -676,8 +676,12 @@ content:
         label: Partner
         type: string
       - name: logos
-        label: Partner Logos
-        type: list
-        items:
-          type: image
+        label: PartnerLogos
+        type: block
+        list: true
+        blocks:
+          - name: logoImage
+            label: logo
+            fields:
+              - {name: logo, label: image, type: image}
  
