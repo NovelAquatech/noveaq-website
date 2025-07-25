@@ -666,3 +666,18 @@ content:
           - name: copyright
             label: Copyright Text
             type: string
+  - name: partners
+    label: Our Partners
+    type: file
+    format: json
+    path: content/partners.json
+    fields:
+      - name: title
+        label: Partner
+        type: string
+      - name: logos
+        label: Partner Logos
+        type: list
+        items:
+          type: image
+ 

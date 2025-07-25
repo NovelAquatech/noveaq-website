@@ -11,6 +11,7 @@ import {
   IndustriesItem,
   PointsItem,
 } from "@/types/software-page";
+import FooterSection from "../_components/footer/footer";
 
 export default function Index() {
   const homePageContent: SoftwarePage = getPageBySlug("software-page.json");
@@ -38,9 +39,9 @@ export default function Index() {
           return <PartnersSection key={section.id} section={section} />;
         if (section._block === "call-to-action")
           return <CallToActionSection key={section.id} section={section} />;
-
         return null;
       })}
+      <FooterSection/>
     </main>
   );
 }

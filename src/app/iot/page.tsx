@@ -55,8 +55,8 @@ export default function Index() {
           return <PricingSection key={section.id} section={section} />;
         if (section._block === "faq")
           return <FAQSection key={section.id} section={section} />;
-        // if (section._block === "contact")
-        //   return <ContactSection key={section.id} section={section} />;
+        if (section._block === "contact")
+          return <ContactSection key={section.id} section={section} />;
         return null;
       })}
       <FooterSection />
