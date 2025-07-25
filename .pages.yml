@@ -611,18 +611,18 @@ content:
     fields:
       - name: "sectionOne"
         label: "Section One"
-        type: "group"
-        fields:
+        type: block
+        list: true
+        blocks:
           - name: "columnOne"
-            label: "Logo & Description"
-            type: "group"
+            label: "Logo & Description"            
             fields:
               - {name: "logo",label: "Logo",type: "image"}
               - {name: "description",label: "Description",type: "text"}
 
           - name: "columnTwo"
             label: "What We Do"
-            type: "group"
+            type: "object"
             fields:
              - {name: "title",label: "Title",type: "string"}
              - name: "services"
@@ -633,13 +633,13 @@ content:
 
           - name: "columnThree"
             label: "Contact Us"
-            type: "group"
+            type: "object"
             fields:
               - name: "infoBlock"
                 label: "Info with Icons"
                 type: "list"
                 items:
-                  type: "group"
+                  type: "object"
                   fields:
                     - {name: "icon",
                        label: "Icon",
@@ -651,7 +651,7 @@ content:
                 label: "Social Media"
                 type: "list"
                 items:
-                  type: "group"
+                  type: "object"
                   fields:
                     - {name: "url",
                       label: "URL",
@@ -661,7 +661,7 @@ content:
                        type: "image"}
       - name: "sectionTwo"
         label: "Section Two"
-        type: "group"
+        type: "object"
         fields:
           - name: "copyright"
             label: "Copyright Text"
