@@ -684,4 +684,47 @@ content:
             label: logo
             fields:
               - {name: logo, label: image, type: image}
- 
+  - name: contact-page
+    label: Contact Page
+    type: file
+    format: json
+    path: content/contact.json
+    fields:
+      - name: sections
+        label: Sections
+        type: block
+        list: true
+        blocks:
+          - name: officeSection
+            label: Office Section
+            fields:
+              - {name: title,  label: Section Title, type: string}
+              - name: descriptionBlock
+                label: Description Block
+                type: object
+                fields:
+                  - {name: description,label: Description,type: text}
+                  - name: contactList
+                    label: Contact List Items
+                    type: block
+                    list: true
+                    blocks:
+                      - name: list
+                        label: list
+                        fields:
+                          - {name: emoji, label: emoji,type: string}
+                          - {name: text, label: contact,  type: string}
+              - name: mapBlock
+                label: Google Map Block
+                type: object
+                fields:
+                  - {name: mapEmbed, label: Google Map, type: string}
+              - name: imagesBlock
+                label: Images Block
+                type: block
+                list: true
+                blocks:
+                  - name: Office image
+                    label: Office
+                    fields:
+                      - {name: office Image, label: Image, type: image}
