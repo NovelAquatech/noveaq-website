@@ -1,80 +1,65 @@
 {
-  "columns": [
+  "sectionOne": [
     {
-      "_block": "logo",
-      "id": "logo",
-      "type": "object",
-      "description": "Our team offers the most up-to-date, sustainable manufacturing solutions. We only source materials from tried and trusted suppliers.",
-      "logo": "assets/logo.png"
+      "_block": "columnOne",
+      "logo": "assets/logo.png",
+      "description": "Our team offers the most up-to-date, sustainable manufacturing solutions. We only source materials from tried and trusted suppliers."
     },
     {
-      "_block": "what we do",
-      "id": "Service",
-      "type": "object",
+      "_block": "columnTwo",
       "title": "What We Do",
       "services": [
         {
           "_block": "service",
-          "text": "Software Engineering",
-          "image": "Software Engineering"
+          "title": "Software Engineering",
+          "emoji": "💻"
         },
         {
           "_block": "service",
-          "text": "Internet Of Things(IoT)",
-          "image": "Internet Of Things(IoT)"
+          "title": "IoT",
+          "emoji": "🌏"
         },
         {
           "_block": "service",
-          "text": "Renewable & non-conventional Energy",
-          "image": "Renewable & non-conventional Energy"
+          "title": "Renewable & Non conventional Energy",
+          "emoji": "💻"
         }
       ]
     },
     {
-      "_block": "Contact",
-      "id": "contact",
-      "type": "object",
-      "title": "Contact Us",
-      "contacts": [
+      "_block": "columnThree",
+      "infoBlock": [
         {
-          "_block": "contact",
-          "emoji": "🌏",
-          "text": "7 Clarke Street Newington New South Wales 2127"
+          "_block": "address",
+          "title": "7 Clarke Street Newington New South Wales 2127",
+          "emoji": "📍"
         },
         {
-          "_block": "contact",
-          "emoji": "📞",
-          "text": "1300 768 439 or 9666 7183"
+          "_block": "address",
+          "title": "1300 768 439 or 9666 7183",
+          "emoji": "📞"
         },
         {
-          "_block": "contact",
-          "emoji": "✈",
-          "text": "ABN 69110336617 AND ACN 110 336 617"
+          "_block": "address",
+          "title": "ABN 69110336617 AND ACN 110 336 617",
+          "emoji": "✈"
         },
         {
-          "_block": "contact",
-          "emoji": "📧",
-          "text": "http://www.novelaquatech.com"
+          "_block": "address",
+          "title": "http://www.novelaquatech.com",
+          "emoji": "📧"
         }
-      ]
-    },
-    {
-      "_block": "Social",
-      "id": "social",
-      "type": "object",
-      "socials": [
+      ],
+      "socialLinks": [
         {
           "_block": "social",
-          "icon": "📍",
-          "link": "https://novelaquatech.com/"
-        },
-        {
-          "_block": "social",
-          "icon": "📍",
-          "link": "https://novelaquatech.com/"
+          "icon": "assets/icons8-facebook-50.png",
+          "href": "https://novelaquatech.com/"
         }
       ]
     }
   ],
-  "copyright": "© Novel Aquatech 2025. All rights reserved."
+  "sectionTwo": {
+    "copyright": "Copyrights © 2025 Novel Aquatech"
+  }
 }
