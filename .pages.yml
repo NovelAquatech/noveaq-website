@@ -7,7 +7,7 @@ content:
     label: IoT Page
     type: file
     format: json
-    path: "content/iot-page.json"
+    path: content/iot-page.json
     view:
       fields: [ coverImage, title, date ]
     fields:
@@ -276,7 +276,7 @@ content:
     label: Components
     type: file
     format: json
-    path: "content/components.json"
+    path: content/components.json
     fields:
       - { name: anonymousProfileImage, label: Anonymous Profile Image, type: image }
       - { name: logo, label: Logo, type: image }
@@ -284,7 +284,7 @@ content:
     label: Navigation
     type: file
     format: json
-    path: "content/menu.json"
+    path: content/menu.json
     fields:
       - name: navigation
         label: Navigation
@@ -296,12 +296,12 @@ content:
             fields:
               - { name: title, label: Title, type: string }
               - { name: link, label: Link, type: string }
-              - { name: authType, label: Authentication Type, type: select, options: { values: [ "all", "anonymous", "authenticated" ] } }
+              - { name: authType, label: Authentication Type, type: select, options: { values: [ all, anonymous, authenticated ] } }
   - name: setup-instructions-json
     label: Setup Instructions
     type: file
     format: json
-    path: "content/setup-instructions.json"
+    path: content/setup-instructions.json
     fields:
       - { name: title, label: Title, type: string }
       - { name: description, label: Description, type: string }
@@ -309,7 +309,7 @@ content:
   - name: setup-instructions-md
     label: Setup Instructions Markdown
     type: file
-    path: "content/setup-instructions.md"
+    path: content/setup-instructions.md
     fields:
       - { name: title, label: Title, type: string }
       - { name: description, label: Description, type: string }
@@ -319,7 +319,7 @@ content:
     label: Home Page
     type: file
     format: json
-    path: "content/home-page.json"
+    path: content/home-page.json
     fields:
       - name: sections
         label: Sections
@@ -472,64 +472,64 @@ content:
                         fields:
                           - { name: name, label: Name, type: string }
                           - { name: type, label: Type, type: string }
-  - name: "footer"
-    label: "Footer"
-    type: "file"
-    format: "json"
-    path: "content/footer.json"
+  - name: footer
+    label: Footer
+    type: file
+    format: json
+    path: content/footer.json
     fields: 
-        - { name: "id", label: "ID", type: "string" }
-        - { name: "type", label: "Type", type: "string" }
-        - { name: "label", label: "Label", type: "string" }
-        - { name: "description", label: "Company Description", type: "text" }
-        - { name: "logo", label: "Company Logo", type: "image" }
-        -   name: "columns"
-            label: "Columns"
-            type: "block"
+        - { name: id, label: ID, type: string }
+        - { name: type, label: Type, type: string }
+        - { name: label, label: Label, type: string }
+        - { name: description, label: Company Description, type: text }
+        - { name: logo, label: Company Logo, type: image }
+        -   name: columns
+            label: Columns
+            type: block
             list: true,
             blocks:              
-                - name: "column"
-                  label: "Column"
+                - name: column
+                  label: Column
                   fields: 
-                - { name: "title", label: "Title", type: "string" }              
-                - name: "links"
-                  label: "Links"
-                  type: "block"
+                - { name: title, label: Title, type: string }              
+                - name: links
+                  label: Links
+                  type: block
                   list: true
                   blocks: 
-                    -  name: "link"
-                       label: "Link"                  
+                    -  name: link
+                       label: Link                  
                        fields: 
-                       - { name: "label", label: "Label", type: "string" }
-                       - { name: "href", label: "Link", type: "string" }    
-        -  name: "contact"
-        -  label: "Contact Info"
-           type: "group"
+                       - { name: label, label: Label, type: string }
+                       - { name: href, label: Link, type: string }    
+        -  name: contact
+        -  label: Contact Info
+           type: group
            fields: 
-           - { name: "address", label: "Address", type: "text" }
-           - { name: "phone", label: "Phone Numbers", type: "list", items: { type: "string" } }
-           - { name: "email", label: "Email", type: "string" }
-           - { name: "abn", label: "ABN", type: "string" }
-           - { name: "acn", label: "ACN", type: "string" }
-           - { name: "website", label: "Website", type: "string" }    
-           - name: "socialMedia"
-             label: "Social Media Links"
-             type: "block"
+           - { name: address, label: Address, type: text }
+           - { name: phone, label: Phone Numbers, type: list, items: { type: string } }
+           - { name: email, label: Email, type: string }
+           - { name: abn, label: ABN, type: string }
+           - { name: acn, label: ACN, type: string }
+           - { name: website, label: Website, type: string }    
+           - name: socialMedia
+             label: Social Media Links
+             type: block
              list: true,
              blocks: 
-               - name: "socialLink"
-                 label: "Social Link"
+               - name: socialLink
+                 label: Social Link
                  fields: 
-                   - { name: "platform", label: "Platform", type: "string" }
-                   - { name: "url", label: "URL", type: "string" }
-                   - { name: "icon", label: "Icon", type: "image" }
-                   - { name: "iconAlt", label: "Icon Alt Text", type: "string" }
-               - { name: "copyright", label: "Copyright Text", type: "string" }         
+                   - { name: platform, label: Platform, type: string }
+                   - { name: url, label: URL, type: string }
+                   - { name: icon, label: Icon, type: image }
+                   - { name: iconAlt, label: Icon Alt Text, type: string }
+               - { name: copyright, label: Copyright Text, type: string }         
   - name: research-page
     label: Research Lab Equipment Page
     type: file
     format: json
-    path: "content/research-page.json"
+    path: content/research-page.json
     fields:
       - { name: title, label: Title, type: string }
       - { name: description, label: Description, type: string }
@@ -550,7 +550,7 @@ content:
     label: Software Engineering Page
     type: file
     format: json
-    path: "content/software-page.json"
+    path: content/software-page.json
     fields:
       - name: sections
         label: Sections
