@@ -16,7 +16,6 @@ import {
 
 export default function Index() {
   const homePageContent: SoftwarePage = getPageBySlug("software-page.json");
-  // console.log("Home Page Content:", homePageContent);
   const heroSection = homePageContent.sections.find(
     (section) => section.id === "hero"
   );
@@ -60,7 +59,7 @@ const HeroSection = ({ section: heroSection }: { section: SectionsItem }) => {
       id={heroSection.id}
     >
       <div className="container mx-auto flex flex-col z-10 items-start h-20">
-        <h1 className="text-4xl md:text-4xl font-bold text-white mb-2 leading-tight drop-shadow-lg w-1/2">
+        <h1 className="text-4xl md:text-4xl font-bold text-white mb-2 leading-tight drop-shadow-lg md:w-1/2 w-2/3">
           {heroSection.title}
         </h1>
         <h2 className="text-white text-2xl md:text-2xl font-regular mb-6 leading-tight drop-shadow-lg mt-6  ">
@@ -130,11 +129,11 @@ const IndustriesSection = ({
                 className="flex justify-evenly mb-4 bg-blue-100 p-6 rounded-xl shadow hover:shadow-lg transition-shadow "
               >
                 <div className="text-7xl">{industry.emoji}</div>
-                <div className="text-sm md:text-base text-gray-600 ml-2 flex flex-col justify-content-center align-items-center">
-                  <h3 className="text-md font-semibold mb-4 text-left">
+                <div className="text-sm md:text-base text-black ml-2 flex flex-col justify-content-center align-items-center text-left">
+                  <h3 className="text-md font-semibold mb-4">
                     {industry.title}
                   </h3>
-                  <p className="text-gray-600 text-left w-60">
+                  <p className="md:w-60">
                     {industry.description}
                   </p>
                 </div>
@@ -167,8 +166,8 @@ const WhyChooseSection = ({
               key={index}
               className="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm"
             >
-              <h3 className="text-xl font-semibold "><span>{point.emoji}</span>{point.title}</h3>
-              <p className="text-gray-600">{point.text}</p>
+              <h3 className="text-xl font-semibold "><span className="px-2">{point.emoji}</span>{point.title}</h3>
+              <p className="text-gray-600 px-2">{point.text}</p>
             </div>
           ))}
         </div>
