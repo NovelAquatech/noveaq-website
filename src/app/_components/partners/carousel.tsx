@@ -22,7 +22,10 @@ export default function Carousel({ logos }: { logos: LogosItem[] }) {
   const visibleLogos = logos.slice(index, index + visibleCount);
   return (
     <div className="flex items-center justify-center gap-4">
-      <button onClick={prev} className="text-xl font-bold">
+      <button
+        onClick={prev}
+        className="flex items-center justify-center bg-gray-100 rounded-full w-8 h-8 text-md font-bold text-gray-600"
+      >
         &lt;
       </button>
       <div className="flex gap-6 overflow-hidden">
@@ -35,7 +38,10 @@ export default function Carousel({ logos }: { logos: LogosItem[] }) {
           />
         ))}
       </div>
-      <button onClick={next} className="text-xl font-bold">
+      <button
+        onClick={next}
+        className="flex items-center justify-center bg-gray-100 rounded-full w-8 h-8 text-md font-bold text-gray-600"
+      >
         &gt;
       </button>
     </div>
