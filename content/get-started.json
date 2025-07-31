@@ -27,7 +27,7 @@
           },
           {
             "_block": "field",
-            "name": "Business",
+            "name": "Business Name",
             "type": "text"
           },
           {
@@ -37,7 +37,7 @@
           },
           {
             "_block": "field",
-            "name": "Use-case",
+            "name": "Use-Case",
             "type": "textarea"
           }
         ]
