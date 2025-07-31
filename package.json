@@ -9,6 +9,7 @@
     "dev": "concurrently \"npm run start-app\" \"npm run generate-types:watch\""
   },
   "dependencies": {
+    "@azure/communication-email": "^1.0.0",
     "classnames": "^2.5.1",
     "date-fns": "^3.3.1",
     "gray-matter": "^4.0.3",
