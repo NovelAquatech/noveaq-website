@@ -58,7 +58,7 @@ export default function LaboratoryEquipmentPage() {
                     rel="noopener noreferrer"
                     className="bg-blue-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-600 transition-colors w-fit"
                   >
-                    Click Here
+                    Contact Us for Info
                   </Link>
                 </div>
               </div>

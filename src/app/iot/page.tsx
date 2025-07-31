@@ -237,7 +237,7 @@ const KeyFeaturesSection = ({
         {keyFeaturesSection.title}
       </h2>
 
-      <div className="container relative mx-auto rounded-xl p-8 justify-items-center w-4/5">
+      <div className="container relative mx-auto rounded-xl p-8 justify-items-center md:w-4/5">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           {keyFeaturesSection.features
             ?.slice(0, 2)
@@ -468,12 +468,12 @@ const PricingSection = ({
           >
             {pricingSection.ctaText}
           </a>
-          <a
+          {/* <a
             href={pricingSection.compareLink}
             className="inline-block bg-gray-200 text-gray-800 px-8 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-colors"
           >
             {pricingSection.compareText}
-          </a>
+          </a> */}
         </div>
       </div>
     </section>

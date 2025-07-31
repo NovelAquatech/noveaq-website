@@ -17,7 +17,7 @@
         {
           "_block": "cta",
           "text": "Explore Our Expertise",
-          "link": "https://novelaquatech.com/"
+          "link": "/"
         }
       ]
     },
@@ -121,7 +121,7 @@
         {
           "_block": "cta",
           "title": "View Our Services",
-          "link": "https://novelaquatech.com/"
+          "link": "/"
         }
       ]
     }

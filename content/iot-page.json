@@ -165,17 +165,17 @@
         {
           "_block": "demo",
           "title": "Farming IoT Dashboard",
-          "link": "https://novelaquatech.com/demo/farming"
+          "link": "https://novelaquatech.com/farmers/"
         },
         {
           "_block": "demo",
           "title": "Engineering IoT Dashboard",
-          "link": "https://novelaquatech.com/demo/engineering"
+          "link": "https://novelaquatech.com/seely-energy-monitor/"
         },
         {
           "_block": "demo",
           "title": "Weather Station IoT Dashboard",
-          "link": "https://novelaquatech.com/demo/weather"
+          "link": "https://novelaquatech.com/weather-station/"
         }
       ]
     },
@@ -317,9 +317,9 @@
       "label": "Contact",
       "id": "contact",
       "title": "Contact Us",
-      "email": "support@noveliot.com",
-      "phone": "+61 1234 5678",
-      "address": "123 Industry Rd, Sydney, NSW",
+      "email": "gautam@novelaquatech.com",
+      "phone": "0414676245",
+      "address": "7 Clarke St, Newington 2127",
       "helpTitle": "Help Centre",
       "helpLinks": [
         {
@@ -335,7 +335,7 @@
         {
           "_block": "link",
           "title": "Setup Tutorials",
-          "url": "https://tutorials.noveliot.com"
+          "url": "/setup-instructions"
         }
       ]
     }
