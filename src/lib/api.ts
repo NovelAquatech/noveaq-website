@@ -60,7 +60,7 @@ export async function submitFormLogic(formData: Record<string, string>) {
       plainText: plainTextBody,
     },
     recipients: {
-      to: [{ address: "gautam@novelaquatech.com" }],
+      to: [{ address: "jhilick.s@gmail.com" }],
     },
   };
 
