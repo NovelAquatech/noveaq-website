@@ -72,6 +72,34 @@
           "office Image": "assets/contact/OfficePicture4.jpg"
         }
       ]
+    },
+    {
+      "_block": "contact-form",
+      "id": "form",
+      "type": "Call to action",
+      "label": "Contact-Us",
+      "background": "Bold",
+      "headline": "Got a Question?",
+      "subheadline": "Share your enquiry below and we’ll get back to you soon.",
+      "form": {
+        "fields": [
+          {
+            "_block": "field",
+            "name": "Name",
+            "type": "Text"
+          },
+          {
+            "_block": "field",
+            "name": "Phone",
+            "type": "Number"
+          },
+          {
+            "_block": "field",
+            "name": "Inquiry",
+            "type": "textarea"
+          }
+        ]
+      }
     }
   ]
 }
