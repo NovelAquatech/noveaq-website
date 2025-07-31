@@ -156,7 +156,7 @@ function WhyChooseSection({ section }: { section: SectionsItem }) {
   );
 }
 
-export function ProjectsSection({ section }: { section: SectionsItem }) {
+function ProjectsSection({ section }: { section: SectionsItem }) {
   return (
     <section id={section.id} className="py-16 bg-gray-50">
       <div className="container mx-auto px-6 ">
