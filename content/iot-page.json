@@ -244,7 +244,7 @@
         }
       ],
       "ctaText": "Get Started",
-      "ctaLink": "https://novelaquatech.com/signup",
+      "ctaLink": "/get-started",
       "compareText": "Compare Plans",
       "compareLink": "https://novelaquatech.com/pricing"
     },
