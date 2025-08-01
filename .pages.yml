@@ -728,3 +728,84 @@ content:
                     label: Office
                     fields:
                       - {name: office Image, label: Image, type: image}
+          - name: contact-form
+            label: Contact-Form
+            type: object
+            fields:
+              - { name: id, label: ID, type: string }
+              - { name: type, label: Type, type: string }
+              - { name: label, label: Label, type: string }
+              - { name: background, label: Background, type: string }
+              - { name: headline, label: Headline, type: string }
+              - { name: subheadline, label: Subheadline, type: string }
+              - name: form
+                label: Form
+                type: object
+                fields:
+                  - name: fields
+                    label: Fields
+                    type: block
+                    list: true
+                    blocks:
+                      - name: field
+                        label: Field
+                        fields:
+                          - { name: name, label: Name, type: string }
+                          - { name: type, label: Type, type: string }
+  - name: Get-started-Novel-IoTpage
+    label: Get-started-Novel-IoTpage
+    type: file
+    format: json
+    path: content/get-started.json
+    fields:
+      - name: sections
+        label: Sections
+        type: block
+        list: true
+        blocks:
+          - name: tutorial
+            label: tutorial-video
+            fields:
+              - {name: title,  label: Section Title, type: string}
+              - {name: tutorial, label: video, type: video }
+          - name: contact-form
+            label: Contact-Form
+            type: object
+            fields:
+              - { name: id, label: ID, type: string }
+              - { name: type, label: Type, type: string }
+              - { name: label, label: Label, type: string }
+              - { name: background, label: Background, type: string }
+              - { name: headline, label: Headline, type: string }
+              - { name: subheadline, label: Subheadline, type: string }
+              - name: form
+                label: Form
+                type: object
+                fields:
+                  - name: fields
+                    label: Fields
+                    type: block
+                    list: true
+                    blocks:
+                      - name: field
+                        label: Field
+                        fields:
+                          - { name: name, label: Name, type: string }
+                          - { name: type, label: Type, type: string }
+  - name: project-page
+    label: Project page
+    type: file
+    format: json
+    path: content/project.json
+    fields: 
+      - name: sections
+        label: Sections
+        type: block
+        list: true
+        blocks:
+          - name: project
+            label: Project
+            fields:
+              - {name: title, label: Title, type: string}
+              - {name: summary, label: Summary, type: string}
+              - {name: image, label: Project Image, type: image}

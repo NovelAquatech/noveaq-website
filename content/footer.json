@@ -22,7 +22,7 @@
         {
           "_block": "service",
           "title": "Renewable & Non conventional Energy",
-          "emoji": "💻"
+          "emoji": "🌱"
         }
       ]
     },
@@ -53,8 +53,8 @@
       "socialLinks": [
         {
           "_block": "social",
-          "icon": "assets/components/icons8-facebook-50.png",
-          "href": "https://novelaquatech.com/"
+          "icon": "assets/icons8-linkedin-50.png",
+          "href": "https://www.linkedin.com/company/novel-aquatech-pty-ltd/"
         }
       ]
     }

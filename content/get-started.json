@@ -1,0 +1,47 @@
+{
+  "sections": [
+    {
+      "_block": "tutorial",
+      "title": "Check the Tutorial",
+      "tutorial": "https://example.com/video.mp4"
+    },
+    {
+      "_block": "contact-form",
+      "id": "form",
+      "type": "call-to-action",
+      "label": "Contact-Us",
+      "background": "bold",
+      "headline": "Tell Us About Your Use Case",
+      "subheadline": "Let’s explore how our platform fits your use case",
+      "form": {
+        "fields": [
+          {
+            "_block": "field",
+            "name": "Name",
+            "type": "text"
+          },
+          {
+            "_block": "field",
+            "name": "Phone",
+            "type": "Number"
+          },
+          {
+            "_block": "field",
+            "name": "Business Name",
+            "type": "text"
+          },
+          {
+            "_block": "field",
+            "name": "Email",
+            "type": "email"
+          },
+          {
+            "_block": "field",
+            "name": "Use-Case",
+            "type": "textarea"
+          }
+        ]
+      }
+    }
+  ]
+}

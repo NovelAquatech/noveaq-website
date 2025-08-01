@@ -14,7 +14,7 @@
       "subheadline": "From bespoke software to IoT networks and renewable energy systems, we deliver end-to-end solutions for tomorrow’s urban challenges.",
       "cta": {
         "label": "Explore Our Solutions",
-        "href": "/expertise"
+        "href": "#expertise"
       }
     },
     {
@@ -106,7 +106,7 @@
           ],
           "cta": {
             "label": "Learn More",
-            "href": "/energy"
+            "href": "/laboratory-equipment"
           }
         }
       ]

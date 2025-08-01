@@ -12,12 +12,12 @@
         {
           "_block": "cta",
           "text": "Work with Us",
-          "link": "https://novelaquatech.com/"
+          "link": "/contact#form"
         },
         {
           "_block": "cta",
           "text": "Explore Our Expertise",
-          "link": "https://novelaquatech.com/"
+          "link": "/"
         }
       ]
     },
@@ -116,12 +116,12 @@
         {
           "_block": "cta",
           "title": "Book A Discovery Call",
-          "link": "https://novelaquatech.com/"
+          "link": "/contact#form"
         },
         {
           "_block": "cta",
           "title": "View Our Services",
-          "link": "https://novelaquatech.com/"
+          "link": "/"
         }
       ]
     }
