@@ -769,10 +769,14 @@ content:
               - {name: title,  label: Section Title, type: string}
               - name: Videos
                 label: videos
-                type: object
-                fields:
-                  - {name: title, label: title, type: string}
-                  - {name: video, label: video,   type: file,  accept: video/mp4}
+                type: block
+                list: true
+                blocks:
+                  - name: videos
+                    label: videos                    
+                    fields:
+                      - {name: title, label: title, type: string}
+                      - {name: video, label: video,   type: video}
           - name: contact-form
             label: Contact-Form
             type: object
