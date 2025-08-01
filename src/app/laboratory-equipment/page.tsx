@@ -31,19 +31,22 @@ export default function LaboratoryEquipmentPage() {
                 justifyContent: idx % 2 === 0 ? "flex-start" : "flex-end",
               }}
             >
-              <div className="bg-blue-100 shadow rounded-xl flex max-w-2xl w-full h-56 overflow-hidden">
-                {idx % 2 === 1 && (
-                  <div className="relative w-56 h-full flex-shrink-0">
-                    <Image
-                      src={eq.image}
-                      alt={eq.imageAlt}
-                      fill
-                      style={{ objectFit: "cover" }}
-                      className="rounded-r-xl"
-                      sizes="224px"
-                    />
-                  </div>
-                )}
+              <div className="bg-blue-100 shadow rounded-xl flex flex-col md:flex-row max-w-2xl w-full overflow-hidden">
+                {/* Image - will appear on top for small screens, side for md+ */}
+                <div
+                  className={`relative w-full md:w-56 h-64 md:h-full flex-shrink-0`}
+                >
+                  <Image
+                    src={eq.image}
+                    alt={eq.imageAlt}
+                    fill
+                    style={{ objectFit: "cover" }}
+                    className="rounded-t-xl md:rounded-none md:rounded-r-xl"
+                    sizes="224px"
+                  />
+                </div>
+
+                {/* Text Content */}
                 <div className="flex-1 flex flex-col justify-center px-8 py-8">
                   <h2 className="text-xl font-semibold mb-2 text-gray-800">
                     {eq.name}
@@ -58,25 +61,14 @@ export default function LaboratoryEquipmentPage() {
                     Click Here
                   </Link>
                 </div>
-                {idx % 2 === 0 && (
-                  <div className="relative w-56 h-full flex-shrink-0">
-                    <Image
-                      src={eq.image}
-                      alt={eq.imageAlt}
-                      fill
-                      style={{ objectFit: "cover" }}
-                      className="rounded-r-xl"
-                      sizes="224px"
-                    />
-                  </div>
-                )}
               </div>
             </div>
           ))}
         </div>
       </div>
-      <PartnersCarousel/>
-      <FooterSection/>
+      <PartnersCarousel />
+      <FooterSection />
     </main>
   );
 }
+
