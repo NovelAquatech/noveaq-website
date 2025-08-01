@@ -3,7 +3,33 @@
     {
       "_block": "tutorial",
       "title": "Check the Tutorial",
-      "tutorial": "https://example.com/video.mp4"
+      "Videos": [
+        {
+          "_block": "videos",
+          "title": "Report Page",
+          "video": "https://res.cloudinary.com/dk5aernt7/video/upload/v1754058586/Report-page_kznpq7.mp4"
+        },
+        {
+          "_block": "videos",
+          "title": "Device Page",
+          "video": "https://res.cloudinary.com/dk5aernt7/video/upload/v1754058564/Device-page_qwk0xu.mp4"
+        },
+        {
+          "_block": "videos",
+          "title": "Settings Page",
+          "video": "https://res.cloudinary.com/dk5aernt7/video/upload/v1754058575/Setting-page_hyttpg.mp4"
+        },
+        {
+          "_block": "videos",
+          "title": "Device Advisory",
+          "video": "https://res.cloudinary.com/dk5aernt7/video/upload/v1754058557/Device-advisory_ll8v7w.mp4"
+        },
+        {
+          "_block": "videos",
+          "title": "Gauge Chart",
+          "video": "https://res.cloudinary.com/dk5aernt7/video/upload/v1754058571/Gauge-chart_jcftri.mp4"
+        }
+      ]
     },
     {
       "_block": "contact-form",

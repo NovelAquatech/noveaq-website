@@ -4,6 +4,7 @@ import FooterSection from "../_components/footer/footer";
 import PartnersCarousel from "../_components/partners/partner";
 import { GetStarted } from "@/types/get-started";
 import ContactForm from "../_components/contact/contactForm";
+import TutorialTabs from "../_components/videotab/tutorialTab";
 
 export default function ContactPage() {
   const getStarted: GetStarted = getPageBySlug("get-started.json");
@@ -22,11 +23,9 @@ export default function ContactPage() {
                 <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-14 text-center">
                   {section.title}
                 </h2>
-
                 {/* Video block */}
-
                 <div className="flex flex-col md:flex-row justify-center items-center gap-2 mt-6 ">
-                  {section.tutorial}
+                  <TutorialTabs videos={section.Videos ?? []} />
                 </div>
               </div>
             </section>
