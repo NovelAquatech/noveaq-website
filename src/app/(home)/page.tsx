@@ -4,6 +4,7 @@ import { getPageBySlug } from "@/lib/api";
 import SectionSelector from "../_components/sectionSelector";
 import FooterSection from "../_components/footer/footer";
 import PartnersCarousel from "../_components/partners/partner";
+import ContactForm from "../_components/contact/contactForm";
 
 export default function Index() {
   const homePageContent: HomePage = getPageBySlug("home-page.json");
@@ -198,34 +199,7 @@ function ContactSection({ section }: { section: SectionsItem }) {
       <div className="container mx-auto px-6 text-center">
         <h2 className="text-3xl font-bold mb-4">{section.headline}</h2>
         <p className="mb-8 text-lg">{section.subheadline}</p>
-        <form className="max-w-xl mx-auto grid gap-4 mt-8">
-          {section.form?.fields.map((field: any, idx: number) => (
-            <div key={idx}>
-              <label className="block mb-2 text-left font-medium">
-                {field.name}
-              </label>
-              {field.type === "textarea" ? (
-                <textarea
-                  className="w-full p-3 rounded text-black"
-                  rows={4}
-                  name={field.name}
-                />
-              ) : (
-                <input
-                  className="w-full p-3 rounded text-black"
-                  type={field.type}
-                  name={field.name}
-                />
-              )}
-            </div>
-          ))}
-          <button
-            type="submit"
-            className="px-6 py-3 bg-gray-200 text-gray-800 rounded hover:bg-blue-100 transition"
-          >
-            Send
-          </button>
-        </form>
+        <ContactForm fields={section.form?.fields || []} />
       </div>
     </section>
   );

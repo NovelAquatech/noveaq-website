@@ -54,13 +54,13 @@ export async function submitForm(formData: Record<string, string>) {
   const emailClient = new EmailClient(connectionString);
 
   const message = {
-    senderAddress: "DoNotReply@your-resource-id.communication.azure.com",
+    senderAddress: "DoNotReply@33bfff8c-dfd0-4b56-beb8-109a63d8afe2.azurecomm.net",
     content: {
       subject: "New Form Submission",
       plainText: plainTextBody,
     },
     recipients: {
-      to: [{ address: "jhilick.s@gmail.com" }],
+      to: [{ address: "gautam@novelaquatech.com" }],
     },
   };
 
