@@ -767,7 +767,12 @@ content:
             label: tutorial-video
             fields:
               - {name: title,  label: Section Title, type: string}
-              - {name: tutorial, label: video, type: video }
+              - name: Videos
+                label: videos
+                type: object
+                fields:
+                  - {name: title, label: title, type: string}
+                  - {name: video, label: video,   type: file,  accept: video/mp4}
           - name: contact-form
             label: Contact-Form
             type: object
