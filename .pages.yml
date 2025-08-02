@@ -154,6 +154,7 @@ content:
                   - name: demo
                     label: Demo Button
                     fields:
+                      -  { name: id, label: id, type: string }
                       - name: title
                         label: Title
                         type: string

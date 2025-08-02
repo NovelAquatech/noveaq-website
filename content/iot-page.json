@@ -165,17 +165,17 @@
         {
           "_block": "demo",
           "title": "Farming IoT Dashboard",
-          "link": "https://novelaquatech.com/farmers/"
+          "link": ""
         },
         {
           "_block": "demo",
           "title": "Engineering IoT Dashboard",
-          "link": "https://novelaquatech.com/seely-energy-monitor/"
+          "link": ""
         },
         {
           "_block": "demo",
           "title": "Weather Station IoT Dashboard",
-          "link": "https://novelaquatech.com/weather-station/"
+          "link": ""
         }
       ]
     },
