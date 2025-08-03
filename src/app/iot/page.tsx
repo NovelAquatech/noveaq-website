@@ -139,7 +139,9 @@ const FunctionsSection = ({
               <div key={index} className="flex flex-col items-center">
                 {feature.image && (
                   <div
+
                     className="flex justify-center rounded-xl py-2 w-[320px] bg-blue-100"                    
+
                   >
                     <img
                       src={feature.image}
