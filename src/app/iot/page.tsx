@@ -17,6 +17,7 @@ import {
   PlansItem,
   HelpLinksItem,
 } from "@/types/iot-page";
+import Link from "next/link";
 
 export default function Index() {
   const homePageContent: IotPage = getPageBySlug("iot-page.json");
@@ -138,7 +139,9 @@ const FunctionsSection = ({
               <div key={index} className="flex flex-col items-center">
                 {feature.image && (
                   <div
-                    className="flex justify-center rounded-xl py-2 w-[320px] bg-blue-100"
+
+                    className="flex justify-center rounded-xl py-2 w-[320px] bg-blue-100"                    
+
                   >
                     <img
                       src={feature.image}
@@ -356,12 +359,12 @@ const LiveDemoSection = ({
               className="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm"
             >
               <h3 className="text-xl font-semibold mb-4">{demo.title}</h3>
-              <a
+              <Link
                 href={demo.link}
                 className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Launch Demo
-              </a>
+              </Link>
             </div>
           ))}
         </div>

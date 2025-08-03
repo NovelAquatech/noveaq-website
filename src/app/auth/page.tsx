@@ -1,9 +1,9 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 
-export default function AuthPage() {
+ function AuthContent() {
   const searchParams = useSearchParams();
   const org = searchParams?.get("org");
   const [email, setEmail] = useState("");
@@ -40,7 +40,7 @@ export default function AuthPage() {
       });
 
       if (res.ok) {
-        setEmail("")
+        // setEmail("")
         setOtpSent(true);
         setTimeLeft(600);
         setMessage("OTP sent to your email.");
@@ -132,12 +132,21 @@ export default function AuthPage() {
           </>
         )}
 
-        {message && timeLeft > 0 && (
+        {message  && (
           <p className="mt-4 text-medium text-gray-700 transition-opacity">
             {message}
           </p>
         )}
       </div>
     </main>
+  );
+}
+
+
+export default function AuthPage() {
+  return (
+    <Suspense fallback={<div className="text-center mt-20">Loading...</div>}>
+      <AuthContent />
+    </Suspense>
   );
 }
