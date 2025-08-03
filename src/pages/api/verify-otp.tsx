@@ -14,8 +14,6 @@ const getPassword = (org: string) => {
       return null;
   }
 };
-// console.log("env check", process.env.ENGINEERING_PASSWORD);// Not working
-
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).end();
