@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { getOtp, deleteOtp, logOtpStore } from '@/lib/otpStore';
+import { getOtp, deleteOtp } from '@/lib/otpStore';
 import CryptoJS from 'crypto-js';
 
 const getPassword = (org: string) => {
