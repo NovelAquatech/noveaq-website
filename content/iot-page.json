@@ -25,32 +25,28 @@
           "title": "Comprehensive Sensor Data Monitoring",
           "description": "Track IAQ in real time via LoRaWAN sensors—view data per area under ‘Sensor Data’",
           "image": "assets/iot-page/sensor-data-monitoring.png",
-          "imageAlt": "Sensor data monitoring dashboard",
-          "bgColor": "bg-blue-100"
+          "imageAlt": "Sensor data monitoring dashboard"
         },
         {
           "_block": "feature",
           "title": "Occupant Survey & Perception Analysis",
           "description": "QR surveys. Instant feedback. Smarter spaces.",
           "image": "assets/iot-page/occupant-survey.png",
-          "imageAlt": "Occupant survey dashboard",
-          "bgColor": "bg-blue-100"
+          "imageAlt": "Occupant survey dashboard"
         },
         {
           "_block": "feature",
           "title": "Automated Advisories",
           "description": "Get one actionable IAQ alert per sensor daily when thresholds are exceeded.",
           "image": "assets/iot-page/automated-advisories.png",
-          "imageAlt": "Automated advisories dashboard",
-          "bgColor": "bg-blue-100"
+          "imageAlt": "Automated advisories dashboard"
         },
         {
           "_block": "feature",
           "title": "Advanced Device Sequence & Logic Control",
           "description": "Define custom on/off sequences and logic for precise, reliable equipment operation.",
           "image": "assets/iot-page/device-sequence-logic.png",
-          "imageAlt": "Device sequence and logic control dashboard",
-          "bgColor": "bg-blue-100"
+          "imageAlt": "Device sequence and logic control dashboard"
         }
       ]
     },
@@ -164,18 +160,21 @@
       "demos": [
         {
           "_block": "demo",
+          "id": "farming",
           "title": "Farming IoT Dashboard",
-          "link": "https://novelaquatech.com/farmers/"
+          "link": "/auth?org=farming"
         },
         {
           "_block": "demo",
+          "id": "engineering",
           "title": "Engineering IoT Dashboard",
-          "link": "https://novelaquatech.com/seely-energy-monitor/"
+          "link": "/auth?org=engineering"
         },
         {
           "_block": "demo",
+          "id": "weather",
           "title": "Weather Station IoT Dashboard",
-          "link": "https://novelaquatech.com/weather-station/"
+          "link": "/auth?org=weather"
         }
       ]
     },
