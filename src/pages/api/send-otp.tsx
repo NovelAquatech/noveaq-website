@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { EmailClient } from "@azure/communication-email";
 import { setOtp } from "@/lib/otpStore";
-// import allowedEmailData from "../../../content/allowed-email.json";
+import allowedEmailData from "../../../content/allowed-emails.json";
 
 export default async function handler(
   req: NextApiRequest,
@@ -14,13 +14,11 @@ export default async function handler(
     return res.status(400).json({ error: "Invalid email" });
   }
 
-  // const allowedEmails: string[] = (allowedEmailData["Allowed-Emails"] || [])
-  //   .map((data: any) => data.email?.toLowerCase().trim())
-  //   .filter((e: string) => !!e);
+  const allowedEmails: string[] = (allowedEmailData["Email-Lists"] || [])
+    .map((data: any) => data.email?.toLowerCase().trim())
+    .filter((e: string) => !!e);
 
-   const allowedEmails=[
-    "jhilick.s@gmail.com"
-   ]
+   
   if (!allowedEmails.includes(email)) {
     return res
       .status(403)
