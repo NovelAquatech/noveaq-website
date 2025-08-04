@@ -1,0 +1,20 @@
+{
+  "title": "About Us",
+  "sections": [
+    {
+      "_block": "sectionItem",
+      "name": "Our Story",
+      "description": "Established in 2004 by Dr. Gautam Chattopadhyay in Sydney, Australia, Novel Aquatech Pty Limited initially aimed to provide technology-enabled services and products in the environmental science and technology sector. Over time, the company’s focus has shifted and diversified. Our Indian counterpart, <a href=\"https://gasprocessing.in/\" target=\"_blank\" style=\"text-decoration: underline;color:blue;\">Gas Processing Equipment Private Limited (GPE Limited)</a>, specializes in software-aided engineering design. With a proven track record, GPE Limited has successfully executed numerous projects worldwide, primarily within the energy industry. Their areas of expertise encompass compressor packaging, gas purification and conditioning, pressure swing adsorption technology, as well as comprehensive engineering design and code calculations."
+    },
+    {
+      "_block": "sectionItem",
+      "name": "Engineering",
+      "description": "Our current operations can be categorized into three distinct segments. <br/><br/> The Software Engineering and Services Group manage a compact software engineering practice in Australia, tapping into a reservoir of highly skilled and experienced engineers affiliated with Novel Aquatech. In the initial years, the annual turnover fluctuated between $300,000 and $800,000. The business experienced a slowdown due to the impact of COVID-19; however, it rebounded in 2021. Anticipated growth in revenue from this sector is projected to reach $2 million by 2024.<br/> <br/>  The IoT and OT Engineering Group engage in research and development, crafting applications for the Environment and Energy industry, along with the creation of high-value laboratory equipment not currently manufactured in Australia. <br/> <br/>The third group conducts global research on equipment manufacturers, collaborates with them to ensure compliance with Australian standards, and subsequently imports and deploys the products in specialized laboratory applications."
+    },
+    {
+      "_block": "sectionItem",
+      "name": "Growth Strategy",
+      "description": "Novel Aquatech has consistently maintained profitability since its inception, despite a comparatively modest turnover. Due to limited cash flow, the company faced challenges in investing adequately in certain targeted areas of new technology, hindering the development of innovative products and services. However, a recent opportunity in software engineering services is anticipated to enhance cash flow significantly. The generated free cash will be strategically reinvested in the Internet of Things (IOT) and Energy sectors of the business. The company envisions evolving into a midsize, profitable technology firm with an anticipated turnover of $10 million within the next 10 years."
+    }
+  ]
+}

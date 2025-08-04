@@ -819,3 +819,35 @@ content:
               - {name: title, label: Title, type: string}
               - {name: summary, label: Summary, type: string}
               - {name: image, label: Project Image, type: image}
+  - name: allowed-email
+    label: Allowed Emails
+    type: file
+    format: json
+    path: content/allowed-email.json
+    fields:
+      - name: Allowed-Emails
+        label: Allowed Emails
+        type: block
+        list: true
+        blocks:
+          - name: Email
+            label: Email
+            fields:
+              - {name: email, label: email, type: string}
+  - name: About-us
+    label: About us 
+    type: file
+    format: json
+    path: content/about-us.json
+    fields:
+      - {name: title, label: Title, type: string}
+      - name: sections
+        label: Sections
+        type: block
+        list: true
+        blocks:
+          - name: sectionItem
+            label: Section Item
+            fields:
+              - { name: name, label: Name, type: string }
+              - { name: description, label: Description, type: string }
