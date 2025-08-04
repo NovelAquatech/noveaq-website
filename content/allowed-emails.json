@@ -1,12 +1,8 @@
 {
-  "Email-Lists": [
+  "EmailLists": [
     {
       "_block": "Email",
-      "email": "bhattacharyya.deep@gmail.com "
-    },
-    {
-      "_block": "Email",
-      "email": "novelaquatech@gmail.com "
+      "email": "a.mitra@qantecautomation.com"
     },
     {
       "_block": "Email",
@@ -14,11 +10,11 @@
     },
     {
       "_block": "Email",
-      "email": "a.mitra@qantecautomation.com"
+      "email": "novelaquatech@gmail.com "
     },
     {
       "_block": "Email",
-      "email": "jhilick.s@gmail.com"
+      "email": "bhattacharyya.deep@gmail.com "
     }
   ]
 }
