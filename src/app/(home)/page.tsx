@@ -2,6 +2,9 @@ import { Background, HomePage, SectionsItem } from "@/types/home-page";
 import Navbar from "../_components/navbar/navbar";
 import { getPageBySlug } from "@/lib/api";
 import SectionSelector from "../_components/sectionSelector";
+import FooterSection from "../_components/footer/footer";
+import PartnersCarousel from "../_components/partners/partner";
+import ContactForm from "../_components/contact/contactForm";
 
 export default function Index() {
   const homePageContent: HomePage = getPageBySlug("home-page.json");
@@ -29,12 +32,13 @@ export default function Index() {
             return <ProjectsSection key={section.id} section={section} />;
           case "contact":
             return <ContactSection key={section.id} section={section} />;
-          case "footer":
-            return <FooterSection key={section.id} section={section} />;
+
           default:
             return null;
         }
       })}
+      <PartnersCarousel/>
+      <FooterSection />
     </div>
   );
 }
@@ -195,61 +199,10 @@ function ContactSection({ section }: { section: SectionsItem }) {
       <div className="container mx-auto px-6 text-center">
         <h2 className="text-3xl font-bold mb-4">{section.headline}</h2>
         <p className="mb-8 text-lg">{section.subheadline}</p>
-        <form className="max-w-xl mx-auto grid gap-4 mt-8">
-          {section.form?.fields.map((field: any, idx: number) => (
-            <div key={idx}>
-              <label className="block mb-2 text-left font-medium">
-                {field.name}
-              </label>
-              {field.type === "textarea" ? (
-                <textarea
-                  className="w-full p-3 rounded text-black"
-                  rows={4}
-                  name={field.name}
-                />
-              ) : (
-                <input
-                  className="w-full p-3 rounded text-black"
-                  type={field.type}
-                  name={field.name}
-                />
-              )}
-            </div>
-          ))}
-          <button
-            type="submit"
-            className="px-6 py-3 bg-gray-200 text-gray-800 rounded hover:bg-blue-100 transition"
-          >
-            Send
-          </button>
-        </form>
+        <ContactForm fields={section.form?.fields || []} />
       </div>
     </section>
   );
 }
 
-function FooterSection({ section }: { section: SectionsItem }) {
-  return (
-    <footer id={section.id} className="bg-gray-900 text-white py-10">
-      <div className="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8">
-        {section.columns?.map((col: any, idx: number) => (
-          <div key={idx}>
-            <h4 className="font-bold mb-4">{col.title}</h4>
-            <ul>
-              {col.links.map((link: any, i: number) => (
-                <li key={i} className="mb-2">
-                  <a href={link.href} className="hover:underline text-gray-300">
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
-      <div className="text-center mt-8 text-gray-400 text-sm">
-        {section.copyright}
-      </div>
-    </footer>
-  );
-}
+

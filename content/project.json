@@ -1,0 +1,22 @@
+{
+  "sections": [
+    {
+      "_block": "project",
+      "title": "Air Quality Monitoring Network",
+      "summary": "Commercial High-rise",
+      "image": "assets/home/aqm.png"
+    },
+    {
+      "_block": "project",
+      "title": "Web-Based Energy Management Portal",
+      "summary": "Residential Micro-grids",
+      "image": "assets/home/enman.png"
+    },
+    {
+      "_block": "project",
+      "title": "Custom CNC Lab Equipment",
+      "summary": "University R&D Labs",
+      "image": "assets/home/cnc.png"
+    }
+  ]
+}

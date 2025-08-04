@@ -2,6 +2,7 @@ import { Page } from "@/interfaces/post";
 import fs from "fs";
 import matter from "gray-matter";
 import { join } from "path";
+import { EmailClient } from "@azure/communication-email";
 
 const postsDirectory = join(process.cwd(), "content");
 
@@ -42,4 +43,29 @@ export function getAuthState() {
     isLoggedIn: false,
     user: null,
   };
+}
+
+export async function submitForm(formData: Record<string, string>) {
+  const plainTextBody = Object.entries(formData)
+    .map(([key, value]) => `${key}: ${value}`)
+    .join("\n");
+
+  const connectionString = process.env.ACS_CONNECTION_STRING ?? "";
+  const emailClient = new EmailClient(connectionString);
+
+  const message = {
+    senderAddress: "DoNotReply@33bfff8c-dfd0-4b56-beb8-109a63d8afe2.azurecomm.net",
+    content: {
+      subject: "New Form Submission",
+      plainText: plainTextBody,
+    },
+    recipients: {
+      to: [{ address: "gautam@novelaquatech.com" }],
+    },
+  };
+
+  const poller = await emailClient.beginSend(message);
+  const response = await poller.pollUntilDone();
+
+  return response;
 }

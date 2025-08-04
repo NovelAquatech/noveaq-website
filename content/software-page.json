@@ -1,0 +1,129 @@
+{
+  "sections": [
+    {
+      "_block": "hero",
+      "label": "Hero Section",
+      "id": "hero",
+      "title": "Engineering Smart Solutions for Complex Business Problems",
+      "subtitle": "From HR transformation to full-stack digital solutions—trusted for over a decade",
+      "image": "assets/software/software-hero.png",
+      "imageAlt": "Software engineering illustration",
+      "ctas": [
+        {
+          "_block": "cta",
+          "text": "Work with Us",
+          "link": "/contact#form"
+        },
+        {
+          "_block": "cta",
+          "text": "Explore Our Expertise",
+          "link": "/"
+        }
+      ]
+    },
+    {
+      "_block": "intro",
+      "title": "From Humble Beginnings to Nationwide Impact",
+      "id": "intro",
+      "description": "At Novel Aquatech, we’ve been solving business challenges through software engineering for over 10 years. Starting as a small firm with big ideas, we’re now recognized as a <strong>Standard Business Sponsor by the Australian Government</strong>, enabling us to combine <strong>local talent, international expertise, and continuous upskilling</strong> to deliver high-quality digital solutions."
+    },
+    {
+      "_block": "industries",
+      "title": "Driving Transformation Across Industries",
+      "id": "industries",
+      "industries": [
+        {
+          "_block": "industry",
+          "title": "Human Resources & Payroll",
+          "description": "Easily export data in CSV format for offline analysis, compliance, or integration with other systems.",
+          "emoji": "💼"
+        },
+        {
+          "_block": "industry",
+          "title": "Construction & Field Services",
+          "description": "Digital solutions for field workforce coordination, compliance, and mobile tracking.",
+          "emoji": "🏗️"
+        },
+        {
+          "_block": "industry",
+          "title": "Healthcare & Aged Care",
+          "description": "Building custom apps and workflows for patient care and facility management.",
+          "emoji": "🏥"
+        },
+        {
+          "_block": "industry",
+          "title": "Supply Chain & Logistics",
+          "description": "Optimizing processes with real-time dashboards, alerting, and workflow automation.",
+          "emoji": "🚚"
+        },
+        {
+          "_block": "industry",
+          "title": "Enterprise Platforms & Integrations",
+          "description": "ERP integration, API design, and system modernization using scalable engineering.",
+          "emoji": "🏢"
+        },
+        {
+          "_block": "industry",
+          "title": "Custom Software & Product Development",
+          "description": "From concept to code: building modern applications tailored to your business.",
+          "emoji": "💻"
+        }
+      ]
+    },
+    {
+      "_block": "why-choose",
+      "title": "Why Choose Novel Aquatech?",
+      "id": "why-choose",
+      "points": [
+        {
+          "_block": "point",
+          "emoji": "✅",
+          "title": "Niche + Broad Capability",
+          "text": "HR transformation is our specialty—but not our limit. We've delivered results across industries"
+        },
+        {
+          "_block": "point",
+          "emoji": "🌏",
+          "title": "Global Talent Model",
+          "text": "We blend locally embedded consultants with international engineering talent."
+        },
+        {
+          "_block": "point",
+          "emoji": "🧠",
+          "title": "Continuous Innovation",
+          "text": "We invest in training, emerging tech, and future-proof design."
+        },
+        {
+          "_block": "point",
+          "emoji": "🤝",
+          "title": "End-to-End Partnership",
+          "text": "Strategy. Build. Support. We’re with you for the full journey—not just implementation."
+        }
+      ]
+    },
+    {
+      "_block": "partners",
+      "title": "Partnerships & Collaborations",
+      "id": "partners",
+      "description": "In 2021, we entered a strategic joint venture with Transformationplus Pty Ltd, expanding our reach in complex software engineering and digital delivery projects. Together, we’re tackling bigger problems with greater precision."
+    },
+    {
+      "_block": "call-to-action",
+      "title": "Let’s Build the Right Solution for Your Business",
+      "subtitle": "Whether you’re optimizing HR, modernizing your tech stack, or launching a new product—we’re ready to help.",
+      "id": "call-to-action",
+      "ctas": [
+        {
+          "_block": "cta",
+          "title": "Book A Discovery Call",
+          "link": "/contact#form"
+        },
+        {
+          "_block": "cta",
+          "title": "View Our Services",
+          "link": "/"
+        }
+      ]
+    }
+  ]
+}

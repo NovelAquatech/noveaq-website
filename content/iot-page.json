@@ -23,20 +23,30 @@
         {
           "_block": "feature",
           "title": "Comprehensive Sensor Data Monitoring",
-          "description": "Monitor all key Indoor Air Quality (IAQ) parameters in real time using sensors connected via LoRaWAN gateways. Visualize sensor data for each monitored area by clicking the 'Sensor Data' tab.",
-          "emoji": "📊"
+          "description": "Track IAQ in real time via LoRaWAN sensors—view data per area under ‘Sensor Data’",
+          "image": "assets/iot-page/sensor-data-monitoring.png",
+          "imageAlt": "Sensor data monitoring dashboard"
         },
         {
           "_block": "feature",
           "title": "Occupant Survey & Perception Analysis",
-          "description": "Engage occupants with a seamless QR code survey experience. Instantly capture real-world feedback and transform it into actionable insights, with powerful cloud-based analytics that reveal trends and drive smarter decisions for healthier, more comfortable spaces.",
-          "emoji": "📝"
+          "description": "QR surveys. Instant feedback. Smarter spaces.",
+          "image": "assets/iot-page/occupant-survey.png",
+          "imageAlt": "Occupant survey dashboard"
         },
         {
           "_block": "feature",
           "title": "Automated Advisories",
-          "description": "Receive advisories when any IAQ parameter exceeds preset thresholds. The system ensures only one advisory per sensor per 24-hour period, helping you focus on actionable alerts.",
-          "emoji": "⚠️"
+          "description": "Get one actionable IAQ alert per sensor daily when thresholds are exceeded.",
+          "image": "assets/iot-page/automated-advisories.png",
+          "imageAlt": "Automated advisories dashboard"
+        },
+        {
+          "_block": "feature",
+          "title": "Advanced Device Sequence & Logic Control",
+          "description": "Define custom on/off sequences and logic for precise, reliable equipment operation.",
+          "image": "assets/iot-page/device-sequence-logic.png",
+          "imageAlt": "Device sequence and logic control dashboard"
         }
       ]
     },
@@ -74,6 +84,8 @@
       "label": "Features",
       "id": "key-features",
       "title": "Platform Features That Make a Difference",
+      "image": "assets/iot-page/laptop.png",
+      "imageAlt": "Key features of Novel IoT platform",
       "features": [
         {
           "_block": "feature",
@@ -148,18 +160,21 @@
       "demos": [
         {
           "_block": "demo",
+          "id": "farming",
           "title": "Farming IoT Dashboard",
-          "link": "https://novelaquatech.com/demo/farming"
+          "link": "/auth?org=farming"
         },
         {
           "_block": "demo",
+          "id": "engineering",
           "title": "Engineering IoT Dashboard",
-          "link": "https://novelaquatech.com/demo/engineering"
+          "link": "/auth?org=engineering"
         },
         {
           "_block": "demo",
+          "id": "weather",
           "title": "Weather Station IoT Dashboard",
-          "link": "https://novelaquatech.com/demo/weather"
+          "link": "/auth?org=weather"
         }
       ]
     },
@@ -228,7 +243,7 @@
         }
       ],
       "ctaText": "Get Started",
-      "ctaLink": "https://novelaquatech.com/signup",
+      "ctaLink": "/get-started",
       "compareText": "Compare Plans",
       "compareLink": "https://novelaquatech.com/pricing"
     },
@@ -301,9 +316,9 @@
       "label": "Contact",
       "id": "contact",
       "title": "Contact Us",
-      "email": "support@noveliot.com",
-      "phone": "+61 1234 5678",
-      "address": "123 Industry Rd, Sydney, NSW",
+      "email": "gautam@novelaquatech.com",
+      "phone": "0414676245",
+      "address": "7 Clarke St, Newington 2127",
       "helpTitle": "Help Centre",
       "helpLinks": [
         {
@@ -319,7 +334,7 @@
         {
           "_block": "link",
           "title": "Setup Tutorials",
-          "url": "https://tutorials.noveliot.com"
+          "url": "/setup-instructions"
         }
       ]
     }

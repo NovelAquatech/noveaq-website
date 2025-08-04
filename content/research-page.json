@@ -1,0 +1,22 @@
+{
+  "title": "Laboratory Equipment",
+  "description": "Novel Aquatech collaborates with Athena Technology in India to design and develop cutting-edge equipment tailored for chemical laboratories in Australia. Stringent safety standards govern laboratory equipment in Australia, necessitating thorough testing and compliance with operational norms before any import is permitted. Currently, two pieces of equipment have successfully met compliance requirements, with one already undergoing rigorous testing in service. The imminent introduction of a second item further underscores our commitment to delivering high-quality, safety-compliant solutions for the Australian market.",
+  "equipments": [
+    {
+      "_block": "equipmentItem",
+      "name": "Hydrogen Generator",
+      "description": "A hydrogen gas generator for gas chromatography (GC) utilizes electrolysis to produce high-purity hydrogen gas from distilled water, offering a safer and more convenient alternative to traditional gas cylinders",
+      "image": "/assets/equipment/hydrogen.png",
+      "imageAlt": "A hydrogen generator",
+      "link": "/contact#form"
+    },
+    {
+      "_block": "equipmentItem",
+      "name": "Nitrogen Generator",
+      "description": "A nitrogen gas generator for a laboratory is a device that produces high-purity nitrogen gas on-site by separating it from compressed air, eliminating the need for traditional nitrogen cylinders.",
+      "image": "/assets/equipment/nitrogen.png",
+      "imageAlt": "A nitrogen generator",
+      "link": "/contact#form"
+    }
+  ]
+}
