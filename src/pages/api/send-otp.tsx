@@ -1,12 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { EmailClient } from "@azure/communication-email";
 import { setOtp } from "@/lib/otpStore";
-const allowedEmails = [
-  "bhattacharyya.deep@gmail.com",
-  "novelaquatech@gmail.com",
-  "gautam@novelaquatech.com",
-  "a.mitra@qantecautomation.com",
-];
+import allowedEmailData from "../../../content/allowed-email.json";
 
 export default async function handler(
   req: NextApiRequest,
@@ -19,7 +14,11 @@ export default async function handler(
     return res.status(400).json({ error: "Invalid email" });
   }
 
- 
+  const allowedEmails: string[] = (allowedEmailData["Allowed-Emails"] || [])
+    .map((data: any) => data.email?.toLowerCase().trim())
+    .filter((e: string) => !!e);
+
+  
   if (!allowedEmails.includes(email)) {
     return res
       .status(403)
@@ -28,7 +27,6 @@ export default async function handler(
 
   const otp = Math.floor(100000 + Math.random() * 900000).toString();
   setOtp(email, otp);
- 
 
   try {
     const connectionString = process.env.ACS_CONNECTION_STRING ?? "";
