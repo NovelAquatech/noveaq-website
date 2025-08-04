@@ -14,7 +14,7 @@ export default async function handler(
     return res.status(400).json({ error: "Invalid email" });
   }
 
-  const allowedEmails: string[] = (allowedEmailData["Email-Lists"] || [])
+  const allowedEmails: string[] = (allowedEmailData["EmailLists"] || [])
     .map((data: any) => data.email?.toLowerCase().trim())
     .filter((e: string) => !!e);
 
