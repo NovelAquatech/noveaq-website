@@ -834,3 +834,20 @@ content:
             label: Email
             fields:
               - {name: email, label: email, type: string}
+  - name: About-us
+    label: About us 
+    type: file
+    format: json
+    path: content/about-us.json
+    fields:
+      - {name: title, label: Title, type: string}
+      - name: sections
+        label: Sections
+        type: block
+        list: true
+        blocks:
+          - name: sectionItem
+            label: Section Item
+            fields:
+              - { name: name, label: Name, type: string }
+              - { name: description, label: Description, type: string }
