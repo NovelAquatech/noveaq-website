@@ -843,7 +843,7 @@ content:
     path: content/allowed-email.json
     fields:
       - name: Allowed-Emails
-        label: Allowed Emails
+        label: EmailsList
         type: block
         list: true
         blocks:
