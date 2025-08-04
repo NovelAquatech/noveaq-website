@@ -1,0 +1,20 @@
+{
+  "Allowed-Emails": [
+    {
+      "_block": "Email",
+      "email": "bhattacharyya.deep@gmail.com "
+    },
+    {
+      "_block": "Email",
+      "email": "novelaquatech@gmail.com"
+    },
+    {
+      "_block": "Email",
+      "email": "gautam@novelaquatech.com"
+    },
+    {
+      "_block": "Email",
+      "email": "a.mitra@qantecautomation.com"
+    }
+  ]
+}
