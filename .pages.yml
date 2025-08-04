@@ -836,18 +836,3 @@ content:
             fields:
               - { name: name, label: Name, type: string }
               - { name: description, label: Description, type: string }
-  - name: allowed-email
-    label: Allowed Emails
-    type: file
-    format: json
-    path: content/allowed-email.json
-    fields:
-      - name: Allowed-Emails
-        label: EmailsList
-        type: block
-        list: true
-        blocks:
-          - name: Email
-            label: Email
-            fields:
-              - {name: email, label: email, type: string}
