@@ -2,8 +2,9 @@
 
 import { useSearchParams } from "next/navigation";
 import React, { useState, useEffect, Suspense } from "react";
+import { useRouter } from "next/navigation";
 
- function AuthContent() {
+function AuthContent() {
   const searchParams = useSearchParams();
   const org = searchParams?.get("org");
   const [email, setEmail] = useState("");
@@ -69,10 +70,19 @@ import React, { useState, useEffect, Suspense } from "react";
       });
       if (!res.ok) throw new Error();
       const data = await res.json();
-      window.location.href = data.redirectUrl;
+      // window.location.href = data.redirectUrl;
+      
+      setOtp("");
+      setOtpSent(false);
+      setTimeLeft(0);     
+      setTimeout(() => {
+        window.open(data.redirectUrl, "_blank");
+      }, 1000);
     } catch (err) {
-      setMessage("Invalid OTP! Please enter the correct OTP or generate new one.");
-      setOtp("")
+      setMessage(
+        "Invalid OTP! Please enter the correct OTP or generate new one."
+      );
+      setOtp("");
     }
     setVerifying(false);
   };
@@ -80,6 +90,7 @@ import React, { useState, useEffect, Suspense } from "react";
   return (
     <main className="min-h-screen relative overflow-hidden">
       <div className="max-w-md mx-auto mt-20 p-4 border rounded-lg shadow">
+        <div className="mt-6 text-center"></div>
         <h2 className="text-xl font-bold text-gray-800 mb-6 text-center">
           Enter Your Email to Receive OTP
         </h2>
@@ -131,8 +142,7 @@ import React, { useState, useEffect, Suspense } from "react";
             </p>
           </>
         )}
-
-        {message  && (
+        {message && (
           <p className="mt-4 text-medium text-gray-700 transition-opacity">
             {message}
           </p>
@@ -142,10 +152,18 @@ import React, { useState, useEffect, Suspense } from "react";
   );
 }
 
-
 export default function AuthPage() {
+  const router = useRouter();
   return (
     <Suspense fallback={<div className="text-center mt-20">Loading...</div>}>
+      <div className="mt-6 text-left p-6">
+        <button
+          onClick={() => router.push("/iot")}
+          className="text-blue-600 hover:underline font-medium"
+        >
+          ← Back to IoT Page
+        </button>
+      </div>
       <AuthContent />
     </Suspense>
   );
