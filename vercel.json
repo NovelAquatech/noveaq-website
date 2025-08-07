@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/novel",
+      "destination": "https://portal.novelaquatech.com",
+      "permanent": true
+    }
+  ]
+}
