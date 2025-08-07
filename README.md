@@ -164,4 +164,4 @@ For technical support or questions about the website, please contact the develop
 
 ---
 
-Built with ❤️ by the NovelAquatech team
+Built with ❤️ by the NovelAquatech team.
