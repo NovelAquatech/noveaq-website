@@ -39,6 +39,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   // Encrypt password using base64
   const encrypted = CryptoJS.enc.Base64.stringify(CryptoJS.enc.Utf8.parse(password));
 
-  const redirectUrl = `https://novelaquatech.com/novel/?p=${encrypted}`;
+  const redirectUrl = `https://portal.novelaquatech.com/?p=${encrypted}`;
   return res.status(200).json({ redirectUrl });
 }
