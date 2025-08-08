@@ -167,7 +167,7 @@
         {
           "_block": "demo",
           "id": "engineering",
-          "title": "Engineering IoT Dashboard",
+          "title": "Industrial IoT Dashboard",
           "link": "/auth?org=engineering"
         },
         {
