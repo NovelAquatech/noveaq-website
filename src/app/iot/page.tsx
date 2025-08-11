@@ -221,7 +221,7 @@ const KeyFeaturesSection = ({
   return (
     <section className="relative px-6 md:px-24 py-16 md:py-32">
       {/* Background Image (only visible on md+) */}
-      <div className="hidden md:block absolute inset-0">
+      <div className="hidden absolute inset-0">
         <div
           className="w-full h-full"
           style={{
@@ -234,12 +234,12 @@ const KeyFeaturesSection = ({
           }}
         />
       </div>
-      <h2 className=" relative text-4xl md:text-5xl font-bold md:text-white sm:text-gray-800 mb-10 text-center">
+      <h2 className="relative text-4xl md:text-5xl font-bold text-gray-800 mb-10 text-center">
         {keyFeaturesSection.title}
       </h2>
 
       <div className="container relative mx-auto rounded-xl p-8 justify-items-center md:w-4/5">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 mb-8">
           {keyFeaturesSection.features
             ?.slice(0, 2)
             .map((feature: FeaturesItem, index: number) => (
@@ -257,7 +257,7 @@ const KeyFeaturesSection = ({
               </div>
             ))}
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 xl:grid-cols-3 gap-8">
           {keyFeaturesSection.features
             ?.slice(2, 5)
             .map((feature: FeaturesItem, index: number) => (
