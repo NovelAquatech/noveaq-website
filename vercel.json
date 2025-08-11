@@ -4,6 +4,11 @@
       "source": "/novel",
       "destination": "https://portal.novelaquatech.com",
       "permanent": true
+    },
+    {
+      "source": "/novel-dev",
+      "destination": "https://portal-dev.novelaquatech.com",
+      "permanent": true
     }
   ]
 }
