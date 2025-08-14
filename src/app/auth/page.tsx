@@ -70,14 +70,11 @@ function AuthContent() {
       });
       if (!res.ok) throw new Error();
       const data = await res.json();
-      // window.location.href = data.redirectUrl;
       
       setOtp("");
       setOtpSent(false);
-      setTimeLeft(0);     
-      setTimeout(() => {
-        window.open(data.redirectUrl, "_blank");
-      }, 1000);
+      setTimeLeft(0);
+      window.location.replace(data.redirectUrl)
     } catch (err) {
       setMessage(
         "Invalid OTP! Please enter the correct OTP or generate new one."
