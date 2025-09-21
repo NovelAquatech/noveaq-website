@@ -15,14 +15,14 @@ export default function MeetingPopup({ open, onClose }: MeetingPopupProps) {
         {/* Close button */}
         <button
           onClick={onClose}
-          className="absolute top-2 right-2 text-gray-600 hover:text-gray-900"
+          className="absolute top-4 right-6 lg:right-10 text-xl text-gray-600 hover:text-gray-900"
         >
           ✕
         </button>
 
         {/* Iframe container */}
         <iframe
-          src="https://outlook.office.com/book/Test@novelaquatechgmail.onmicrosoft.com/?ismsaljsauthenabled"
+          src="https://outlook.office.com/book/NovelAquatech@novelaquatechgmail.onmicrosoft.com/?ismsaljsauthenabled"
           className="w-full h-full rounded-b-lg"
           scrolling="yes"
         />
