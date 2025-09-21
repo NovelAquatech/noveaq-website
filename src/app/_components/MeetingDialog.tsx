@@ -22,7 +22,7 @@ export default function MeetingPopup({ open, onClose }: MeetingPopupProps) {
 
         {/* Iframe container */}
         <iframe
-          src="http://outlook.office.com/book/Test@novelaquatechgmail.onmicrosoft.com/?ismsaljsauthenabled"
+          src="https://outlook.office.com/book/Test@novelaquatechgmail.onmicrosoft.com/?ismsaljsauthenabled"
           className="w-full h-full rounded-b-lg"
           scrolling="yes"
         />
