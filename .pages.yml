@@ -146,36 +146,27 @@ content:
               - { name: id, label: id, type: string }
               - { name: title, label: Title, type: string }
               - { name: subtitle, label: Subtitle, type: string }
-              - name: agri-solutions
-                label: Agri-Solutions
+              - name: sections
+                label: Demo Section
                 type: block
                 list: true
                 blocks:
-                  - name: demos
-                    label: Demo Button
+                  - name : subsection
+                    label: subsection
                     fields:
-                      -  { name: id, label: id, type: string }
-                      - name: title
-                        label: Title
-                        type: string
-                      - name: link
-                        label: Link
-                        type: string
-              - name: smart-infra-solutions
-                label: Smart Infrastructure Solutions
-                type: block
-                list: true
-                blocks:
-                  - name: demos
-                    label: Demo Button
-                    fields:
-                      -  { name: id, label: id, type: string }
-                      - name: title
-                        label: Title
-                        type: string
-                      - name: link
-                        label: Link
-                        type: string
+                      - { name: id, label: id, type: string }
+                      - { name: title, label: Title, type: string }
+                      - name: buttons
+                        label: Buttons
+                        type: block
+                        list: true
+                        blocks:
+                          - name: demo
+                            label: demo
+                            fields:
+                              - { name: id, label: id, type: string }
+                              - { name: title, label: Title, type: string }
+                              - { name: link, label: Link, type: string }           
           - name: testimonials
             label: Testimonials
             type: object
