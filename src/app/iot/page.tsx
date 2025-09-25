@@ -12,7 +12,6 @@ import {
   FeaturesItem,
   CasesItem,
   StepsItem,
-  DemosItem,
   TestimonialsItem,
   PlansItem,
   HelpLinksItem,
@@ -350,53 +349,27 @@ const LiveDemoSection = ({
         </p>
 
         <div className="space-y-12">
-          {/* Agri-Solutions */}
-          <div>
-            <h2 className="text-2xl font-bold mb-6">Agri-Solutions</h2>
-            <div className="flex flex-wrap justify-center gap-6">
-              {liveDemoSection["agri-solutions"]?.map(
-                (demo: DemosItem, index: number) => (
+          {liveDemoSection.sections?.map((demos, idx) => (
+            <div key={idx}>
+              <h2 className="text-2xl font-bold mb-6">{demos.title}</h2>
+              <div className="flex flex-wrap justify-center gap-6">
+                {demos.buttons?.map((btn, bIdx) => (
                   <div
-                    key={index}
+                    key={bIdx}
                     className="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm w-full max-w-lg"
                   >
-                    <h3 className="text-xl font-semibold mb-4">{demo.title}</h3>
+                    <h3 className="text-xl font-semibold mb-4">{btn.title}</h3>
                     <Link
-                      href={demo.link}
+                      href={btn.link}
                       className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                     >
                       Launch Demo
                     </Link>
                   </div>
-                )
-              )}
+                ))}
+              </div>
             </div>
-          </div>
-
-          {/* Smart Infrastructure Solutions */}
-          <div>
-            <h2 className="text-2xl font-bold mb-6">
-              Smart Infrastructure Solutions
-            </h2>
-            <div className="flex flex-wrap justify-center gap-6">
-              {liveDemoSection["smart-infra-solutions"]?.map(
-                (demo: DemosItem, index: number) => (
-                  <div
-                    key={index}
-                    className="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm w-full max-w-lg"
-                  >
-                    <h3 className="text-xl font-semibold mb-4">{demo.title}</h3>
-                    <Link
-                      href={demo.link}
-                      className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-                    >
-                      Launch Demo
-                    </Link>
-                  </div>
-                )
-              )}
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
