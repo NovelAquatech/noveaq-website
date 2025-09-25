@@ -151,7 +151,7 @@ content:
                 type: block
                 list: true
                 blocks:
-                  - name: demo
+                  - name: demos
                     label: Demo Button
                     fields:
                       -  { name: id, label: id, type: string }
@@ -166,7 +166,7 @@ content:
                 type: block
                 list: true
                 blocks:
-                  - name: demo
+                  - name: demos
                     label: Demo Button
                     fields:
                       -  { name: id, label: id, type: string }
