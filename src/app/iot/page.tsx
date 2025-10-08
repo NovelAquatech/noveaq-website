@@ -12,7 +12,6 @@ import {
   FeaturesItem,
   CasesItem,
   StepsItem,
-  DemosItem,
   TestimonialsItem,
   PlansItem,
   HelpLinksItem,
@@ -138,11 +137,7 @@ const FunctionsSection = ({
             (feature: FeaturesItem, index: number) => (
               <div key={index} className="flex flex-col items-center">
                 {feature.image && (
-                  <div
-
-                    className="flex justify-center rounded-xl py-2 w-[320px] bg-blue-100"                    
-
-                  >
+                  <div className="flex justify-center rounded-xl py-2 w-[320px] bg-blue-100">
                     <img
                       src={feature.image}
                       alt={feature.imageAlt || feature.title}
@@ -352,19 +347,27 @@ const LiveDemoSection = ({
         <p className="text-lg md:text-xl mb-12 opacity-90">
           {liveDemoSection.subtitle}
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {liveDemoSection.demos?.map((demo: DemosItem, index: number) => (
-            <div
-              key={index}
-              className="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm"
-            >
-              <h3 className="text-xl font-semibold mb-4">{demo.title}</h3>
-              <Link
-                href={demo.link}
-                className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                Launch Demo
-              </Link>
+
+        <div className="space-y-12">
+          {liveDemoSection.sections?.map((demos, idx) => (
+            <div key={idx}>
+              <h2 className="text-2xl font-bold mb-6">{demos.title}</h2>
+              <div className="flex flex-wrap justify-center gap-6">
+                {demos.buttons?.map((btn, bIdx) => (
+                  <div
+                    key={bIdx}
+                    className="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm w-full max-w-lg"
+                  >
+                    <h3 className="text-xl font-semibold mb-4">{btn.title}</h3>
+                    <Link
+                      href={btn.link}
+                      className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                    >
+                      Launch Demo
+                    </Link>
+                  </div>
+                ))}
+              </div>
             </div>
           ))}
         </div>

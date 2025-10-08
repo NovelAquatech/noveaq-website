@@ -157,24 +157,38 @@
       "id": "live-demo",
       "title": "Try the Dashboard Live 🚀",
       "subtitle": "Want to see how it works before committing? Explore our live sandbox demo—no setup required.",
-      "demos": [
+      "sections": [
         {
-          "_block": "demo",
-          "id": "farming",
-          "title": "Farming IoT Dashboard",
-          "link": "/auth?org=farming"
+          "_block": "subsection",
+          "id": "agriculture",
+          "title": "Agri-Solutions",
+          "buttons": [
+            {
+              "_block": "demo",
+              "id": "farming",
+              "title": "Farming and Irrigation IoT Dashboard",
+              "link": "/auth?org=farming"
+            },
+            {
+              "_block": "demo",
+              "id": "weather",
+              "title": "Weather Station IoT Dashboard",
+              "link": "/auth?org=weather"
+            }
+          ]
         },
         {
-          "_block": "demo",
+          "_block": "subsection",
           "id": "engineering",
-          "title": "Industrial IoT Dashboard",
-          "link": "/auth?org=engineering"
-        },
-        {
-          "_block": "demo",
-          "id": "weather",
-          "title": "Weather Station IoT Dashboard",
-          "link": "/auth?org=weather"
+          "title": "Smart Infrastructure Solutions",
+          "buttons": [
+            {
+              "_block": "demo",
+              "id": "engineering",
+              "title": "Indoor Air Quality IoT Dashboard",
+              "link": "/auth?org=engineering"
+            }
+          ]
         }
       ]
     },
