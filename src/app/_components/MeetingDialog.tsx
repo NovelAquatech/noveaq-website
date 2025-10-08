@@ -1,15 +1,17 @@
 'use client';
+import { getPageBySlug } from '@/lib/api';
+import { Menu } from '@/types/menu';
 import React, { useState } from 'react';
 
 interface MeetingPopupProps {
   open: boolean;
-  onClose: () => void;
+  correctPassword: string;
+  link: string;
 }
 
-export default function MeetingPopup({ open, onClose }: MeetingPopupProps) {
+export default function MeetingPopup({ open, correctPassword, link }: MeetingPopupProps) {
   const [password, setPassword] = useState('');
-  const [authenticated, setAuthenticated] = useState(true);
-  const correctPassword = 'novelmeeting9876!';
+  const [authenticated, setAuthenticated] = useState(false);
 
   if (!open) return null;
 
@@ -27,7 +29,7 @@ export default function MeetingPopup({ open, onClose }: MeetingPopupProps) {
       <div className="relative bg-white rounded-lg shadow-xl w-11/12 max-w-5xl h-[85vh] p-6 flex flex-col">
         {/* Close button */}
         <button
-          onClick={onClose}
+          onClick={() => window.history.back()}
           className="absolute top-4 right-6 lg:right-10 text-xl text-gray-600 hover:text-gray-900"
         >
           ✕
@@ -40,7 +42,7 @@ export default function MeetingPopup({ open, onClose }: MeetingPopupProps) {
             className="flex flex-col items-center justify-center flex-grow"
           >
             <label className="mb-4 text-lg font-medium text-gray-700">
-              Enter Meeting Password
+              Enter Password
             </label>
             <input
               type="password"
@@ -59,7 +61,7 @@ export default function MeetingPopup({ open, onClose }: MeetingPopupProps) {
         ) : (
           // Iframe container
           <iframe
-            src="https://outlook.office.com/book/NovelAquatechLiveShow@novelaquatechgmail.onmicrosoft.com/?ismsaljsauthenabled"
+            src={link}
             className="w-full h-full rounded-b-lg"
             scrolling="yes"
           />

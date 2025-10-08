@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import { Footer } from '@/types/footer';
-import MeetingPopup from '../MeetingDialog';
 
 export default function FooterClient({
   footerContent,
@@ -10,7 +9,6 @@ export default function FooterClient({
   footerContent: Footer;
 }) {
   const { sectionOne, sectionTwo } = footerContent;
-  const [meetingOpen, setMeetingOpen] = useState(false);
 
   const columnOne = sectionOne.find((col) => col._block === 'columnOne');
   const columnTwo = sectionOne.find((col) => col._block === 'columnTwo');
@@ -55,13 +53,6 @@ export default function FooterClient({
                   <span className="font-semibold">{info.title}</span>
                 </li>
               ))}
-
-              <button
-                onClick={() => setMeetingOpen(true)}
-                className="rounded-md bg-blue-500 px-3 py-2 text-sm font-semibold text-white hover:bg-blue-600"
-              >
-                Book a Meeting
-              </button>
             </ul>
 
             <h3 className="text-lg font-semibold mb-2">Follow Us</h3>
@@ -88,7 +79,6 @@ export default function FooterClient({
           {sectionTwo?.copyright}
         </div>
       </footer>
-      <MeetingPopup open={meetingOpen} onClose={() => setMeetingOpen(false)} />
     </>
   );
 }

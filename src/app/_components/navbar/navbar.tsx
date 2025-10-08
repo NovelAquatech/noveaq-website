@@ -22,10 +22,13 @@ export default function Navbar({ currentHref }: { currentHref: string }) {
       ...item,
       current: item.link === currentHref,
     }));
+  const bookingLink = navFile.novelBookAMeetingLink;
+
   return (
     <NavbarClient
       logo={components.logo}
       navigation={navigationItems}
+      bookingLink={bookingLink}
       authState={authState}
       anonymousProfileImage={anonymousProfileImage}
     />
