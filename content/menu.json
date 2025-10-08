@@ -26,14 +26,14 @@
     },
     {
       "_block": "navItem",
-      "title": "Contact Us",
-      "link": "/contact",
+      "title": "Live Show Tool",
+      "link": "https://outlook.office.com/book/NovelAquatech@novelaquatechgmail.onmicrosoft.com/?ismsaljsauthenabled",
       "authType": "anonymous"
     },
     {
       "_block": "navItem",
-      "title": "Meeting Software",
-      "link": "https://outlook.office.com/book/NovelAquatech@novelaquatechgmail.onmicrosoft.com/?ismsaljsauthenabled",
+      "title": "Contact Us",
+      "link": "/contact",
       "authType": "anonymous"
     },
     {
