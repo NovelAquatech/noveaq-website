@@ -32,6 +32,12 @@
     },
     {
       "_block": "navItem",
+      "title": "Meeting Software",
+      "link": "https://outlook.office.com/book/NovelAquatech@novelaquatechgmail.onmicrosoft.com/?ismsaljsauthenabled",
+      "authType": "anonymous"
+    },
+    {
+      "_block": "navItem",
       "title": "Login",
       "link": "https://portal.novelaquatech.com/",
       "authType": "anonymous"
