@@ -304,6 +304,15 @@ content:
               - { name: title, label: Title, type: string }
               - { name: link, label: Link, type: string }
               - { name: authType, label: Authentication Type, type: select, options: { values: [ all, anonymous, authenticated ] } }
+      - name: liveShow
+        label: Live Show
+        type: object
+        fields:
+          - { name: link, label: Link, type: string }
+          - { name: password, label: Password, type: string }
+      - name: novelBookAMeetingLink
+        label: Novel Book A Meeting Link
+        type: string
   - name: setup-instructions-json
     label: Setup Instructions
     type: file
