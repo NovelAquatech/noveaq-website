@@ -8,7 +8,7 @@ interface MeetingPopupProps {
 
 export default function MeetingPopup({ open, onClose }: MeetingPopupProps) {
   const [password, setPassword] = useState('');
-  const [authenticated, setAuthenticated] = useState(false);
+  const [authenticated, setAuthenticated] = useState(true);
   const correctPassword = 'novelmeeting9876!';
 
   if (!open) return null;
