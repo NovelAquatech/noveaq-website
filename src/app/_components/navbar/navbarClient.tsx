@@ -10,6 +10,7 @@ interface NavItemCurrent extends NavigationItem {
 interface NavbarClientProps {
   navigation: NavItemCurrent[];
   anonymousProfileImage: string;
+  bookingLink: string;
   authState: { isLoggedIn: boolean; user: any };
   logo: string;
 }
@@ -17,6 +18,7 @@ interface NavbarClientProps {
 export default function NavbarClient({
   logo,
   navigation,
+  bookingLink,
   anonymousProfileImage,
   authState,
 }: NavbarClientProps) {
@@ -111,12 +113,13 @@ export default function NavbarClient({
                   ))}
 
                   {/* Book a Meeting Button */}
-                  <button
-                    onClick={() => setMeetingOpen(true)}
-                    className="rounded-md bg-blue-500 px-3 py-2 text-sm font-semibold text-white hover:bg-blue-600"
-                  >
-                    Book a Meeting
-                  </button>
+                  <a href={bookingLink}>
+                    <button
+                      className="rounded-md bg-blue-500 px-3 py-2 text-sm font-semibold text-white hover:bg-blue-600"
+                    >
+                      Book a Meeting
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -142,18 +145,17 @@ export default function NavbarClient({
                 </a>
               ))}
 
-              <button
-                onClick={() => setMeetingOpen(true)}
-                className="mt-2 rounded-md bg-blue-500 px-3 py-2 text-base font-semibold text-white hover:bg-blue-600"
-              >
-                Book a Meeting
-              </button>
+              <a href={bookingLink}>
+                <button
+                  className="mt-2 rounded-md bg-blue-500 px-3 py-2 text-base font-semibold text-white hover:bg-blue-600"
+                >
+                  Book a Meeting
+                </button>
+              </a>
             </div>
           </div>
         )}
       </nav>
-
-      <MeetingPopup open={meetingOpen} onClose={() => setMeetingOpen(false)} />
     </>
   );
 }

@@ -27,7 +27,7 @@
     {
       "_block": "navItem",
       "title": "Live Show Tool",
-      "link": "https://outlook.office.com/book/NovelAquatech@novelaquatechgmail.onmicrosoft.com/?ismsaljsauthenabled",
+      "link": "/create-live-show",
       "authType": "anonymous"
     },
     {
@@ -60,5 +60,10 @@
       "link": "/logout",
       "authType": "authenticated"
     }
-  ]
+  ],
+  "liveShow":{
+    "link":"https://outlook.office.com/book/NovelAquatech@novelaquatechgmail.onmicrosoft.com/?ismsaljsauthenabled",
+    "password":"novelmeeting9876!"
+  },
+  "novelBookAMeetingLink":"https://outlook.office.com/book/NovelAquatechLiveShow@novelaquatechgmail.onmicrosoft.com/?ismsaljsauthenabled"
 }
