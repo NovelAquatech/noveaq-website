@@ -189,6 +189,19 @@
               "link": "/auth?org=engineering"
             }
           ]
+        },
+        {
+          "_block": "subsection",
+          "id": "security",
+          "title": "Security Solutions",
+          "buttons": [
+            {
+              "_block": "demo",
+              "id": "camera",
+              "title": "Security Camera Monitoring Dashboard",
+              "link": "https://security.novelaquatech.com/"
+            }
+          ]
         }
       ]
     },
