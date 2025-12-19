@@ -361,6 +361,7 @@ const LiveDemoSection = ({
                     <h3 className="text-xl font-semibold mb-4">{btn.title}</h3>
                     <Link
                       href={btn.link}
+                      target="_blank"
                       className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                     >
                       Launch Demo
