@@ -211,7 +211,7 @@
             {
               "_block": "demo",
               "id": "tracking-solution",
-              "title": "Tracking and location monitoring dashboard",
+              "title": "Tracking and monitoring dashboard",
               "link": "https://tracking-app-admin-web.vercel.app/logistics/"
             }
           ]
