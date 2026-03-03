@@ -23,10 +23,10 @@ export default function Index() {
   // Parse the JSON string to an object
 
   const heroSection = homePageContent.sections.find(
-    (section) => section.id === "hero"
+    (section) => section.id === "hero",
   );
   const otherSections = homePageContent.sections.filter(
-    (section) => section.id !== "hero"
+    (section) => section.id !== "hero",
   );
   if (!heroSection || !otherSections) return null;
 
@@ -36,7 +36,7 @@ export default function Index() {
       <HeroSection section={heroSection} />
       <SectionSelector
         sections={homePageContent.sections.filter(
-          (section) => section.id !== "hero"
+          (section) => section.id !== "hero",
         )}
       />
       {otherSections.map((section) => {
@@ -154,7 +154,7 @@ const FunctionsSection = ({
                   </p>
                 </div>
               </div>
-            )
+            ),
           )}
         </div>
       </div>
@@ -348,7 +348,7 @@ const LiveDemoSection = ({
           {liveDemoSection.subtitle}
         </p>
 
-        <div className="space-y-12">
+        {/* <div className="space-y-16">
           {liveDemoSection.sections?.map((demos, idx) => (
             <div key={idx}>
               <h2 className="text-2xl font-bold mb-6">{demos.title}</h2>
@@ -371,6 +371,64 @@ const LiveDemoSection = ({
               </div>
             </div>
           ))}
+        </div> */}
+        <div className="space-y-16">
+          {/* Multi-button sections (like Agri-Solutions) */}
+          {liveDemoSection.sections
+            ?.filter((section) => (section.buttons?.length ?? 0) > 1)
+            .map((demos, idx) => (
+              <div key={idx}>
+                <h2 className="text-2xl font-bold mb-6">{demos.title}</h2>
+                <div className="flex flex-wrap justify-center gap-6">
+                  {demos.buttons?.map((btn, bIdx) => (
+                    <div
+                      key={bIdx}
+                      className="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm w-full max-w-lg"
+                    >
+                      <h3 className="text-xl font-semibold mb-4">
+                        {btn.title}
+                      </h3>
+                      <Link
+                        href={btn.link}
+                        target="_blank"
+                        className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                      >
+                        Launch Demo
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+
+          {/* Single-button sections side-by-side */}
+          <div className="grid md:grid-cols-3 gap-8">
+            {liveDemoSection.sections
+              ?.filter((section) => (section.buttons?.length ?? 0) === 1)
+              .map((demos, idx) => (
+                <div key={idx} className="text-center">
+                  <h2 className="text-2xl font-bold mb-6">{demos.title}</h2>
+
+                  {demos.buttons?.map((btn, bIdx) => (
+                    <div
+                      key={bIdx}
+                      className="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm"
+                    >
+                      <h3 className="text-xl font-semibold mb-4">
+                        {btn.title}
+                      </h3>
+                      <Link
+                        href={btn.link}
+                        target="_blank"
+                        className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                      >
+                        Launch Demo
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+              ))}
+          </div>
         </div>
       </div>
     </section>
@@ -407,7 +465,7 @@ const TestimonialsSection = ({
                   <div className="text-gray-500">{testimonial.title}</div>
                 </div>
               </div>
-            )
+            ),
           )}
         </div>
       </div>
@@ -533,7 +591,7 @@ const ContactSection = ({
                   >
                     → {link.title}
                   </a>
-                )
+                ),
               )}
             </div>
           </div>
