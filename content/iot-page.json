@@ -202,6 +202,19 @@
               "link": "https://security.novelaquatech.com/"
             }
           ]
+        },
+        {
+          "_block": "subsection",
+          "id": "logistics",
+          "title": "Logistics Solutions",
+          "buttons": [
+            {
+              "_block": "demo",
+              "id": "tracking-solution",
+              "title": "Tracking and location monitoring dashboard",
+              "link": "https://tracking-app-admin-web.vercel.app/logistics/"
+            }
+          ]
         }
       ]
     },
