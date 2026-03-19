@@ -38,6 +38,12 @@
     },
     {
       "_block": "navItem",
+      "title": "Tutorial",
+      "link": "/get-started",
+      "authType": "all"
+    },
+    {
+      "_block": "navItem",
       "title": "Login",
       "link": "https://portal.novelaquatech.com/",
       "authType": "anonymous"
@@ -59,12 +65,6 @@
       "title": "Logout",
       "link": "/logout",
       "authType": "authenticated"
-    },
-    {
-      "_block": "navItem",
-      "title": "Tutorial",
-      "link": "/get-started",
-      "authType": "all"
     }
   ],
   "liveShow": {
