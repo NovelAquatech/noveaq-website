@@ -59,11 +59,17 @@
       "title": "Logout",
       "link": "/logout",
       "authType": "authenticated"
+    },
+    {
+      "_block": "navItem",
+      "title": "Tutorial",
+      "link": "/get-started",
+      "authType": "all"
     }
   ],
-  "liveShow":{
-    "link":"https://outlook.office.com/book/NovelAquatech@novelaquatechgmail.onmicrosoft.com/?ismsaljsauthenabled",
-    "password":"novelmeeting9876!"
+  "liveShow": {
+    "link": "https://outlook.office.com/book/NovelAquatech@novelaquatechgmail.onmicrosoft.com/?ismsaljsauthenabled",
+    "password": "novelmeeting9876!"
   },
-  "novelBookAMeetingLink":"https://outlook.office.com/book/NovelAquatechLiveShow@novelaquatechgmail.onmicrosoft.com/?ismsaljsauthenabled"
+  "novelBookAMeetingLink": "https://outlook.office.com/book/NovelAquatechLiveShow@novelaquatechgmail.onmicrosoft.com/?ismsaljsauthenabled"
 }
