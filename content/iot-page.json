@@ -199,7 +199,7 @@
               "_block": "demo",
               "id": "camera",
               "title": "Security Camera Monitoring Dashboard",
-              "link": "https://security.novelaquatech.com/"
+              "link": "/auth?org=camera"
             }
           ]
         },
@@ -212,7 +212,7 @@
               "_block": "demo",
               "id": "tracking-solution",
               "title": "Tracking and monitoring dashboard",
-              "link": "https://tracking-app-admin-web.vercel.app/logistics/"
+              "link": "/auth?org=tracking-solution"
             }
           ]
         }
