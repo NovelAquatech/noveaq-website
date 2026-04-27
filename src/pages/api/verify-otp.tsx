@@ -11,7 +11,7 @@ const orgConfig: Record<string, { url: string; password?: string }> = {
     url: "https://portal.novelaquatech.com/",
     password: "$seelySensors18340932",
   },
-  weather: {
+  monitor: {
     url: "https://portal.novelaquatech.com/",
     password: "$NikTVHS3844",
   },
