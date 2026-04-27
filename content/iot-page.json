@@ -171,8 +171,8 @@
             },
             {
               "_block": "demo",
-              "id": "weather",
-              "title": "Weather Station IoT Dashboard",
+              "id": "monitor",
+              "title": "Remote Infrastructure Monitoring Dashboard",
               "link": "/auth?org=weather"
             }
           ]
