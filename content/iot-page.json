@@ -173,7 +173,7 @@
               "_block": "demo",
               "id": "monitor",
               "title": "Remote Infrastructure Monitoring Dashboard",
-              "link": "/auth?org=weather"
+              "link": "/auth?org=monitor"
             }
           ]
         },
