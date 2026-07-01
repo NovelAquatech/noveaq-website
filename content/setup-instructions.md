@@ -51,30 +51,15 @@ If there is a UC51x controller that needs to be connected to the Gateway:
 
 ## 2.2 Set Up the Decoders
 
-*   Go to [https://github.com/Milesight-IoT/SensorDecoders](https://github.com/Milesight-IoT/SensorDecoders) and get the decoders for ALL devices you are setting up. Download the JS file to your local machine.
+*   Go to [https://github.com/DeeplyDiligent/SensorDecoders](https://github.com/DeeplyDiligent/SensorDecoders) and find the appropriate decoder for each device you are setting up.
     
-*   In each decoder add in two lines of code to the milesightDeviceDecode function:
-    
-
-```javascript
-function milesightDeviceDecode(bytes) {
-  var decoded = {};
-
-  // Add these two lines:
-  decoded.devEUI = LoRaObject.devEUI;
-  decoded.devName = LoRaObject.deviceName;
-
-  ...
-}
-```
-
-*   Save the decoder files.
+*   Copy the contents of the decoder for your device.
     
 *   In the network server go to the `Payload Codec` tab. Click on the plus button at the very bottom of the page.
     
 *   Enter the name of the device as the decoder name
     
-*   Copy and paste the contents of the decoder from the edited js file.
+*   Paste the copied decoder contents.
     
 *   Save it
     
