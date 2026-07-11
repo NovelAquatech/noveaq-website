@@ -1,7 +1,6 @@
 'use client';
 import React, { useState } from 'react';
 import { NavigationItem } from '../../../types/menu';
-import MeetingPopup from '../MeetingDialog';
 
 interface NavItemCurrent extends NavigationItem {
   current?: boolean;
@@ -9,45 +8,21 @@ interface NavItemCurrent extends NavigationItem {
 
 interface NavbarClientProps {
   navigation: NavItemCurrent[];
-  anonymousProfileImage: string;
-  bookingLink: string;
-  authState: { isLoggedIn: boolean; user: any };
   logo: string;
 }
 
 export default function NavbarClient({
   logo,
   navigation,
-  bookingLink,
-  anonymousProfileImage,
-  authState,
 }: NavbarClientProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [profileMenuOpen, setProfileMenuOpen] = useState(false);
-  const [meetingOpen, setMeetingOpen] = useState(false);
-
-  // Close profile menu when clicking outside
-  React.useEffect(() => {
-    if (!profileMenuOpen) return;
-    function handleClick(e: MouseEvent) {
-      const target = e.target as HTMLElement;
-      if (
-        !target.closest('#user-menu-button') &&
-        !target.closest('#profile-dropdown')
-      ) {
-        setProfileMenuOpen(false);
-      }
-    }
-    document.addEventListener('mousedown', handleClick);
-    return () => document.removeEventListener('mousedown', handleClick);
-  }, [profileMenuOpen]);
 
   return (
     <>
-      <nav className="bg-blue-100">
+      <nav className="relative z-50 bg-blue-100">
         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
           <div className="relative flex h-16 items-center justify-between">
-            <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+            <div className="absolute inset-y-0 left-0 z-10 flex items-center sm:hidden">
               {/* Mobile menu button */}
               <button
                 type="button"
@@ -111,15 +86,6 @@ export default function NavbarClient({
                       {item.title}
                     </a>
                   ))}
-
-                  {/* Book a Meeting Button */}
-                  <a href={bookingLink}>
-                    <button
-                      className="rounded-md bg-blue-500 px-3 py-2 text-sm font-semibold text-white hover:bg-blue-600"
-                    >
-                      Book a Meeting
-                    </button>
-                  </a>
                 </div>
               </div>
             </div>
@@ -127,8 +93,11 @@ export default function NavbarClient({
         </div>
         {/* Mobile menu, show/hide based on menu state. */}
         {mobileMenuOpen && (
-          <div className="sm:hidden" id="mobile-menu">
-            <div className="space-y-1 px-2 pt-2 pb-3">
+          <div
+            className="absolute left-0 right-0 top-full z-50 border-t border-blue-200 bg-blue-100 shadow-xl sm:hidden"
+            id="mobile-menu"
+          >
+            <div className="space-y-1 px-3 pt-2 pb-4">
               {navigation.map((item) => (
                 <a
                   key={item.title}
@@ -144,14 +113,6 @@ export default function NavbarClient({
                   {item.title}
                 </a>
               ))}
-
-              <a href={bookingLink}>
-                <button
-                  className="mt-2 rounded-md bg-blue-500 px-3 py-2 text-base font-semibold text-white hover:bg-blue-600"
-                >
-                  Book a Meeting
-                </button>
-              </a>
             </div>
           </div>
         )}

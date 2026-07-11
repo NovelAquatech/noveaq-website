@@ -14,20 +14,20 @@
     },
     {
       "_block": "navItem",
-      "title": "Software Engineering",
+      "title": "ConstructIQ",
+      "link": "/construct-iq",
+      "authType": "anonymous"
+    },
+    {
+      "_block": "navItem",
+      "title": "Engineering",
       "link": "/software-engineering",
       "authType": "anonymous"
     },
     {
       "_block": "navItem",
-      "title": "Research Lab Equipment",
+      "title": "Research",
       "link": "/laboratory-equipment",
-      "authType": "anonymous"
-    },
-    {
-      "_block": "navItem",
-      "title": "Live Show Tool",
-      "link": "/create-live-show",
       "authType": "anonymous"
     },
     {
