@@ -15,9 +15,9 @@ author: NovelAQ Team
     
 *   Then add a new connection by pressing the + button on this page. Click on HTTP. Add the required url in the uplink section:
     
-    *   Development Enviornment: `https://ug65-novel-dev-2.azurewebsites.net/api/ug65-data-ingestion-http`
+    *   Development Enviornment: `https://api-dev.novelaquatech.com/api/ug65-data-ingestion-http`
         
-    *   Production Environment: `https://ug65-novel.azurewebsites.net/api/ug65-data-ingestion-http`
+    *   Production Environment: `https://api.novelaquatech.com/api/ug65-data-ingestion-http`
         
 *   Click save
     
