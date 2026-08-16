@@ -80,28 +80,7 @@ If there is a UC51x controller that needs to be connected to the Gateway:
 
 ## 2.4 Connect a Milesight gateway to DeviceHub
 
-DeviceHub lets you view and manage compatible Milesight gateways from one account. You will need an internet-connected gateway and a DeviceHub account created by NovelAQ.
-
-### Activate your DeviceHub account
-
-1. Check your inbox for the DeviceHub account email. If it has not arrived, check your spam or junk folder.
-2. Open the activation link in the email.
-3. Set a password for your DeviceHub account.
-4. Sign in to [NovelAQ DeviceHub](https://devicehub.novelaquatech.com) using your email address and new password.
-
-The activation link is intended only for you. Do not forward or share the email. If the link has expired or the email cannot be found, contact NovelAQ support for a new invitation.
-
-### Generate an activation code
-
-1. In DeviceHub, click the device-shaped tab at the top of the page. This opens the `My Device` page.
-2. Click `Add`.
-3. Enter a name that will help you identify the gateway. You can also assign it to a group if required.
-4. Click `Add` in the dialog.
-5. DeviceHub will display a `Device Added` message containing the activation code. Click `Copy Code`, or select `Send Code to Email` if you want a copy sent to your email address.
-
-Keep the activation code ready for the next step. Do not share it or reuse a code created for another gateway.
-
-### Enter the code in the gateway
+DeviceHub lets NovelAQ support staff monitor and manage compatible Milesight gateways remotely. You will need an internet-connected gateway and the DeviceHub authentication code supplied by NovelAQ.
 
 1. Sign in to the gateway's local web interface.
 2. Go to `System` > `Remote Management`, then open the `Management Platform` tab.
@@ -110,8 +89,31 @@ Keep the activation code ready for the next step. Do not share it or reuse a cod
 5. Set `Activation Server Address` to `devicehub.novelaquatech.com`.
 6. Set `Device Management Server Address` to `https://devicehub.novelaquatech.com/acs`.
 7. Set `Activation Method` to `By Authentication Code`.
-8. Paste the activation code generated in DeviceHub.
+8. Enter the authentication code supplied by NovelAQ.
 9. Click `Save & Apply`.
-10. Wait for the gateway to show that it is connected or activated. This can take a few minutes after the first connection.
+10. Wait for the status to show that the gateway is connected or activated. This can take a few minutes after the first connection.
 
-If the gateway does not connect, confirm that its date, time, DNS and internet connection are correct, then contact NovelAQ support with the gateway serial number.
+Do not share the authentication code or reuse a code issued for another organisation. If the gateway does not connect, confirm that its date, time, DNS and internet connection are correct, then contact NovelAQ support with the gateway serial number.
+
+### Activate your DeviceHub account
+
+NovelAQ will create a DeviceHub account for you. You will receive an email from DeviceHub containing an account activation link.
+
+1. Check your inbox for the DeviceHub email. If it has not arrived, check your spam or junk folder.
+2. Open the activation link in the email.
+3. Set a password for your DeviceHub account.
+4. Sign in to [NovelAQ DeviceHub](https://devicehub.novelaquatech.com) using your email address and new password.
+
+The activation link is intended only for you. Do not forward or share the email. If the link has expired or the email cannot be found, contact NovelAQ support for a new invitation.
+
+### Allow temporary remote access
+
+NovelAQ support may ask you to start a temporary visiting session when remote access to the gateway interface is required.
+
+1. Sign in to [NovelAQ DeviceHub](https://devicehub.novelaquatech.com).
+2. Open `Devices` and find the gateway by its name or serial number.
+3. Select `Visiting Device`.
+4. Choose the requested timeout, then click `Apply`.
+5. Wait for the session to be created before opening the visit link. Do not close or refresh the page while the request is being processed.
+
+The session closes automatically when its timeout expires. Create a new visiting session if more time is needed. Only create a session while NovelAQ support is assisting you, and close it early when it is no longer required.
