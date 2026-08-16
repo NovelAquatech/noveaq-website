@@ -94,6 +94,17 @@ DeviceHub lets NovelAQ support staff monitor and manage compatible Milesight gat
 
 Do not share the authentication code or reuse a code issued for another organisation. If the gateway does not connect, confirm that its date, time, DNS and internet connection are correct, then contact NovelAQ support with the gateway serial number.
 
+### Activate your DeviceHub account
+
+NovelAQ will create a DeviceHub account for you. You will receive an email from DeviceHub containing an account activation link.
+
+1. Check your inbox for the DeviceHub email. If it has not arrived, check your spam or junk folder.
+2. Open the activation link in the email.
+3. Set a password for your DeviceHub account.
+4. Sign in to [NovelAQ DeviceHub](https://devicehub.novelaquatech.com) using your email address and new password.
+
+The activation link is intended only for you. Do not forward or share the email. If the link has expired or the email cannot be found, contact NovelAQ support for a new invitation.
+
 ### Allow temporary remote access
 
 NovelAQ support may ask you to start a temporary visiting session when remote access to the gateway interface is required.
