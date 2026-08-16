@@ -77,3 +77,31 @@ If there is a UC51x controller that needs to be connected to the Gateway:
 *   Click save and do this for each device.
     
 *   Ensure the device seen status is green and the devices are being registered on the gateway.
+
+## 2.4 Connect a Milesight gateway to DeviceHub
+
+DeviceHub lets NovelAQ support staff monitor and manage compatible Milesight gateways remotely. You will need an internet-connected gateway and the DeviceHub authentication code supplied by NovelAQ.
+
+1. Sign in to the gateway's local web interface.
+2. Go to `System` > `Device Management`.
+3. Enable device management.
+4. Set `Platform Type` to `DeviceHub`.
+5. Set the DeviceHub server address to `https://devicehub.novelaquatech.com/acs`.
+6. Set `Activation Method` to `By Authentication Code`.
+7. Enter the authentication code supplied by NovelAQ.
+8. Click `Apply` or `Save`.
+9. Wait for the DeviceHub status to show `Connected` or `Activated`. This can take a few minutes after the first connection.
+
+Do not share the authentication code or reuse a code issued for another organisation. If the gateway does not connect, confirm that its date, time, DNS and internet connection are correct, then contact NovelAQ support with the gateway serial number.
+
+### Allow temporary remote access
+
+NovelAQ support may ask you to start a temporary visiting session when remote access to the gateway interface is required.
+
+1. Sign in to [NovelAQ DeviceHub](https://devicehub.novelaquatech.com).
+2. Open `Devices` and find the gateway by its name or serial number.
+3. Select `Visiting Device`.
+4. Choose the requested timeout, then click `Apply`.
+5. Wait for the session to be created before opening the visit link. Do not close or refresh the page while the request is being processed.
+
+The session closes automatically when its timeout expires. Create a new visiting session if more time is needed. Only create a session while NovelAQ support is assisting you, and close it early when it is no longer required.
