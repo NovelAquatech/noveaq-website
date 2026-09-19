@@ -47,12 +47,12 @@
           {
             "_block": "list",
             "emoji": "📍",
-            "text": "11/8 Avenue of the Americas, Newington, NSW, 2127"
+            "text": "637 - Level 6, 150 George St, Parramatta NSW 2150"
           }
         ]
       },
       "mapBlock": {
-        "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3314.2027136781066!2d151.0516870754847!3d-33.83288251719903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12a4a3c0fb3a7f%3A0x154bf419e7ab3653!2s11%2F8%20Ave%20of%20the%20Americas%2C%20Newington%20NSW%202127%2C%20Australia!5e0!3m2!1sen!2sde!4v1753475818285!5m2!1sen!2sde"
+        "mapEmbed": "https://www.google.com/maps?q=637%20-%20Level%206%2C%20150%20George%20St%2C%20Parramatta%20NSW%202150&output=embed"
       },
       "imagesBlock": [
         {
