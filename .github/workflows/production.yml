@@ -1,0 +1,68 @@
+name: Build and verify production
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  statuses: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 8.15.9
+          run_install: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build
+
+  verify-production:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      # Vercel's existing GitHub integration deploys every push to main.
+      # Fail this check if the Vercel deployment fails or never completes.
+      - name: Wait for Vercel production deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          REVISION: ${{ github.sha }}
+        run: |
+          for attempt in {1..40}; do
+            status=$(gh api "repos/$GH_REPO/commits/$REVISION/status" --jq '[.statuses[] | select(.context == "Vercel")][0].state // "pending"')
+            echo "Vercel deployment: $status (attempt $attempt/40)"
+            case "$status" in
+              success) exit 0 ;;
+              failure|error) exit 1 ;;
+            esac
+            sleep 15
+          done
+          echo "Timed out waiting for Vercel" >&2
+          exit 1
+      - name: Smoke test production pages
+        run: |
+          set -euo pipefail
+          site=https://noveaq-website.vercel.app
+          for attempt in {1..12}; do
+            if curl --fail --silent --show-error --location "$site/articles" -o /tmp/articles.html \
+              && grep -q 'How IoT Sensors Help Prevent Equipment Downtime' /tmp/articles.html \
+              && curl --fail --silent --show-error --location "$site/articles/0001-how-iot-sensors-help-prevent-equipment-downtime" -o /tmp/article.html \
+              && grep -q 'Temperature monitoring' /tmp/article.html \
+              && curl --fail --silent --show-error --location "$site/iot" -o /tmp/iot.html \
+              && grep -q 'View tutorial' /tmp/iot.html; then
+              echo 'Production articles and IoT tutorial link are live.'
+              exit 0
+            fi
+            sleep 10
+          done
+          echo 'Production pages did not serve the new content.' >&2
+          exit 1
