@@ -14,6 +14,12 @@
     },
     {
       "_block": "navItem",
+      "title": "Articles",
+      "link": "/articles",
+      "authType": "all"
+    },
+    {
+      "_block": "navItem",
       "title": "ConstructIQ",
       "link": "/construct-iq",
       "authType": "anonymous"
@@ -35,12 +41,6 @@
       "title": "Contact Us",
       "link": "/contact",
       "authType": "anonymous"
-    },
-    {
-      "_block": "navItem",
-      "title": "Tutorial",
-      "link": "/get-started",
-      "authType": "all"
     },
     {
       "_block": "navItem",
