@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { isValidElement, type ReactNode } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
@@ -6,6 +7,7 @@ import remarkGfm from "remark-gfm";
 import Navbar from "../../_components/navbar/navbar";
 import FooterSection from "../../_components/footer/footer";
 import { getArticle, getArticleSlugs } from "@/lib/articles";
+import MermaidDiagram from "../MermaidDiagram";
 
 export function generateStaticParams() {
   return getArticleSlugs().map((slug) => ({ slug }));
@@ -40,7 +42,18 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
       </div>
       <article className="mx-auto max-w-4xl px-6 pb-20">
         <div className="prose prose-lg prose-slate max-w-none prose-headings:tracking-tight prose-headings:text-slate-900 prose-h2:mt-14 prose-h2:border-t prose-h2:border-slate-200 prose-h2:pt-10 prose-h3:mt-8 prose-a:text-blue-700 prose-img:mx-auto prose-img:rounded-2xl prose-img:border prose-img:border-slate-200 prose-img:bg-white prose-img:p-3 prose-img:shadow-sm prose-pre:overflow-x-auto prose-pre:bg-slate-900 overflow-x-auto">
-          <ReactMarkdown remarkPlugins={[remarkGfm]}>
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
+            components={{
+              pre({ children }) {
+                if (isValidElement<{ className?: string; children?: ReactNode }>(children)
+                  && children.props.className === "language-mermaid") {
+                  return <MermaidDiagram chart={String(children.props.children).trim()} />;
+                }
+                return <pre>{children}</pre>;
+              },
+            }}
+          >
             {article.content.replace(/^# .+\n/, "")}
           </ReactMarkdown>
         </div>

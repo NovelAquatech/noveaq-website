@@ -380,21 +380,14 @@ LoRaWAN is particularly suitable for:
 
 For example:
 
-```text
-Equipment Sensors
-│
-│ LoRaWAN
-▼
-LoRaWAN Gateway
-│
-▼
-Internet / Cellular
-│
-▼
-IoT Platform
-│
-▼
-Maintenance Dashboard
+```mermaid
+flowchart TD
+    accTitle: LoRaWAN equipment monitoring architecture
+    accDescr: Equipment sensors communicate via LoRaWAN to a gateway, then through the internet or cellular network to an IoT platform and maintenance dashboard.
+    sensors["Equipment sensors"] -->|LoRaWAN| gateway["LoRaWAN gateway"]
+    gateway --> network["Internet / cellular"]
+    network --> platform["IoT platform"]
+    platform --> dashboard["Maintenance dashboard"]
 ```
 
 The appropriate communication technology depends on the application.
@@ -411,15 +404,15 @@ An IoT gateway or edge device can process data locally.
 
 For example:
 
-```text
-Sensor
-↓
-Edge Device
-↓
-Abnormal condition detected
-├── Local alarm
-├── Equipment shutdown/interlock*
-└── Cloud notification
+```mermaid
+flowchart TD
+    accTitle: Edge computing and local decisions
+    accDescr: A sensor sends data to an edge device. When an abnormal condition is detected, the device can raise a local alarm, initiate an engineered shutdown or interlock, and send a cloud notification.
+    sensor["Sensor"] --> edge["Edge device"]
+    edge --> detected{"Abnormal condition detected"}
+    detected --> alarm["Local alarm"]
+    detected --> interlock["Equipment shutdown / interlock*"]
+    detected --> cloud["Cloud notification"]
 ```
 
 \*Where appropriate and engineered as part of the equipment's safety and control system.
@@ -491,22 +484,17 @@ The objective of an IoT monitoring system should not simply be to generate alarm
 
 A useful workflow is:
 
-```text
-Sensor detects change
-↓
-Platform analyses condition
-↓
-Alert generated
-↓
-Maintenance team investigates
-↓
-Problem confirmed or dismissed
-↓
-Maintenance action scheduled
-↓
-Equipment serviced
-↓
-Sensor data confirms return to normal operation
+```mermaid
+flowchart TD
+    accTitle: Monitoring to maintenance workflow
+    accDescr: Sensor data is analysed and an alert prompts investigation, maintenance, and confirmation that the equipment has returned to normal operation.
+    change["Sensor detects change"] --> analyse["Platform analyses condition"]
+    analyse --> alert["Alert generated"]
+    alert --> investigate["Maintenance team investigates"]
+    investigate --> assess["Problem confirmed or dismissed"]
+    assess --> schedule["Maintenance action scheduled"]
+    schedule --> service["Equipment serviced"]
+    service --> confirm["Sensor data confirms return to normal operation"]
 ```
 
 This closes the loop between monitoring and maintenance.
