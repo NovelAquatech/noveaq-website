@@ -67,7 +67,7 @@ export default function NavbarClient({
             </div>
             <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
               <div className="flex shrink-0 items-center">
-                <img className="h-8 w-auto" src={logo} alt="Your Company" />
+                <img className="h-8 w-auto" src={`/${logo.replace(/^\/+/, '')}`} alt="Novel Aquatech" />
               </div>
               <div className="hidden sm:ml-6 sm:block">
                 <div className="flex space-x-4">
