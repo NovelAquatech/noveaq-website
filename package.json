@@ -1,6 +1,7 @@
 {
   "private": true,
   "scripts": {
+    "test": "node --test tests/*.test.cjs",
     "start-app": "next",
     "build": "npm run generate-types && next build",
     "start": "next start",
