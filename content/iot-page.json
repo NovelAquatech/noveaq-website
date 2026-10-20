@@ -171,9 +171,9 @@
             },
             {
               "_block": "demo",
-              "id": "weather",
-              "title": "Weather Station IoT Dashboard",
-              "link": "/auth?org=weather"
+              "id": "monitor",
+              "title": "Remote Infrastructure Monitoring Dashboard",
+              "link": "/auth?org=monitor"
             }
           ]
         },
@@ -199,7 +199,20 @@
               "_block": "demo",
               "id": "camera",
               "title": "Security Camera Monitoring Dashboard",
-              "link": "https://security.novelaquatech.com/"
+              "link": "/auth?org=camera"
+            }
+          ]
+        },
+        {
+          "_block": "subsection",
+          "id": "logistics",
+          "title": "Logistics Solutions",
+          "buttons": [
+            {
+              "_block": "demo",
+              "id": "tracking-solution",
+              "title": "Tracking and monitoring dashboard",
+              "link": "/auth?org=tracking-solution"
             }
           ]
         }

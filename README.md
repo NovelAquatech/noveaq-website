@@ -2,6 +2,12 @@
 
 A modern, responsive website for NovelAquatech's IoT solutions built with Next.js and managed through PagesCMS for easy content updates.
 
+## Portal demo compatibility
+
+`src/pages/api/verify-otp.tsx` keeps the existing OTP-to-company-login handoff. Configure server-only `DEMO_FARMING_PASSWORD`, `DEMO_ENGINEERING_PASSWORD`, and `DEMO_MONITOR_PASSWORD` variables in Vercel. Do not use `NEXT_PUBLIC_*` names or commit credential values. Missing demo configuration returns 503 without consuming the OTP. Run `npm test` for the handoff tests.
+
+The existing `?p=` handoff contains a Base64 password-equivalent. Base64 is not encryption, and moving credentials out of source does not remove their exposure in URLs or Git history. This release preserves demo compatibility; replacing that protocol and rotating the demo credentials remain separate security work.
+
 ## 🚀 Live Deployments
 
 - **Production**: [noveaq-website.vercel.app](https://noveaq-website.vercel.app)

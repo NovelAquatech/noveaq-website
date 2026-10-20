@@ -1,29 +1,39 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { EmailClient } from "@azure/communication-email";
 import { setOtp } from "@/lib/otpStore";
-import allowedEmailData from "../../../content/allowed-emails.json";
-
+// import allowedEmailData from "../../../content/allowed-emails.json";
+function isValidEmail(email: string): boolean {
+  const emailRegex =
+    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$/;
+  return emailRegex.test(email);
+}
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
+
+  
   if (req.method !== "POST") return res.status(405).end();
 
   const email = req.body.email?.toLowerCase().trim();
   if (!email || typeof email !== "string") {
     return res.status(400).json({ error: "Invalid email" });
   }
+    // ✅ Validate proper email format
+  if (!isValidEmail(email)) {
+    return res.status(400).json({ error: "Invalid email format" });
+  }
 
-  const allowedEmails: string[] = (allowedEmailData["EmailLists"] || [])
-    .map((data: any) => data.email?.toLowerCase().trim())
-    .filter((e: string) => !!e);
+  // const allowedEmails: string[] = (allowedEmailData["EmailLists"] || [])
+  //   .map((data: any) => data.email?.toLowerCase().trim())
+  //   .filter((e: string) => !!e);
 
    
-  if (!allowedEmails.includes(email)) {
-    return res
-      .status(403)
-      .json({ error: "This email is not authorized to receive an OTP." });
-  }
+  // if (!allowedEmails.includes(email)) {
+  //   return res
+  //     .status(403)
+  //     .json({ error: "This email is not authorized to receive an OTP." });
+  // }
 
   const otp = Math.floor(100000 + Math.random() * 900000).toString();
   setOtp(email, otp);

@@ -23,10 +23,10 @@ export default function Index() {
   // Parse the JSON string to an object
 
   const heroSection = homePageContent.sections.find(
-    (section) => section.id === "hero"
+    (section) => section.id === "hero",
   );
   const otherSections = homePageContent.sections.filter(
-    (section) => section.id !== "hero"
+    (section) => section.id !== "hero",
   );
   if (!heroSection || !otherSections) return null;
 
@@ -36,7 +36,7 @@ export default function Index() {
       <HeroSection section={heroSection} />
       <SectionSelector
         sections={homePageContent.sections.filter(
-          (section) => section.id !== "hero"
+          (section) => section.id !== "hero",
         )}
       />
       {otherSections.map((section) => {
@@ -47,7 +47,12 @@ export default function Index() {
         if (section._block === "key-features")
           return <KeyFeaturesSection key={section.id} section={section} />;
         if (section._block === "how-it-works")
-          return <HowItWorksSection key={section.id} section={section} />;
+          return (
+            <React.Fragment key={section.id}>
+              <HowItWorksSection section={section} />
+              <TutorialSection />
+            </React.Fragment>
+          );
         if (section._block === "live-demo")
           return <LiveDemoSection key={section.id} section={section} />;
         if (section._block === "testimonials")
@@ -154,7 +159,7 @@ const FunctionsSection = ({
                   </p>
                 </div>
               </div>
-            )
+            ),
           )}
         </div>
       </div>
@@ -330,6 +335,21 @@ const HowItWorksSection = ({
   );
 };
 
+const TutorialSection = () => (
+  <section className="bg-blue-50 px-6 py-16 md:px-24 md:py-20" aria-labelledby="iot-tutorial-heading">
+    <div className="container mx-auto flex flex-col items-start justify-between gap-8 rounded-3xl border border-blue-100 bg-white p-8 shadow-sm md:flex-row md:items-center md:p-12">
+      <div>
+        <p className="mb-3 text-sm font-bold uppercase tracking-widest text-blue-700">Step-by-step guide</p>
+        <h2 id="iot-tutorial-heading" className="text-3xl font-bold text-slate-900 md:text-4xl">New to Novel IoT?</h2>
+        <p className="mt-4 max-w-2xl text-lg leading-8 text-slate-600">Explore the tutorial for a guided introduction to the platform and start making sense of your sensor data.</p>
+      </div>
+      <Link href="/get-started" className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-blue-700 px-6 py-3 font-bold text-white transition-colors hover:bg-blue-800">
+        View tutorial <span aria-hidden="true">→</span>
+      </Link>
+    </div>
+  </section>
+);
+
 const LiveDemoSection = ({
   section: liveDemoSection,
 }: {
@@ -348,7 +368,7 @@ const LiveDemoSection = ({
           {liveDemoSection.subtitle}
         </p>
 
-        <div className="space-y-12">
+        {/* <div className="space-y-16">
           {liveDemoSection.sections?.map((demos, idx) => (
             <div key={idx}>
               <h2 className="text-2xl font-bold mb-6">{demos.title}</h2>
@@ -371,6 +391,64 @@ const LiveDemoSection = ({
               </div>
             </div>
           ))}
+        </div> */}
+        <div className="space-y-16">
+          {/* Multi-button sections (like Agri-Solutions) */}
+          {liveDemoSection.sections
+            ?.filter((section) => (section.buttons?.length ?? 0) > 1)
+            .map((demos, idx) => (
+              <div key={idx}>
+                <h2 className="text-2xl font-bold mb-6">{demos.title}</h2>
+                <div className="flex flex-wrap justify-center gap-6">
+                  {demos.buttons?.map((btn, bIdx) => (
+                    <div
+                      key={bIdx}
+                      className="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm w-full max-w-lg"
+                    >
+                      <h3 className="text-xl font-semibold mb-4">
+                        {btn.title}
+                      </h3>
+                      <Link
+                        href={btn.link}
+                        target="_blank"
+                        className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                      >
+                        Launch Demo
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+
+          {/* Single-button sections side-by-side */}
+          <div className="grid md:grid-cols-3 gap-8">
+            {liveDemoSection.sections
+              ?.filter((section) => (section.buttons?.length ?? 0) === 1)
+              .map((demos, idx) => (
+                <div key={idx} className="text-center">
+                  <h2 className="text-2xl font-bold mb-6">{demos.title}</h2>
+
+                  {demos.buttons?.map((btn, bIdx) => (
+                    <div
+                      key={bIdx}
+                      className="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm"
+                    >
+                      <h3 className="text-xl font-semibold mb-4">
+                        {btn.title}
+                      </h3>
+                      <Link
+                        href={btn.link}
+                        target="_blank"
+                        className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                      >
+                        Launch Demo
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+              ))}
+          </div>
         </div>
       </div>
     </section>
@@ -407,7 +485,7 @@ const TestimonialsSection = ({
                   <div className="text-gray-500">{testimonial.title}</div>
                 </div>
               </div>
-            )
+            ),
           )}
         </div>
       </div>
@@ -533,7 +611,7 @@ const ContactSection = ({
                   >
                     → {link.title}
                   </a>
-                )
+                ),
               )}
             </div>
           </div>
